@@ -1,9 +1,9 @@
-package edu.hzuapps.androidlabs.homeworks.Net1414080903217;
+package com.example.mgb.firstapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Net1414080903217Activity extends AppCompatActivity {
+public class net1414080903217Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
