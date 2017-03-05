@@ -1,9 +1,9 @@
-package com.example.shezhiming.myapplication;
+package edu.hzuapps.androidlabs.homeworks.net1414080903230;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Net1414080903230 extends AppCompatActivity {
+public class Net1414080903230Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
