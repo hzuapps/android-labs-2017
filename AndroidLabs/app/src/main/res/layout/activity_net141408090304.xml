@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.myapplication.homework.Net1414080903104Activity.Net141408090304Activity">
+    tools:context="edu.hzuapps.AndroidLabs.homework.Net1414080903104Activity.Net141408090304Activity">
 
     <TextView
         android:layout_width="wrap_content"
