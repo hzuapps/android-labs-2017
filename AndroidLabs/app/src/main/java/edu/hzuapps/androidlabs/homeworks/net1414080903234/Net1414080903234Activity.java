@@ -1,4 +1,4 @@
-package com.example.hzxy.myapplication;
+package edu.hzuapps.androidlabs.homework.net1414080903234;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
