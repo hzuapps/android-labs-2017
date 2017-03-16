@@ -1,9 +1,9 @@
-package edu.hzuapps.myapplication.homeworks.net1414080903119;
+package edu.hzuapps.androidlabs.homeworks.net1414080903119;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import edu.hzuapps.myapplication.R;
+import edu.hzuapps.androidlabs.R;
 
 public class Net1414080903119Activity extends AppCompatActivity {
 
