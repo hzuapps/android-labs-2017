@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="143dp"
+        android:text="新增账目"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:text="查看当前账目"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
