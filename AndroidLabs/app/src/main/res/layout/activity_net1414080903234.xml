@@ -10,8 +10,68 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.hzuapps.androidlabs.homework.net1414080903234.Net1414080903234Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <LinearLayout
+        android:id="@+id/ly_tab_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp">
+
+        <TextView
+            android:text="总额"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/text_money"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <TextView
+            android:text="收入"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/text_income"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <TextView
+            android:text="支出"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/text_outlay"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <TextView
+            android:text="设置"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/text_setting"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:gravity="center" />
+    </LinearLayout>
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/white"
+        android:layout_above="@id/ly_tab_bar"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
+        android:id="@+id/ly_content">
+
+    </FrameLayout>
 </RelativeLayout>
+
