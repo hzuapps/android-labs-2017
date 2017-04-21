@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903213.Net1414080903213Activity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <Button
+        android:text="我的日程安排"
+        android:layout_width="82dp"
+        android:layout_height="61dp"
+        android:id="@+id/button1"
+        android:elevation="0dp"
+        style="@android:style/Widget.Button"
+        android:textColorLink="@android:color/holo_blue_light"
+        android:layout_weight="0.38" />
+
+    <Button
+        android:text="日历"
+        android:layout_width="82dp"
+        android:layout_height="61dp"
+        android:id="@+id/button2"
+        android:layout_weight="0.48"
+        style="@android:style/Widget.Button" />
+
+    <Button
+        android:text="笔记本"
+        android:layout_width="82dp"
+        android:layout_height="61dp"
+        android:id="@+id/button3"
+        android:layout_weight="0.45"
+        style="@android:style/Widget.Button" />
+</LinearLayout>
