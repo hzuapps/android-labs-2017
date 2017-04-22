@@ -11,7 +11,52 @@
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903222.Net1414080903222Activity">
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:text="Recording"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/presence_audio_online" />
+
+    <Button
+        android:id="@+id/Astart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="67dp"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:text="start" />
+
+    <Button
+        android:id="@+id/Astop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Astart"
+        android:layout_alignBottom="@+id/Astart"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginRight="40dp"
+        android:text="stop" />
+
+    <Button
+        android:id="@+id/Aplay"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Astop"
+        android:layout_centerHorizontal="true"
+        android:text="play" />
+
 </RelativeLayout>
