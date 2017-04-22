@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/regist_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:text="消费金额："
+
+            />
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/et_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的本次的消费金额"
+            android:textSize="14dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/regist_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regist_username"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="7dp"
+            android:text="选择消费类型："
+
+            />
+
+
+
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/languages"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/regist_password"
+        android:layout_alignLeft="@+id/regist_password"
+        android:layout_alignStart="@+id/regist_password" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="提交消费记录"
+        android:layout_below="@+id/regist_password"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
