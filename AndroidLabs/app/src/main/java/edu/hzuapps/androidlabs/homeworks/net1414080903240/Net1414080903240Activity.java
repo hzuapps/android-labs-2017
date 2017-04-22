@@ -12,7 +12,7 @@ public class Net1414080903240Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.main_1414080903240);
 
 
         btn_send1 = (Button) findViewById(R.id.button1);
@@ -20,7 +20,7 @@ public class Net1414080903240Activity extends AppCompatActivity {
         btn_send1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Net1414080903240Activity.this,NewAccount.class);
+                Intent intent = new Intent(Net1414080903240Activity.this,Net1414080903240_NewAccount.class);
                 startActivity(intent);
             }
         });
@@ -28,7 +28,7 @@ public class Net1414080903240Activity extends AppCompatActivity {
         btn_send2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Net1414080903240Activity.this,OrderRecord.class);
+                Intent intent = new Intent(Net1414080903240Activity.this,Net1414080903240_OrderRecord.class);
                 startActivity(intent);
             }
         });
