@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.homeworks.net1414080903231activity;
+package edu.hzuapps.androidlabs.homeworks.net1414080903231;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

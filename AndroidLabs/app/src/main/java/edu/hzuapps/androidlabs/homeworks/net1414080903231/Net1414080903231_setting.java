@@ -1,6 +1,6 @@
-package edu.hzuapps.androidlabs.homeworks.net1414080903231activity;
+package edu.hzuapps.androidlabs.homeworks.net1414080903231;
 
-import edu.hzuapps.androidlabs.homeworks.net1414080903231activity.Net1414080903231_time;
+import edu.hzuapps.androidlabs.homeworks.net1414080903231.Net1414080903231_time;
 /**
  * Created by hzu on 2017/4/21.
  */

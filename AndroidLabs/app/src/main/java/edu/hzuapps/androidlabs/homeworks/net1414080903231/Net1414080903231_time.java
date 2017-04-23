@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.homeworks.net1414080903231activity;
+package edu.hzuapps.androidlabs.homeworks.net1414080903231;
 
 /**
  * Created by hzu on 2017/4/21.
