@@ -36,5 +36,4 @@
             android:label="I am Networkctivity">
         </activity>
     </application>
-
 </manifest>
