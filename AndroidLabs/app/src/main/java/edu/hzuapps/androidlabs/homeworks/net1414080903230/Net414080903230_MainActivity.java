@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.homework.net1414080903230.net1414080903230;
+package edu.hzuapps.androidlabs.homework.net1414080903230;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity; // 注意这里我们导入的V4的包，不要导成app的包了
