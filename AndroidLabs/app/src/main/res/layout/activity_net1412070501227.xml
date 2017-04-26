@@ -8,10 +8,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.homworks.net1412070501227.Net1412070501227Activity">
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1412070501227.Net1412070501227Activity">
 
-    <TextView
+    <Button
+        android:text="首页"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:id="@+id/index" />
+
+    <Button
+        android:text="购物车"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cart"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/index"
+        android:layout_toEndOf="@+id/index"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp" />
+
+    <Button
+        android:text="登陆"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp"
+        android:id="@+id/login"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
