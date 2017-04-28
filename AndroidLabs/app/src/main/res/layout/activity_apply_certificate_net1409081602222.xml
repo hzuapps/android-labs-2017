@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="申请安全证书"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工程名称："/>
+
+        <EditText
+            android:id="@+id/et_project_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColorHint="#55000000"
+            android:hint="请输入工程名称"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:padding="15dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工程时间："/>
+
+        <EditText
+            android:id="@+id/et_project_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColorHint="#55000000"
+            android:hint="请输入工程时间"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="确     定"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>
