@@ -1,4 +1,4 @@
-package com.example.rem.androidlabs;
+package edu.hzuapps.androidlabs.homeworks.net1414080903111;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
