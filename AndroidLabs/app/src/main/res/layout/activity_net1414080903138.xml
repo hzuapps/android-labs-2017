@@ -11,7 +11,34 @@
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903138.Net1414080903138Activity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="欢迎使用该应用" />
+
+    <Button
+        android:text="记账本"
+        android:layout_height="wrap_content"
+        android:id="@+id/cashbook_But"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent" />
+
+    <Button
+        android:text="类别报表"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Classreport_But"
+        android:layout_marginTop="96dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="备忘录"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Memoire_But"
+        android:layout_marginBottom="91dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
+
