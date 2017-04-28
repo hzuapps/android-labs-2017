@@ -1,21 +1,17 @@
-package com.edu.hzuapps.androidlabs.net1414080903112;
+package edu.hzuapps.androidlabs.net1414080903112;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.content.Intent;
-import android.view.View;//注意view的大小写
-import android.view.View.OnClickListener;
-import android.os.Bundle;
-import android.widget.Button;
-public class Net1414080903112 extends AppCompatActivity {
+
+public class select1414080903112 extends AppCompatActivity {
+
 
     private static final String[] m={"星期一","星期二","星期三","星期四","星期五"};
     private TextView view ;
@@ -29,17 +25,17 @@ public class Net1414080903112 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.spinner);
+        setContentView(R.layout.activity_select1414080903112);
 
         Button btn1=(Button)findViewById(R.id.button);
 
         //给btn1绑定监听事件
-        btn1.setOnClickListener(new OnClickListener() {
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 // 给bnt1添加点击响应事件,即带参数跳转到另一页面（参数为空课室数据的筛选参数）
-                Intent intent =new Intent(Net1414080903112.this,Net1414080903112Activity.class);
+                Intent intent =new Intent(select1414080903112.this,result1414080903112.class);
                 intent.putExtra("weekday", view.getText());
                 intent.putExtra("time", view2.getText());
                 //启动
@@ -69,7 +65,7 @@ public class Net1414080903112 extends AppCompatActivity {
     }
 
     //使用数组形式操作，对用户选择的下拉框内容进行读取
-    class SpinnerSelectedListener implements OnItemSelectedListener{
+    class SpinnerSelectedListener implements AdapterView.OnItemSelectedListener {
 
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
                                    long arg3) {
@@ -80,7 +76,7 @@ public class Net1414080903112 extends AppCompatActivity {
         }
     }
     //使用XML形式操作，对用户选择的下拉框内容进行读取
-    class SpinnerXMLSelectedListener implements OnItemSelectedListener{
+    class SpinnerXMLSelectedListener implements AdapterView.OnItemSelectedListener {
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
                                    long arg3) {
             view2.setText("你选择的是："+adapter2.getItem(arg2));
@@ -91,5 +87,4 @@ public class Net1414080903112 extends AppCompatActivity {
         }
 
     }
-
 }
