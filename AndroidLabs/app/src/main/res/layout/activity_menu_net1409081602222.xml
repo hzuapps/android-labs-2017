@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:text="申请"/>
+
+    <Button
+
+        android:id="@+id/bt_to_apply_budget"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="申请预算"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"/>
+
+
+    <Button
+        android:id="@+id/bt_to_apply_certificate"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="申请安全证书"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>
