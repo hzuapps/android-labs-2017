@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903128.Net1414080903128CompareActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="116dp"
+        android:id="@+id/linearLayout">
+
+    <EditText
+        android:id="@+id/inputString"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="99dp"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/outputString"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="48dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/guess"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        tools:layout_editor_absoluteY="198dp"
+        tools:layout_editor_absoluteX="-16dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
