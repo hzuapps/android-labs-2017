@@ -1,4 +1,4 @@
-package com.example.xx.androidlabs.homeworks.net1414080903136;
+package edu.hzuapps.androidlabs.homworks.net1414080903136;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.xx.androidlabs.R;
+import edu.hzuapps.androidlabs.R;
 
 public class Net1414080903136Activity extends AppCompatActivity {
     public String url;
@@ -29,18 +29,18 @@ public class Net1414080903136Activity extends AppCompatActivity {
             public void onClick(View v) {
                 String a=et1.getText().toString();
                 String b=et2.getText().toString();
-                    url = "https://m.kuaidi100.com/index_all.html?type=" + a + "&postid=" + b;
-                    webView.getSettings().setJavaScriptEnabled(true);
-                    webView.loadUrl(url);
-                    webView.setWebViewClient(new WebViewClient() {
-                        @Override
-                        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                            view.loadUrl(url);
-                            return true;
-                        }
-                    });
-                    webView.setVisibility(View.VISIBLE);
-                }
+                url = "https://m.kuaidi100.com/index_all.html?type=" + a + "&postid=" + b;
+                webView.getSettings().setJavaScriptEnabled(true);
+                webView.loadUrl(url);
+                webView.setWebViewClient(new WebViewClient() {
+                    @Override
+                    public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                        view.loadUrl(url);
+                        return true;
+                    }
+                });
+                webView.setVisibility(View.VISIBLE);
+            }
         });
 
     }
