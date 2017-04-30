@@ -10,6 +10,6 @@ public class Net1414080903137fFifthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Net1414080903137fifth);
+        setContentView(R.layout.net1414080903137fifth);
     }
 }
