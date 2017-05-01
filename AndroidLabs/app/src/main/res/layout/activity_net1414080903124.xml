@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_net1414080903124"
     android:layout_width="match_parent"
@@ -8,10 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.homworks.net1414080903124.Net1414080903124Activity">
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903124.Net1414080903124Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
+  <Button
+    android:text="余额查询"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/button1"
+    android:onClick="click1"/>
+
+    <Button
+        android:text="转账"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:id="@+id/button2"
+        android:onClick="click2"/>
+
+    <Button
+        android:text="取款"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:onClick="click3"/>
+
+</LinearLayout>
+
+
