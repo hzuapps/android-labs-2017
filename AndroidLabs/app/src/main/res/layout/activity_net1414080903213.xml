@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/img_activity">
+    android:layout_height="match_parent">
 
     <Button
         android:text="我的日程安排"
@@ -13,8 +12,7 @@
         android:elevation="0dp"
         style="@android:style/Widget.Button"
         android:textColorLink="@android:color/holo_blue_light"
-        android:layout_weight="0.38"
-        />
+        android:layout_weight="0.38" />
 
     <Button
         android:text="日历"

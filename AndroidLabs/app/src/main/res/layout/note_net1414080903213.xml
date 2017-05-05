@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/img_note">
+    android:layout_height="match_parent">
 
     <EditText
         android:layout_width="wrap_content"
@@ -11,6 +10,5 @@
         android:id="@+id/editText3"
         android:layout_weight="1"
         android:textSize="18dp"
-        android:hint="点击开始做笔记"
-        style="@android:style/Widget.DeviceDefault.EditText" />
+        android:hint="开始做笔记" />
 </LinearLayout>
