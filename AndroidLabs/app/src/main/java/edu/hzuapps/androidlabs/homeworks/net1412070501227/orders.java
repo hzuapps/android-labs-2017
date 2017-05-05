@@ -4,7 +4,7 @@ package edu.hzuapps.androidlabs.homeworks.net1412070501227;
  * 一个订单类，定义的变量均为订单的内容
  */
 
-public class orders {
+public class Orders {
      private int id;
      public String price,standard;
      public String sendname,senderphone,sendaddress;

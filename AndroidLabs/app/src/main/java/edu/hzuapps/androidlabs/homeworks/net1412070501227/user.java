@@ -3,7 +3,7 @@ package edu.hzuapps.androidlabs.homeworks.net1412070501227;
 /**
  * 一个user类 ，定义的变量均为用户信息
  */
-public class user {
+public class User {
     private String username,password;
     private String phone,Email;
     public String getUsername() {
