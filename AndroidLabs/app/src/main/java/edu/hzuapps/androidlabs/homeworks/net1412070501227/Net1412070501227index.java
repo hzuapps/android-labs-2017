@@ -8,12 +8,12 @@ import android.widget.Button;
 
 import edu.hzuapps.androidlabs.R;
 
-public class index_net1412070501227 extends AppCompatActivity {
+public class Net1412070501227index extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_index_net1412070501227);
+        setContentView(R.layout.activity_net1412070501227_index);
 
         Button backBtn=(Button) findViewById(R.id.btn_login);
         backBtn.setOnClickListener(new View.OnClickListener(){
@@ -21,7 +21,7 @@ public class index_net1412070501227 extends AppCompatActivity {
                 public void onClick(View v){
 
             Intent intent = new
-                    Intent(index_net1412070501227.this, login_net1412070501227.class);
+                    Intent(Net1412070501227index.this, Net1412070501227login.class);
             startActivity(intent);
         }
         });

@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.homeworks.net1412070501227.index_net1412070501227">
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1412070501227.Net1412070501227index">
 
     <Button
         android:text="首页"
