@@ -6,6 +6,23 @@
     android:gravity="center"
     tools:context=".MainActivity" >
 
+    <ImageView
+        android:id="@+id/pet_imgv"
+        android:layout_width="163dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/baby" />
+
+    <TextView
+        android:id="@+id/pet_dialog_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="这是一个图片案例" />
 
     <TableLayout
         android:layout_width="fill_parent"
