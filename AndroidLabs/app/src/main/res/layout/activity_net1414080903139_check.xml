@@ -4,7 +4,7 @@
     android:id="@+id/activity_net1414080903139_check"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.hzuapps.androidlabs.net1414080903139.Net1414080903139CheckActivity">
+    tools:context="edu.hzuapps.andridlabs.homeworks.net1414080903139.Net1414080903139CheckActivity">
 
     <ListView
         android:layout_width="match_parent"

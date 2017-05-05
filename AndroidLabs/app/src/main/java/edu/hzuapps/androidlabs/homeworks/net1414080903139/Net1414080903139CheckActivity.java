@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.net1414080903139;
+package edu.hzuapps.andridlabs.homeworks.net1414080903139;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,6 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.hzuapps.andridlabs.homeworks.net1414080903139.MySQLiteHelper;
 import edu.hzuapps.myapplication.R;
 
 public class Net1414080903139CheckActivity extends AppCompatActivity {
