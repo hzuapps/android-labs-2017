@@ -19,7 +19,7 @@ public class Net1414080903104lookActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lookactivity_net1414080903104);
-        
+        /*
         try {
 			U=Visit.Querycard();
 		} catch (Exception e) {
@@ -29,6 +29,8 @@ public class Net1414080903104lookActivity extends ActionBarActivity {
 		}//利用Visit对象执行方法访问数据库内所有卡牌的id、name、level数据；
         //利用对象U将上述访问得到的数据全部利用getXXX方法取出；
         //将获得的数据显示出来。(待编写代码)
+         * 
+         */
     }
     
 }

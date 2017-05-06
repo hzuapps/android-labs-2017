@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+
 import java.util.*;
 
 
@@ -24,7 +26,8 @@ public class Net1414080903104extractActivity extends ActionBarActivity {
         setContentView(R.layout.extractactivity_net1414080903104);
         
         num=randomnum();
-        
+        System.out.print(num);
+        /*
         try {
 			U=Visit.findonecard(num);
 		} catch (Exception e) {
@@ -32,9 +35,34 @@ public class Net1414080903104extractActivity extends ActionBarActivity {
 			e.printStackTrace();
 			Log.e("android", "fail to connect!"+"  "+e.getMessage());
 		}//将num利用Visitdatabases类（即上述创建的对象  V ）封装起来，并访问到数据库中相应的数据；
-        //将对象Visit返回的类型赋值给对象U；
+        //将对象Visit返回的类型赋值给对象U；* 
+         */
         //这时候对象U可以利用getXXX方法获取到数据库内的数据；
+        TextView textView2_1 = (TextView)findViewById(R.id.textView2_1);
+        TextView textView3_1 = (TextView)findViewById(R.id.textView3_1);
+        TextView textView4_1 = (TextView)findViewById(R.id.textView4_1);
+        TextView textView5_1 = (TextView)findViewById(R.id.textView5_1);
+        TextView textView6_1 = (TextView)findViewById(R.id.textView6_1);
+        TextView textView7_1 = (TextView)findViewById(R.id.textView7_1);
+        TextView textView8_1 = (TextView)findViewById(R.id.textView8_1);
+        textView2_1.setText("1");
+        textView3_1.setText("库丘林Alter");
+        textView4_1.setText("SSR");
+        textView5_1.setText("凯尔特神话");
+        textView6_1.setText("9999");
+        textView7_1.setText("9999");
+        textView8_1.setText("9999");
+        //没办法从封装类读取出来
+        /*textView3_1.setText(U.getName());
+        textView4_1.setText(U.getLevel());
+        textView5_1.setText(U.getBackground());
+        textView6_1.setText(U.getStrength());
+        textView7_1.setText(U.getDefensive());
+        textView8_1.setText(U.getHp());
+        * 
+        */
         //将获得的数据显示出来(待编写代码)
+         
     }
 	
 	public int randomnum(){//定义一个在0-9之间获得随机生成数的方法
