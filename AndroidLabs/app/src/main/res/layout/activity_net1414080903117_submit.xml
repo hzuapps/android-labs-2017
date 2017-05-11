@@ -25,7 +25,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/dianfei"
             android:textSize="18sp"/>
         <TextView
             android:layout_marginRight="10dp"
@@ -54,7 +53,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/shuifei"
             android:textSize="18sp"/>
         <TextView
             android:layout_marginRight="10dp"
