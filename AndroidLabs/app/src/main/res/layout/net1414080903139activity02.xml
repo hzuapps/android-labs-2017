@@ -57,4 +57,9 @@
         android:layout_below="@+id/radioGroup"
         android:layout_marginTop="20dp"
         android:text="提交用户信息" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/brithday"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>
