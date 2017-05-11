@@ -4,9 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-	<!--用户登录界面-->
+	<!--通过login_button_bg.xml给按钮设置背景-->
     <Button
         android:id="@+id/login"
+        android:background="@drawable/net1414080903110_login_button_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -16,20 +17,24 @@
         android:layout_below="@+id/password"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
+		
+   <!--给用户名输入框添加图片-->
     <EditText
         android:id="@+id/password"
         android:layout_marginTop="22dp"
+        android:drawableLeft="@drawable/password"
         android:hint="输入密码"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/username"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
+		
+  <!--给密码输入框添加图片-->
     <EditText
         android:id="@+id/username"
         android:layout_marginTop="102dp"
+        android:drawableLeft="@drawable/user"
         android:hint="输入用户名"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
