@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903202.Net1414080903202Navigation"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_width="384dp"
+        android:layout_height="48dp"
+        android:text="财务管理系统"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:background="#00d000"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="1dp" />
+    <Button
+        android:id="@+id/manage"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="财务管理"
+        android:textSize="20dp"
+        android:onClick="click"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="账单查看"
+        android:textSize="20dp"
+        android:onClick="click"
+        tools:layout_editor_absoluteY="202dp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903202.Net1414080903202manage">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="406dp"
+        android:layout_height="44dp"
+        android:text="财务管理"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:background="#00d000"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_marginRight="-11dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="财政收入"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:onClick="click"
+        tools:layout_editor_absoluteY="127dp"
+        tools:layout_editor_absoluteX="117dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="财政支出"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:onClick="click"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="220dp" />
+</android.support.constraint.ConstraintLayout>
