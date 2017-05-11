@@ -10,53 +10,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903222.Net1414080903222Activity">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="32dp"
-        android:text="Recording"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/textView1"
+    <LinearLayout
+        android:background="@drawable/record_microphone_bj1414080903222"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/presence_audio_online" />
+        android:layout_marginTop="55dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/iv_recording_icon"
+            android:src="@drawable/record_microphone1414080903222" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:id="@+id/tv_recording_time"
+            android:layout_width="114dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="00:00" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/Astart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="67dp"
-        android:layout_toLeftOf="@+id/imageView1"
-        android:text="start" />
+        android:text="start"
+        android:layout_marginEnd="19dp"
+        android:layout_above="@+id/Aplay"
+        android:layout_toStartOf="@+id/Aplay"
+        android:layout_marginBottom="34dp" />
 
     <Button
         android:id="@+id/Astop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:text="stop"
         android:layout_alignBaseline="@+id/Astart"
         android:layout_alignBottom="@+id/Astart"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginRight="40dp"
-        android:text="stop" />
+        android:layout_toEndOf="@+id/Aplay"
+        android:layout_marginStart="19dp" />
 
     <Button
         android:id="@+id/Aplay"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Astop"
-        android:layout_centerHorizontal="true"
-        android:text="play" />
+        android:text="play"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
