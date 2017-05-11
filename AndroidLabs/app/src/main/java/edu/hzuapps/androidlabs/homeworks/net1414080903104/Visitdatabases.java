@@ -2,7 +2,8 @@ package edu.hzuapps.androidlabs.homeworks.net1414080903104;
 /*
  * 实现封装基本的数据库操作的类
  * 代码参考javaweb应用开发教材中“数据库访问javabean的设计”
- * (待测)
+ * (未测试成功，待修改)
+ * 注意Accessdata对象
  */
 import java.sql.*;
 import java.util.*;

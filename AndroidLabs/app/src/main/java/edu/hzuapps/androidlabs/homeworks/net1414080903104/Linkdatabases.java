@@ -2,7 +2,7 @@ package edu.hzuapps.androidlabs.homeworks.net1414080903104;
 /*
  *实现数据库连接和释放的类 
  *代码参考javaweb应用开发教材中“数据库访问javabean的设计”
- *（待测）
+ *（未测试成功，待修改）
  */
 import java.sql.Connection;
 import java.sql.DriverManager;

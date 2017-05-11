@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:stretchColumns="2"
+    android:background="@drawable/two_net1414080903104"
      >
     
     <TextView
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:textColor="#FF4500"
         android:textSize="25sp"
         android:text="今日卡牌池：" />
     <TableRow>
@@ -19,6 +21,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_column="0"
+        android:textColor="#FF4500"
         android:textSize="20sp"
         android:text="id:" />
         <TextView
@@ -26,6 +29,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_column="1"
+        android:textColor="#FF4500"
         android:textSize="20sp"
         android:text="name:" />
         <TextView
@@ -33,6 +37,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_column="2"
+        android:textColor="#FF4500"
         android:textSize="20sp"
         android:text="level:" />
     </TableRow>
