@@ -15,15 +15,15 @@ public class Net1414080903124Activity extends AppCompatActivity {
         setContentView(R.layout.activity_net1414080903124);
     }
     public void click1(View view) {
-        Intent intent = new Intent(this, Activity02.class);
+        Intent intent = new Intent(this, Net1414080903124queryActivity.class);
         startActivity(intent);
     }
     public void click2(View view) {
-        Intent intent = new Intent(this, Activity03.class);
+        Intent intent = new Intent(this, Net1414080903124transferActivity.class);
         startActivity(intent);
     }
     public void click3(View view) {
-        Intent intent = new Intent(this, Activity04.class);
+        Intent intent = new Intent(this, Net1414080903124drawActivity.class);
         startActivity(intent);
     }
 }
