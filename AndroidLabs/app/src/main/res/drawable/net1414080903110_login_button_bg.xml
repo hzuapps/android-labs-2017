@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"  android:drawable="@drawable/btn_style_pressed"></item> <!--按钮点击之后的效果图-->
+    <item android:drawable="@drawable/btn_style_normal"></item> <!--未点击的效果图-->
+</selector>
+  
