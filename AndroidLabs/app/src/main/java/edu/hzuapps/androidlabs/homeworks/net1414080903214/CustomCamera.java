@@ -13,23 +13,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-import android.app.Activity;
-
-import android.content.Intent;
-import android.graphics.ImageFormat;
-import android.hardware.Camera;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.view.View;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-
-import static android.R.attr.data;
 
 /**
  * Created by Administrator on 2017/4/29.
@@ -64,7 +48,7 @@ public class CustomCamera  extends Activity implements SurfaceHolder.Callback{
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.previewlayout);
+        setContentView(R.layout.previewlayout1414080903214);
         mpreview=(SurfaceView) findViewById(R.id.preview);
         mHolder=mpreview.getHolder();
         mHolder.addCallback(this);
