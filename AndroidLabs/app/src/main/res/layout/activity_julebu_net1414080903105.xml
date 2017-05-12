@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903105.JulebuNet1414080903105Activity">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联赛"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="39dp"
+        android:layout_height="29dp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="俱乐部"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="41dp"
+        android:layout_height="29dp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="名称"
+        tools:layout_editor_absoluteY="67dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="胜"
+        tools:layout_editor_absoluteY="67dp"
+        tools:layout_editor_absoluteX="66dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="平"
+        tools:layout_editor_absoluteY="67dp"
+        tools:layout_editor_absoluteX="105dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="负"
+        tools:layout_editor_absoluteY="67dp"
+        tools:layout_editor_absoluteX="147dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进球数"
+        tools:layout_editor_absoluteY="67dp"
+        tools:layout_editor_absoluteX="185dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="失球数"
+        tools:layout_editor_absoluteY="67dp"
+        tools:layout_editor_absoluteX="247dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="净胜球"
+        tools:layout_editor_absoluteY="67dp"
+        tools:layout_editor_absoluteX="317dp" />
+
+
+</android.support.constraint.ConstraintLayout>

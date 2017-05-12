@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903105.SaichengNet1414080903105Activity">
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="联赛"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="俱乐部"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="173dp" />
+
+    <Spinner
+        android:id="@+id/spinner6"
+        android:layout_width="36dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="66dp" />
+
+    <Spinner
+        android:id="@+id/spinner7"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="248dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="轮次"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteY="89dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Spinner
+        android:id="@+id/spinner8"
+        android:layout_width="36dp"
+        android:layout_height="29dp"
+        tools:layout_editor_absoluteY="89dp"
+        tools:layout_editor_absoluteX="66dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="140dp"
+        android:layout_height="34dp"
+        android:text="主"
+        android:textColor="#ff0000"
+        android:background="#c0c0c0"
+        tools:layout_editor_absoluteY="175dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="140dp"
+        android:layout_height="34dp"
+        android:text="客"
+        android:textColor="#0000ff"
+        android:background="#c0c0c0"
+        tools:layout_editor_absoluteY="175dp"
+        tools:layout_editor_absoluteX="214dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间"
+        android:background="#ffffff"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+
+</android.support.constraint.ConstraintLayout>

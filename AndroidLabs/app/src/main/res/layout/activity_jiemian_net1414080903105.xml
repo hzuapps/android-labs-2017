@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903105.JiemianNet1414080903105Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="53dp"
+        android:layout_height="32dp"
+        android:text="联赛"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="43dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteY="80dp"
+        tools:layout_editor_absoluteX="69dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="俱乐部"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="46dp"
+        android:layout_height="31dp"
+        tools:layout_editor_absoluteY="80dp"
+        tools:layout_editor_absoluteX="198dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="球员"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        tools:layout_editor_absoluteY="80dp"
+        tools:layout_editor_absoluteX="299dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <ImageView
+    android:layout_width="123dp"
+    android:layout_height="56dp"
+        android:src="@drawable/英超"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="年龄"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="身高"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="体重"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="国籍"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="号码"
+        tools:layout_editor_absoluteX="299dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+</android.support.constraint.ConstraintLayout>

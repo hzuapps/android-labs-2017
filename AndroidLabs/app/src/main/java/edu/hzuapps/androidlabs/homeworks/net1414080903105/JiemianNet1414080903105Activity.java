@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import edu.hzuapps.androidlabs.R;
 
-public class Net1414080903105julebuActivity extends AppCompatActivity {
+public class JiemianNet1414080903105Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_net1414080903105julebu);
+        setContentView(R.layout.activity_jiemian_net1414080903105);
     }
 }
