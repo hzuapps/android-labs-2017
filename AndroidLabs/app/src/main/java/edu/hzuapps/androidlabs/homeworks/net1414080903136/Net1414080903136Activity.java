@@ -20,6 +20,7 @@ public class Net1414080903136Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903136);
+        getWindow().setBackgroundDrawableResource(R.drawable.net1414080903136);
         webView= (WebView) findViewById(R.id.webview);
         et1= (EditText) findViewById(R.id.et1);
         et2= (EditText) findViewById(R.id.et2);
