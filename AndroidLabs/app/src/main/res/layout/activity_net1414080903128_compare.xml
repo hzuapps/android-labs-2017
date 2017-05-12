@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/游戏界面"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903128.Net1414080903128CompareActivity">
 
     <LinearLayout
@@ -16,19 +17,16 @@
         tools:layout_editor_absoluteY="116dp"
         android:id="@+id/linearLayout">
 
-    <EditText
-        android:id="@+id/inputString"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="99dp"
-        tools:layout_editor_absoluteX="46dp" />
-
-    <TextView
+        <TextView
         android:id="@+id/outputString"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:text="outputString"
         tools:layout_editor_absoluteY="48dp"
         tools:layout_editor_absoluteX="0dp" />
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/guess"
@@ -36,10 +34,27 @@
         android:layout_height="wrap_content"
         android:text="确定"
         tools:layout_editor_absoluteY="198dp"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="-16dp"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp" />
 
-
-    </LinearLayout>
+    <EditText
+        android:id="@+id/inputString"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="输入你要猜的数字"
+        tools:layout_editor_absoluteY="99dp"
+        tools:layout_editor_absoluteX="46dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginStart="76dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignLeft="@+id/guess"
+        android:layout_alignStart="@+id/guess"
+        android:layout_marginBottom="12dp" />
 
 
 </RelativeLayout>
