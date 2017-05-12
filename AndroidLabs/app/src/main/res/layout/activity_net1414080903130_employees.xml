@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/enployee">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -155,7 +156,7 @@
         android:text="员工信息"
         android:textSize="28dp"
         android:layout_marginStart="25dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/employees_input"
