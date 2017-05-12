@@ -3,75 +3,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:background="#22CDCDC1"
     android:orientation="vertical">
 
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/net1414080903117"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:text="宿舍水电费"/>
+
+
     <LinearLayout
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"
-        android:background="#ffffff">
-
+        android:orientation="horizontal">
         <TextView
-            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="电    费： "/>
-
+            android:text="账 号："/>
         <EditText
-            android:gravity="right"
+            android:id="@+id/et_main_username"
+            android:textSize="20sp"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:id="@+id/dianfei"
-            android:textSize="18sp"/>
-        <TextView
-            android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="元"/>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:padding="10dp"
-        android:background="#ffffff">
-
+        android:orientation="horizontal">
         <TextView
-            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="水    费： "/>
+            android:text="密 码："/>
 
         <EditText
-            android:gravity="right"
+            android:textSize="20sp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/shuifei"
-            android:textSize="18sp"/>
-        <TextView
-            android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="元"/>
+            android:id="@+id/et_main_password" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/bt_login"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
-        android:text="交      费"
+        android:text="登录"
         android:textSize="18sp"
         android:background="@color/colorPrimary"/>
+
+
+
+
+
 </LinearLayout>
