@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/title_net1414080903219">
+
+
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="单词学习"
+        android:textSize="30sp"
+        android:layout_weight="0.01" />
+
+
+
+</LinearLayout>
