@@ -72,6 +72,21 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:src="@drawable/welcome"/>
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="welcome login"/>
+
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
