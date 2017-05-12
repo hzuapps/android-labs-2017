@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/tuyi_net1414080903219"
+android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单词学习"
+        />
+
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单词听写"
+        />
+
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="错词"
+        />
+
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已学习单词"
+        />
+
+    <Button
+        android:id="@+id/button_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退出"
+        />
+    
+
+    </LinearLayout>

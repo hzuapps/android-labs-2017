@@ -1,5 +1,0 @@
-create table Word(
-id integer primary key autoincrement,
-word text,
-mean text,
-status text)
