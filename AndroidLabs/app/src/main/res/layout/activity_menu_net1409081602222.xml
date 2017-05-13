@@ -8,10 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:textSize="20sp"
+        android:textSize="21sp"
         android:textColor="#ffffff"
         android:background="@color/colorPrimary"
-        android:text="申请"/>
+        android:text="申请"
+        android:id="@+id/textView2" />
 
     <Button
 

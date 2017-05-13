@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
         android:text="申      请"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:background="@color/colorPrimary"/>
 
 </LinearLayout>

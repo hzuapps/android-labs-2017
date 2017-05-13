@@ -70,8 +70,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
-        android:text="登录"
-        android:textSize="18sp"
+        android:text="登       录"
+        android:textSize="20sp"
         android:background="@color/colorPrimary"/>
 
 
