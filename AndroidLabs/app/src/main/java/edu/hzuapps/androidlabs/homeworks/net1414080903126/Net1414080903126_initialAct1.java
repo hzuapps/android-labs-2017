@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import edu.hzuapps.androidlabs.R;
 
 public class Net1414080903126_initialAct1 extends AppCompatActivity {
@@ -21,6 +20,7 @@ public class Net1414080903126_initialAct1 extends AppCompatActivity {
         btn_2=(Button) findViewById(R.id.btn_2);
         btn_3=(Button) findViewById(R.id.btn_3);
     }
+
     public void click(View view){
         switch (view.getId()){
             case R.id.btn_2:
