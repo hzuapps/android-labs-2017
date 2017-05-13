@@ -8,19 +8,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class Net1414080903212FirstFragment extends Fragment {
+public class Net1414080903212SecondFragment extends Fragment {
     private String context;
     private TextView mTextView;
 
-    public Net1414080903212FirstFragment(String context){
+    public Net1414080903212SecondFragment(String context){
         this.context = context;
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.first_fragment1414080903212,container,false);
-        mTextView = (TextView)view.findViewById(R.id.fra_assign);
+        View view = inflater.inflate(R.layout.second_fragment1414080903212,container,false);
+        mTextView = (TextView)view.findViewById(R.id.fra_mark);
         mTextView.setText(context);
         return view;
     }

@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textSize="18sp"
+            android:textSize="26sp"
             android:textColor="@android:color/darker_gray"
             android:text= "作业提交系统" />
 
@@ -33,28 +33,28 @@
         android:layout_alignParentBottom="true">
 
         <TextView
-            android:id="@+id/txt_assign"
+            android:id="@+id/navigation_assign"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tab_homework_bg"
+            android:background="@drawable/tab_hw_bg1414080903212"
             android:drawablePadding="3dp"
-            android:drawableTop="@drawable/tab_homework_assignment"
+            android:drawableTop="@drawable/tab_hw_assignment1414080903212"
             android:gravity="center"
-            android:textColor="@drawable/tab_homework_assignment_text"
+            android:textColor="@drawable/tab_text1414080903212"
             android:text="Assignment"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/txt_mark"
+            android:id="@+id/navigation_mark"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tab_homework_bg"
+            android:background="@drawable/tab_hw_bg1414080903212"
             android:drawablePadding="3dp"
-            android:drawableTop="@drawable/tab_homework_marking"
+            android:drawableTop="@drawable/tab_hw_marking1414080903212"
             android:gravity="center"
-            android:textColor="@drawable/tab_homework_marking_text"
+            android:textColor="@drawable/tab_text1414080903212"
             android:text="Marking"
             android:textSize="12sp" />
 
