@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#33BABABA"
-    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903133.Net1414080903133_Delete">
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903133.Net1414080903133DeleteActivity">
 
     <LinearLayout
         android:background="#ffffff"
@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:text="学 号: "/>
         <EditText
+            android:id="@+id/et_delete_id"
             android:layout_marginLeft="5dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -30,7 +31,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/bt_admin_delete"
+        android:id="@+id/bt_delete"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
