@@ -1,17 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_net1414080903132"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.homework.net1414080903132.Net1414080903132Activity">
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:background="#00005500" >
+            <Button
+                android:id="@+id/start2"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="困难"
+                android:textColor="#ff8888ff"
+                android:textSize="24sp"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/start1"
+                android:layout_marginBottom="16dp">
+            </Button>
+
+        <Button
+                android:id="@+id/start"
+                android:layout_width="160dp"
+                android:gravity="center_horizontal"
+                android:text="简单"
+                android:textColor="#ff8888ff"
+                android:textSize="24sp"
+                android:visibility="visible"
+                android:layout_height="50dp"
+            android:layout_marginBottom="22dp"
+            android:layout_above="@+id/start1"
+            android:layout_alignStart="@+id/start1">
+            </Button>
+
+        <Button
+            android:id="@+id/start1"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:text="普通"
+            android:textColor="#ff8888ff"
+            android:textSize="24sp"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/start2"
+            android:layout_centerHorizontal="true">
+        </Button>
+    </RelativeLayout>
+
+</FrameLayout>
