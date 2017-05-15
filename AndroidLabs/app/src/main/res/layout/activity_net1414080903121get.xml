@@ -4,6 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/my_tu"/>
+
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
