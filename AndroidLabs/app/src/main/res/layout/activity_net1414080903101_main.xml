@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#22000000"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="套            路" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="1.陈式太极拳老架一路"/>
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="2.陈式太极拳老架二路"/>
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="3.陈式太极拳新架一路"/>
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="4.陈式太极拳新架二路"/>
+    <TextView
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="武 术 器 械" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="1.陈式太极单剑"/>
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="2.陈式春秋大刀"/>
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="3.陈式太极枪"/>
+
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="15dp"
+        android:text="4.陈式太极单刀"/>
+</LinearLayout>
