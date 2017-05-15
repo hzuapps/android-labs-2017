@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="plantes">
+        <item>1-2节</item>
+        <item>3-4节</item>
+        <item>5-6节</item>
+        <item>7-8节</item>
+        <item>9-11节</item>
+    </string-array>
+</resources>
