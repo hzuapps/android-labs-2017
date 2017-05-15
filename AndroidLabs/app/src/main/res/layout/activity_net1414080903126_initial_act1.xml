@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tbg"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903126.Net1414080903126_initialAct1">
 
 
     <Button
         android:id="@+id/btn_1"
+        android:background="@drawable/c"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:text="增添一笔账目"
@@ -27,6 +29,7 @@
 
     <Button
         android:id="@+id/btn_2"
+        android:background="@drawable/c"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
@@ -43,6 +46,7 @@
 
     <Button
         android:id="@+id/btn_3"
+        android:background="@drawable/c"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginBottom="8dp"
@@ -56,6 +60,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent" />
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>
