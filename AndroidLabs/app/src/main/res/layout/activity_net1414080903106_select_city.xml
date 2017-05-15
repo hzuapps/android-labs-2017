@@ -5,31 +5,33 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#002F93">
+        android:background="#002f93">
         <ImageButton
             android:id="@+id/btn_selectCity_back"
-        android:layout_width="wrap_content"
-        android:layout_height="45.0dp"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="10.0dp"
-        android:background="#002F93"
-        android:src="@drawable/back"/>
+            android:layout_width="wrap_content"
+            android:layout_height="45.0dp"
+            android:layout_marginLeft="10.0dp"
+            android:background="#002F93"
+            android:src="@drawable/back"/>
+        <ImageButton
+            android:id="@+id/btn_selectCity_search"
+            android:layout_width="wrap_content"
+            android:layout_height="45.0dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10.0dp"
+            android:background="#002F93"
+            android:src="@drawable/search"
+            />
         <EditText
             android:id="@+id/et_cityName"
             android:layout_width="match_parent"
             android:layout_height="45.0dp"
             android:gravity="center_vertical"
             android:layout_toRightOf="@id/btn_selectCity_back"
-            android:text="城市名"
-            android:textSize="20.0sp" />
-        <ImageButton
-            android:id="@+id/btn_selectCity_search"
-            android:layout_width="wrap_content"
-            android:layout_height="45.0dp"
-            android:gravity="center_vertical"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10.0dp"
-            android:background="#002F93"
-            android:src="@drawable/search" />
+            android:layout_toLeftOf="@id/btn_selectCity_search"
+            android:hint="城市名"
+            android:textColorHint="#D3D3D3"
+            android:textSize="20.0sp"
+            android:textColor="#FFFFFF"/>
     </RelativeLayout>
 </RelativeLayout>

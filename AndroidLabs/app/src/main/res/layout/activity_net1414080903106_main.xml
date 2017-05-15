@@ -3,11 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"/>
     <RelativeLayout
         android:id="@+id/title_relative"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#002F93">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/title_name"
             android:layout_width="match_parent"
@@ -40,20 +44,26 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30.0dp"
-            android:textSize="25.0sp"/>
+            android:text="惠州"
+            android:textColor="#FFFFFF"
+            android:textSize="50.0sp"/>
         <TextView
             android:id="@+id/weather_temperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/wether_cityName"
+            android:text="25℃"
+            android:textColor="#FFFFFF"
             android:textSize="25.0sp"/>
         <TextView
-            android:id="@+id/weather_State"
+            android:id="@+id/weather_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/weather_temperature"
+            android:text="阵雨"
+            android:textColor="#FFFFFF"
             android:textSize="25.0sp"/>
     </RelativeLayout>
 </RelativeLayout>
