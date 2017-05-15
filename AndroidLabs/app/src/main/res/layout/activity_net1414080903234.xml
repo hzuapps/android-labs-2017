@@ -45,7 +45,7 @@
             android:gravity="center"
             android:textColor="@drawable/text_select_net1414080903234"/>
         <TextView
-            android:text="更多"
+            android:text="我的"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/text_setting"

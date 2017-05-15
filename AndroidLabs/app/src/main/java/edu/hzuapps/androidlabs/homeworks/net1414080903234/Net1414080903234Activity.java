@@ -16,7 +16,10 @@ public class Net1414080903234Activity extends AppCompatActivity implements View.
     private TextView tabsetting;
 
     private FrameLayout ly_content;
-    private Net1414080903234_M f1,f2,f3,f4;
+    private Net1414080903234_M f1;
+    private Net1414080903234_I f2;
+    private Net1414080903234_O f3;
+    private Net1414080903234_S f4;
     private android.app.FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +71,7 @@ public class Net1414080903234Activity extends AppCompatActivity implements View.
                 selected();
                 tabmoney.setSelected(true);
                 if (f1 == null) {
-                    f1 = new Net1414080903234_M().newInstance("总额");
+                    f1 = new Net1414080903234_M().newInstance("1");
                     transaction.add(R.id.ly_content, f1);
                 } else {
                     transaction.show(f1);
@@ -78,7 +81,7 @@ public class Net1414080903234Activity extends AppCompatActivity implements View.
                 selected();
                 tabincome.setSelected(true);
                 if (f2 == null) {
-                    f2 = new Net1414080903234_M().newInstance("收入");
+                    f2 = new Net1414080903234_I().newInstance("2");
                     transaction.add(R.id.ly_content, f2);
                 } else {
                     transaction.show(f2);
@@ -88,7 +91,7 @@ public class Net1414080903234Activity extends AppCompatActivity implements View.
                 selected();
                 taboutlay.setSelected(true);
                 if (f3 == null) {
-                    f3 = new Net1414080903234_M().newInstance("支出");
+                    f3 = new Net1414080903234_O().newInstance("3");
                     transaction.add(R.id.ly_content, f3);
                 } else {
                     transaction.show(f3);
@@ -98,7 +101,7 @@ public class Net1414080903234Activity extends AppCompatActivity implements View.
                 selected();
                 tabsetting.setSelected(true);
                 if (f4 == null) {
-                    f4 = new Net1414080903234_M().newInstance("设置");
+                    f4 = new Net1414080903234_S().newInstance("4");
                     transaction.add(R.id.ly_content, f4);
                 } else {
                     transaction.show(f4);

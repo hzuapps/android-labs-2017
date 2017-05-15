@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="总额"
+        android:textColor="@color/orange"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:id="@+id/tmoney"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-- -- --"
+        android:textColor="@color/orange"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tmview"/>
+    <View
+        android:id="@+id/div_fist"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/dimgray"
+        android:layout_above="@id/ly_tab_bar"
+        android:layout_marginTop="36dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="总支出"
+        android:textColor="@color/orange"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:id="@+id/toutlay"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-- -- --"
+        android:textColor="@color/orange"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/toview"/>
+    <View
+        android:id="@+id/div_second"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/dimgray"
+        android:layout_above="@id/ly_tab_bar"
+        android:layout_marginTop="36dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="总收入"
+        android:textColor="@color/orange"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:id="@+id/tincome"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-- -- --"
+        android:textColor="@color/orange"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tiview"/>
+
+</LinearLayout>
+
