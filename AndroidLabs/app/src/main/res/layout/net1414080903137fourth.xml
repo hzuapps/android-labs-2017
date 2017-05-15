@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/s"
     tools:context="edu.hzuapps.androidlabs.homworks.net1414080903137.Net1414080903137FourthActivity">
 <TableLayout>
 
@@ -22,7 +23,7 @@
         <EditText
             android:id="@+id/EditText1"
             android:layout_height="wrap_content"
-            android:hint="编号" />
+            android:hint="请输入要添加的商品编号" />
     </TableRow>
 
     <TableRow>
@@ -34,7 +35,7 @@
         <EditText
             android:id="@+id/EditText2"
             android:layout_height="wrap_content"
-            android:hint="名称"/>
+            android:hint="请输入要添加的商品名称"/>
     </TableRow>
     <TableRow>
 
@@ -45,7 +46,7 @@
         <EditText
             android:id="@+id/EditText3"
             android:layout_height="wrap_content"
-            android:hint="数量"/>
+            android:hint="请输入要添加的商品数量"/>
     </TableRow>
     <TableRow>
     <Button

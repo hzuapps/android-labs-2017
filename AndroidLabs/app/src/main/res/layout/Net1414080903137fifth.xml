@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/s"
     tools:context="edu.hzuapps.androidlabs.homworks.net1414080903137.Net1414080903137fFifthActivity">
 <EditText
     android:layout_width="wrap_content"

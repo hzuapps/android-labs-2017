@@ -4,33 +4,24 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/a"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".homworks.net1414080903137.Net1414080903137Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".homworks.net1414080903137.Net1414080903137SecondActivity" />
         <activity
-            android:name=".BackActivity"
-            android:label="@string/title_activity_back">
-        </activity>
-        <activity
-            android:name=".examples.ViewBasicActivity"
-            android:label="@string/title_activity_view_basic">
-        </activity>
-        <activity
-            android:name=".examples.ActivityBasicActivity"
-            android:label="@string/title_activity_activity_basic">
-        </activity>
-        <activity
-            android:name=".examples.ActivityBasic2Activity"
-            android:label="@string/title_activity_activity_basic2">
-        </activity>
+            android:name=".homworks.net1414080903137.Net1414080903137ThirdActivity"
+            android:label="@string/title_activity_thrid"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".homworks.net1414080903137.Net1414080903137FourthActivity" />
+        <activity android:name=".homworks.net1414080903137.Net1414080903137fFifthActivity"></activity>
     </application>
 
 </manifest>
