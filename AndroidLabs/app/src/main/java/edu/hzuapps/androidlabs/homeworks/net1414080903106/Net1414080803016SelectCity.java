@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import edu.hzuapps.androidlabs.R;
 
@@ -12,14 +13,14 @@ import edu.hzuapps.androidlabs.R;
  */
 
 public class Net1414080803016SelectCity extends Activity implements View.OnClickListener {
-    private Button backBtn;
+    private ImageButton backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903106_select_city);
 
         //绑定“返回”按钮
-        backBtn=(Button) findViewById(R.id.btn_selectCity_back);
+        backBtn=(ImageButton) findViewById(R.id.btn_selectCity_back);
         backBtn.setOnClickListener(this);
     }
 
