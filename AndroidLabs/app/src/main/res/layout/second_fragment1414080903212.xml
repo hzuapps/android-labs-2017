@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:id="@+id/fra_mark"
+        android:textSize="21sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:text="学生学号："
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/textView1"
+            android:textSize="21sp"
+            android:layout_gravity="left"
+            android:layout_weight="0.37" />
+
+        <EditText
+            android:layout_width="202dp"
+            android:id="@+id/textView2"
+            android:layout_gravity="right"
+            android:layout_weight="0.63"
+            android:layout_height="42dp" />
+    </LinearLayout>
+
+    <TextView
+        android:text="作业附件："
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="21sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="成绩："
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/textView5"
+            android:textSize="21sp"
+            android:layout_gravity="left"/>
+
+        <EditText
+            android:layout_width="148dp"
+            android:layout_height="42dp"
+            android:id="@+id/textView6"
+            android:layout_gravity="right"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:text="作业评语："
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textSize="21sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="142dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="在此输入作业评语..." />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <Button
+            android:text="提交"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:id="@+id/button" />
+    </LinearLayout>
+
+</LinearLayout>

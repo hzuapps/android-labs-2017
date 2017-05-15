@@ -17,7 +17,8 @@ public class Net1414080903212Activity extends AppCompatActivity implements View.
 
     private FrameLayout ly_content;
 
-    private Net1414080903212FirstFragment f1,f2;
+    private Net1414080903212FirstFragment f1;
+    private Net1414080903212SecondFragment f2;
     private FragmentManager fragmentManager;
 
     @Override
@@ -32,8 +33,8 @@ public class Net1414080903212Activity extends AppCompatActivity implements View.
     //UI组件初始化与事件绑定
     private void bindView() {
         topBar = (TextView)this.findViewById(R.id.txt_top);
-        tabAssign = (TextView)this.findViewById(R.id.txt_assign);
-        tabMark = (TextView)this.findViewById(R.id.txt_mark);
+        tabAssign = (TextView)this.findViewById(R.id.navigation_assign);
+        tabMark = (TextView)this.findViewById(R.id.navigation_mark);
         ly_content = (FrameLayout) findViewById(R.id.fragment_container);
 
         tabAssign.setOnClickListener(this);
@@ -60,22 +61,22 @@ public class Net1414080903212Activity extends AppCompatActivity implements View.
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         hideAllFragment(transaction);
         switch(v.getId()){
-            case R.id.txt_assign:
+            case R.id.navigation_assign:
                 selected();
                 tabAssign.setSelected(true);
                 if(f1==null){
-                    f1 = new Net1414080903212FirstFragment("布置作业任务Fragment");
+                    f1 = new Net1414080903212FirstFragment("");
                     transaction.add(R.id.fragment_container,f1);
                 }else{
                     transaction.show(f1);
                 }
                 break;
 
-            case R.id.txt_mark:
+            case R.id.navigation_mark:
                 selected();
                 tabMark.setSelected(true);
                 if(f2==null){
-                    f2 = new Net1414080903212FirstFragment("记录作业成绩Fragment");
+                    f2 = new Net1414080903212SecondFragment("");
                     transaction.add(R.id.fragment_container,f2);
                 }else{
                     transaction.show(f2);
