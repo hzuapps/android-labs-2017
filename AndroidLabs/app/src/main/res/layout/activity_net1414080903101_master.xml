@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_margin="30dp"
+        android:id="@+id/tv_master1"
+        android:drawableTop="@drawable/m1"
+        android:layout_width="100dp"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:text="陈式太极拳\n陈自强"/>
+
+    <TextView
+        android:layout_margin="30dp"
+        android:layout_toRightOf="@id/tv_master1"
+        android:id="@+id/tv_master2"
+        android:drawableTop="@drawable/m2"
+        android:layout_width="100dp"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:text="陈式太极拳\n陈炳"/>
+    <TextView
+        android:layout_below="@id/tv_master2"
+        android:layout_margin="30dp"
+        android:id="@+id/tv_master3"
+        android:drawableTop="@drawable/m3"
+        android:layout_width="100dp"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:text="陈式太极拳\n刘豪杰"/>
+
+
+</RelativeLayout>
