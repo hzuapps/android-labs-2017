@@ -4,6 +4,36 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/regist_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/et_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/main_logo"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="员工管理系统"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:id="@+id/regist_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,6 +42,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="22dp"
         android:orientation="horizontal"
+        android:layout_below="@id/regist_logo"
         >
 
         <TextView
