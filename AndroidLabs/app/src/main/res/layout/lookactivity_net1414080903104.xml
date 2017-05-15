@@ -21,7 +21,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_column="0"
-        android:textColor="#FF4500"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:text="id:" />
         <TextView
@@ -29,7 +29,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_column="1"
-        android:textColor="#FF4500"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:text="name:" />
         <TextView
@@ -37,7 +37,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_column="2"
-        android:textColor="#FF4500"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:text="level:" />
     </TableRow>

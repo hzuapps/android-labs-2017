@@ -1,8 +1,8 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903104;
 
 /*
- * ÊµÏÖ¡±³é¿¨¡°°´Å¥µÄÏà¹ØÊÂÇé£º
- * ´Ó10¸öidºÅÂë£¨0-9£©ÄÚËæ»úÑ¡È¡Ò»¸öºÅÂë£¬²¢¸ù¾İÕâ¸öidºÅÂë´ÓÊı¾İ¿â×ÜÌáÈ¡¸Ã¿¨ÅÆµÄËùÓĞÊı¾İ
+ * å®ç°â€æŠ½å¡â€œæŒ‰é’®çš„ç›¸å…³äº‹æƒ…ï¼š
+ * ä»10ä¸ªidå·ç ï¼ˆ0-9ï¼‰å†…éšæœºé€‰å–ä¸€ä¸ªå·ç ï¼Œå¹¶æ ¹æ®è¿™ä¸ªidå·ç ä»æ•°æ®åº“æ€»æå–è¯¥å¡ç‰Œçš„æ‰€æœ‰æ•°æ®
  */
 import edu.hzuapps.androidlabs.homeworks.net1414080903104.Visitdatabases;
 import edu.hzuapps.androidlabs.homeworks.net1414080903104.Accessdata;
@@ -17,58 +17,66 @@ import java.util.*;
 
 
 public class Net1414080903104extractActivity extends ActionBarActivity {
-    int num;//ÓÃÓÚ´æ·ÅËæ»úµÃµ½µÄÊı×Ö£¬¸ÃÊı×Ö´ú±í×Å¿¨ÅÆµÄid
-    Accessdata U=new Accessdata();//¶¨ÒåÒ»¸öAccessdata±äÁ¿ÒÔ±ãÓÃÓÚ´æ·Å´ÓÊı¾İ¿â»ñÈ¡µÃµ½µÄÄ³¿¨ÅÆÊı¾İ
-	Visitdatabases Visit=new Visitdatabases();//¶¨ÒåÒ»¸öVisitdatabases±äÁ¿ÒÔ±ãÏëÊı¾İ¿â´«ËÍÊı¾İ»òÕß´ÓÊı¾İ¿âÄÚ»ñÈ¡Êı¾İ
+    int num;//ç”¨äºå­˜æ”¾éšæœºå¾—åˆ°çš„æ•°å­—ï¼Œè¯¥æ•°å­—ä»£è¡¨ç€å¡ç‰Œçš„id
+    Accessdata U=new Accessdata();//å®šä¹‰ä¸€ä¸ªAccessdataå˜é‡ä»¥ä¾¿ç”¨äºå­˜æ”¾ä»æ•°æ®åº“è·å–å¾—åˆ°çš„æŸå¡ç‰Œæ•°æ®
+	Visitdatabases Visit=new Visitdatabases();//å®šä¹‰ä¸€ä¸ªVisitdatabaseså˜é‡ä»¥ä¾¿æƒ³æ•°æ®åº“ä¼ é€æ•°æ®æˆ–è€…ä»æ•°æ®åº“å†…è·å–æ•°æ®
     
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.extractactivity_net1414080903104);
         
         num=randomnum();
-        System.out.print(num);
-        /*
+        /*System.out.print(num);//è¿æ¥æ•°æ®åº“å¤±è´¥
+        
         try {
 			U=Visit.findonecard(num);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Log.e("android", "fail to connect!"+"  "+e.getMessage());
-		}//½«numÀûÓÃVisitdatabasesÀà£¨¼´ÉÏÊö´´½¨µÄ¶ÔÏó  V £©·â×°ÆğÀ´£¬²¢·ÃÎÊµ½Êı¾İ¿âÖĞÏàÓ¦µÄÊı¾İ£»
-        //½«¶ÔÏóVisit·µ»ØµÄÀàĞÍ¸³Öµ¸ø¶ÔÏóU£»* 
-         */
-        //ÕâÊ±ºò¶ÔÏóU¿ÉÒÔÀûÓÃgetXXX·½·¨»ñÈ¡µ½Êı¾İ¿âÄÚµÄÊı¾İ£»
+		}//å°†numåˆ©ç”¨Visitdatabasesç±»ï¼ˆå³ä¸Šè¿°åˆ›å»ºçš„å¯¹è±¡  V ï¼‰å°è£…èµ·æ¥ï¼Œå¹¶è®¿é—®åˆ°æ•°æ®åº“ä¸­ç›¸åº”çš„æ•°æ®ï¼›
+        //å°†å¯¹è±¡Visitè¿”å›çš„ç±»å‹èµ‹å€¼ç»™å¯¹è±¡Uï¼›*/
+        
+        //è¿™æ—¶å€™å¯¹è±¡Uå¯ä»¥åˆ©ç”¨getXXXæ–¹æ³•è·å–åˆ°æ•°æ®åº“å†…çš„æ•°æ®ï¼›
         TextView textView2_1 = (TextView)findViewById(R.id.textView2_1);
         TextView textView3_1 = (TextView)findViewById(R.id.textView3_1);
         TextView textView4_1 = (TextView)findViewById(R.id.textView4_1);
         TextView textView5_1 = (TextView)findViewById(R.id.textView5_1);
         TextView textView6_1 = (TextView)findViewById(R.id.textView6_1);
         TextView textView7_1 = (TextView)findViewById(R.id.textView7_1);
-        TextView textView8_1 = (TextView)findViewById(R.id.textView8_1);
-        textView2_1.setText("1");
-        textView3_1.setText("¿âÇğÁÖAlter");
-        textView4_1.setText("SSR");
-        textView5_1.setText("¿­¶ûÌØÉñ»°");
-        textView6_1.setText("9999");
-        textView7_1.setText("9999");
-        textView8_1.setText("9999");
-        //Ã»°ì·¨´Ó·â×°Àà¶ÁÈ¡³öÀ´
-        /*textView3_1.setText(U.getName());
+        TextView textView8_1 = (TextView)findViewById(R.id.textView8_1);       
+        U=shuju(num);       
+        textView2_1.setText(String.valueOf(U.getId()));
+        textView3_1.setText(U.getName());
         textView4_1.setText(U.getLevel());
         textView5_1.setText(U.getBackground());
         textView6_1.setText(U.getStrength());
         textView7_1.setText(U.getDefensive());
         textView8_1.setText(U.getHp());
-        * 
-        */
-        //½«»ñµÃµÄÊı¾İÏÔÊ¾³öÀ´(´ı±àĞ´´úÂë)
+        
+        
+        //å°†è·å¾—çš„æ•°æ®æ˜¾ç¤ºå‡ºæ¥(å¾…ç¼–å†™ä»£ç )
          
     }
 	
-	public int randomnum(){//¶¨ÒåÒ»¸öÔÚ0-9Ö®¼ä»ñµÃËæ»úÉú³ÉÊıµÄ·½·¨
+	public int randomnum(){//å®šä¹‰ä¸€ä¸ªåœ¨0-9ä¹‹é—´è·å¾—éšæœºç”Ÿæˆæ•°çš„æ–¹æ³•
 		Random random= new Random();
 		int result=random.nextInt(10);
-		return result;
+		return result+1;
+	}
+	public Accessdata shuju(int a){//ç”±äºæ•°æ®åº“è¿æ¥å‡ºç°é”™è¯¯ï¼Œæš‚æ—¶åˆ©ç”¨å‡½æ•°æ–¹æ³•æ¥å®ç°æ•°æ®å†…å®¹çš„è·å–
+		Accessdata U1 = null;
+		if(a==1){U1=new Accessdata(1,"åº“ä¸˜æ—Alter","SSR","å‡¯å°”ç‰¹ç¥è¯","9999","9999","9999");}
+		if(a==2){U1=new Accessdata(2,"äºšç‘Ÿãƒ»æ½˜å¾·æ‹‰è´¡","SR","äºšç‘Ÿç‹ä¼ è¯´","8888","8888","8888");}
+		if(a==3){U1=new Accessdata(3,"è©¹å§†æ–¯Â·è«é‡Œäºšè’‚","R","ç¦å°”æ‘©æ–¯æ¢æ¡ˆé›†ç³»åˆ—","7777","7777","7777");}
+		if(a==4){U1=new Accessdata(4,"æ¢…æ—","SSR","äºšç‘Ÿç‹ä¼ è¯´","6666","6666","6666");}
+		if(a==5){U1=new Accessdata(5,"å‰å°”ä¼½ç¾ä»€","SSR","è‹ç¾å°”æ–‡æ˜ã€å‰å°”ä¼½ç¾ä»€å™äº‹è¯—","5555","5555","5555");}
+		if(a==6){U1=new Accessdata(6,"æ©å¥‡éƒ½","R","å¤ä»£ç¾ç´¢ä¸è¾¾ç±³äºšç¥è¯","4444","4444","4444");}
+		if(a==7){U1=new Accessdata(7,"ä¼Šä¿®å¡”å°”","SR","å¤ä»£ç¾ç´¢ä¸è¾¾ç±³äºšç¥è¯","3333","3333","3333");}
+		if(a==8){U1=new Accessdata(8,"è¿ªå°”å§†å¾·ãƒ»å¥¥è¿ªçº³","R","å‡¯å°”ç‰¹ç¥è¯","2333","2333","2333");}
+		if(a==9){U1=new Accessdata(9,"å†²ç”°æ€»å¸","R","å²å®","2222","2222","2222");}
+		if(a==10){U1=new Accessdata(10,"è´å¾·","SR","å²å®","1111","1111","1111");}
+		return U1;
 	}
     
 }
