@@ -4,7 +4,7 @@
     android:id="@+id/activity_net1414080903116_send_text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6E6"
+    android:background="@drawable/timg"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903116.Net1414080903116SendText">
 
     <EditText

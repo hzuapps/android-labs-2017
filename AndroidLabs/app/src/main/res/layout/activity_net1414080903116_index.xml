@@ -4,6 +4,7 @@
     android:id="@+id/activity_net1414080903116_index"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/timg"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903116.Net1414080903116Index">
 
     <TextView
@@ -13,15 +14,6 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="20dp"/>
-
-    <TextView
-        android:text="显示已发动态"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/text"
-        android:layout_marginTop="19dp"
-        android:id="@+id/textView"
-        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="文字"
@@ -38,8 +30,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/picture"
-        android:layout_above="@+id/textView"
+        android:layout_above="@+id/lv"
         android:layout_toEndOf="@+id/text" />
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text"
+        android:background="#FFFFF8"
+        android:layout_marginTop="19dp"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
