@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903110.Net1414080903110_SubmitActivity">
 
-	<!--作业提交界面-->
+	<!--作业提交界面！-->
     <EditText
         android:id="@+id/work_info"
         android:layout_width="wrap_content"

@@ -27,11 +27,11 @@ public class Net1414080903110_SubmitActivity extends AppCompatActivity {
         btn_s.setVisibility(View.GONE);
         if("user".equals(i))
         {
-            btn_s.setVisibility(View.GONE); //如果是学生用户就只显示作业内容
+            btn_s.setVisibility(View.GONE); //如果是学生用户就只显示作业内容，不显示按钮.
         }
         else
         {
-            btn_s.setVisibility(View.VISIBLE);//如果是教师用户除了显示作业内容之外，还显示提交按钮，教师用户编辑作业内容之后点此按钮提交
+            btn_s.setVisibility(View.VISIBLE);//如果是教师用户除了显示作业内容之外，还显示提交按钮，教师用户编辑作业内容之后点此按钮提交.
         }
 
     }
