@@ -1,72 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_net1414080903222"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903222.Net1414080903222Activity">
-
+    android:layout_height="match_parent">
+    
 
     <LinearLayout
-        android:background="@drawable/record_microphone_bj1414080903222"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp">
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:id="@+id/iv_recording_icon"
-            android:src="@drawable/record_microphone1414080903222" />
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:id="@+id/tv_recording_time"
-            android:layout_width="114dp"
-            android:textColor="#FFFFFF"
+            android:id="@+id/recorder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg1414080903222"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_menu_recorder1414080903222"
             android:gravity="center"
-            android:textSize="16sp"
-            android:text="00:00" />
+            android:textColor="@drawable/tab_menu_recorder_text1414080903222"
+            android:text="录音"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg1414080903222"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_menu_list1414080903222"
+            android:gravity="center"
+            android:textColor="@drawable/tab_menu_list_text1414080903222"
+            android:text="列表"
+            android:textSize="10sp" />/>
+
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/Astart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="start"
-        android:layout_marginEnd="19dp"
-        android:layout_above="@+id/Aplay"
-        android:layout_toStartOf="@+id/Aplay"
-        android:layout_marginBottom="34dp" />
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/text_gray"
+        android:layout_above="@id/tab_menu"/>
 
-    <Button
-        android:id="@+id/Astop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="40dp"
-        android:text="stop"
-        android:layout_alignBaseline="@+id/Astart"
-        android:layout_alignBottom="@+id/Astart"
-        android:layout_toEndOf="@+id/Aplay"
-        android:layout_marginStart="19dp" />
-
-    <Button
-        android:id="@+id/Aplay"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="play"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab_menu"
+        android:background="@color/transparent">
+    </FrameLayout>
+    <!--
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_title"
+        android:layout_above="@id/tab_menu"
+        android:background="@color/transparent">
+    </FrameLayout>
+-->
 </RelativeLayout>

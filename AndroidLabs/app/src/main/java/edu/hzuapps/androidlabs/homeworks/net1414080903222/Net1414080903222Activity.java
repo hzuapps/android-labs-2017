@@ -1,78 +1,93 @@
-﻿package edu.hzuapps.androidlabs.homeworks.net1414080903222;
+package edu.hzuapps.androidlabs.homeworks.net1414080903222;
 
-import android.graphics.PixelFormat;
-import android.media.MediaRecorder;
-import android.os.Bundle;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ListView;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
-import java.io.File;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-public class Net1414080903222Activity extends AppCompatActivity  {
+    private TextView topBar;
+    private TextView tabRecoder;
+    private TextView tabList;
 
-    private Button btn_start, btn_stop,btn_play;
-    private File sdcardfile = null;
-   // private String[] files;
-    private MediaRecorder recorder = null;
-    private File file;
-    //文件路径
-    private String filePath;
-    //文件夹路径
-    private File FolderPath;
+    private FirstFragment1414080903222 f1,f2;
+    private Net1414080903222Activity net1414080903222Activity;
+    private FrameLayout ly_content;
+    private FragmentManager fragmentManager;
 
-     protected void onCreate(Bundle savedInstanceState) {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFormat(PixelFormat.TRANSLUCENT);// 让界面横屏
-        requestWindowFeature(Window.FEATURE_NO_TITLE);// 去掉界面标题
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // 重新设置界面大小
-        setContentView(R.layout.first_fragment1414080903222);
-        initView();
-        getSDCardFile();
-    }
-
-
-   
-    /**
-     * 实例化控件
-     */
-    private void initView() {
-        btn_start = (Button) findViewById(R.id.Astart);
-        btn_stop = (Button) findViewById(R.id.Astop);
- 	btn_play= (Button) findViewById(R.id.Aplay);
-
- 	//时间控件
-        mImageView = (ImageView) findViewById(R.id.iv_recording_icon);
-        mTextView = (TextView) findViewById(R.id.tv_recording_time);
-
-
-        //给按钮添加监听事件
-        btn_start.setOnClickListener(this);
-        btn_stop.setOnClickListener(this);
- 	btn_play.setOnClickListener(this);
-
-        //设置起始状态开始按钮可用，停止按钮不可用
-        btn_start.setEnabled(true);
-        btn_stop.setEnabled(false);
-        btn_play.setEnabled(false);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_net1414080903222);
+        bindView();
 
     }
 
-    /**
-     * 获取内存卡中文件的方法
-     */
-    private void getSDCardFile() {
-        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {//内存卡存在
-            sdcardfile = Environment.getExternalStorageDirectory();//获取目录文件
+    //UI组件初始化与事件绑定
+    private void bindView() {
+      //  topBar = (TextView)this.findViewById(R.id.txt_top);
+        tabRecoder = (TextView)this.findViewById(R.id.recorder);
+        tabList = (TextView)this.findViewById(R.id.list);
+        ly_content = (FrameLayout) findViewById(R.id.fragment_container);
 
-            Toast.makeText(this, "找到内存卡", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "未找到内存卡", Toast.LENGTH_SHORT).show();
+        tabRecoder.setOnClickListener(this);
+        tabList.setOnClickListener(this);
+
+    }
+
+    //重置所有文本的选中状态
+    public void selected(){
+        tabRecoder.setSelected(false);
+        tabList.setSelected(false);
+    }
+
+    //隐藏所有Fragment
+    public void hideAllFragment(FragmentTransaction transaction){
+        if(f1!=null){
+           transaction.hide(f1);
         }
+       if(f2!=null){
+            transaction.hide(f2);
+        }
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        hideAllFragment(transaction);
+        switch(v.getId()){
+            case R.id.recorder:
+               selected();
+                tabRecoder.setSelected(true);
+                if(f1==null){
+                    f1 = new FirstFragment1414080903222();
+                    transaction.add(R.id.fragment_container,f1);
+                }else{
+                    transaction.show(f1);
+                }
+                break;
+
+            case R.id.list:
+                selected();
+                tabList.setSelected(true);
+                if(f2==null){
+
+                    transaction.add(R.id.fragment_container,f2);
+                }else{
+                    transaction.show(f2);
+                }
+                break;
+
+        }
+        transaction.commit();
     }
 
 
