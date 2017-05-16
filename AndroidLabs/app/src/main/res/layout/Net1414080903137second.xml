@@ -11,5 +11,5 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.hzuapps.androidlabs.homworks.net1414080903137.Net1414080903137SecondActivity">
 
-
+    <!-- 库存-->
 </RelativeLayout>
