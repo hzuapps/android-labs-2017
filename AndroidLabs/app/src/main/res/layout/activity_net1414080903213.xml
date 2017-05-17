@@ -1,34 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_activity">
 
     <Button
-        android:text="我的日程安排"
-        android:layout_width="82dp"
-        android:layout_height="61dp"
+        android:text="日程安排"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/button1"
-        android:elevation="0dp"
-        style="@android:style/Widget.Button"
-        android:textColorLink="@android:color/holo_blue_light"
-        android:layout_weight="0.38"
-        />
+        android:layout_marginTop="13dp"
+        android:background="@drawable/mycolor_net1414080903213"
+        android:paddingBottom="8dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="8dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="日历"
         android:layout_width="82dp"
-        android:layout_height="61dp"
+        android:layout_height="40dp"
         android:id="@+id/button2"
         android:layout_weight="0.48"
-        style="@android:style/Widget.Button" />
+        style="@android:style/Widget.Button"
+        android:background="@drawable/mycolor_net1414080903213"
+        android:paddingBottom="8dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_below="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@+id/button1" />
 
     <Button
         android:text="笔记本"
         android:layout_width="82dp"
-        android:layout_height="61dp"
+        android:layout_height="40dp"
         android:id="@+id/button3"
         android:layout_weight="0.45"
-        style="@android:style/Widget.Button" />
-</LinearLayout>
+        style="@android:style/Widget.Button"
+
+        android:background="@drawable/mycolor_net1414080903213"
+        android:paddingBottom="8dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="8dp"
+
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_alignEnd="@+id/button2" />
+
+
+</RelativeLayout>
