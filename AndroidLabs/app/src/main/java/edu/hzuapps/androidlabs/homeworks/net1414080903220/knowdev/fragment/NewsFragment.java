@@ -6,13 +6,19 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 import edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.R;
 import edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.activity.Net1414080903220MainActivity;
+import edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.adapter.NewsAdapter;
+import edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.bean.News;
 import edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.widget.KnowDevToolbar;
 
 /**
@@ -36,17 +42,38 @@ public class NewsFragment extends Fragment implements TabLayout.OnTabSelectedLis
 
     private KnowDevToolbar knowDevToolbar;
     private DrawerLayout drawerLayout;
-
+    private RecyclerView newsItemRV;
     String FragmentTAG="NewsFragment";
+
+    NewsAdapter newsAdapter;
+    List<News>newlist;
+    News news;
     View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_net1414080903220_newslist,container,false);
 
- 
+        view=inflater.inflate(R.layout.fragment_net1414080903220_newslist,container,false);
+        newsItemRV= (RecyclerView) view.findViewById(R.id.recyclerview_news);
+
         initTab(view);
+        initData();
+
+        knowDevToolbar= (KnowDevToolbar) view.findViewById(R.id.knowDevToolbar);
+
+        knowDevToolbar.setMenuButtonOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
         return view;
+    }
+
+    private void initData() {
+        newsAdapter=new NewsAdapter(getActivity());
+        newsItemRV.setAdapter(newsAdapter);
+        newsItemRV.setLayoutManager(new LinearLayoutManager(NewsFragment.this.getActivity()));
     }
 
 
@@ -54,25 +81,26 @@ public class NewsFragment extends Fragment implements TabLayout.OnTabSelectedLis
     public void onAttach(Context context){
         super.onAttach(context);
         Log.i("news","attach");
+        if(context instanceof Net1414080903220MainActivity){
+            Net1414080903220MainActivity mainActivity= (Net1414080903220MainActivity) context;
+            drawerLayout= (DrawerLayout) mainActivity.findViewById(R.id.dl_left);
 
-        View contentView = getLayoutInflater().inflate(R.layout.activity_net1414080903220_rg, null);
-        Net1414080903220MainActivity mainActivity= (Net1414080903220MainActivity) context;
-        inflater=LayoutInflater.from(context);
-        View contentView =inflater.inflate(R.layout.activity_net1414080903220_rg, null);
-        knowDevToolbar= (KnowDevToolbar) contentView.findViewById(R.id.knowDevToolbar);
 
+        }
     }
 
 
 
+
     public void initTab(View view){
-        newsTypeTabLayout=(TabLayout)view.findViewById(R.id.tab_layout);
+        newsTypeTabLayout=(TabLayout)view.findViewById(R.id.tab_news_layout);
         for(int i=0;i<4;i++){
             TabLayout.Tab tab=newsTypeTabLayout.newTab();
             tab.setText(texts[i]);
             tab.setTag(tags[i]);
             newsTypeTabLayout.addTab(tab);
         }
+        newsTypeTabLayout.addOnTabSelectedListener(this);
     }
 
     @Override

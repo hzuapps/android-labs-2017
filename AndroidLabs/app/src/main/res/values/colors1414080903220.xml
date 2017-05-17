@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="text_organ">#ff9800</color>
+    <color name="primary_material_light_1">#795548</color>
+    <color name="primary_material_light_2">#795548</color>
+    <color name="primary_material_light_3">#ff9800</color>
+    <color name="primary_material_light_4">#ff9800</color>
+    <color name="primary_material_light_5">#ff9800</color>
+</resources>

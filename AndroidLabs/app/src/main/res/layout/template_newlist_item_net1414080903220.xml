@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="2dp"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/img_news"
+            android:layout_width="300px"
+            android:layout_height="300px"
+            android:src="@drawable/example_news_thumb1414080903220"/>
+
+        <TextView
+            android:id="@+id/title_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_news"
+            android:paddingTop="15dp"
+            android:maxEms="20"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:hint="付费搜索效应被夸大，以及对企业推广的四个启示"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/source_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来源：移动互联"
+            android:textSize="10sp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignBottom="@id/img_news"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="5dp"
+            />
+
+        <TextView
+            android:id="@+id/time_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间：2017-05-12 08:58"
+            android:textSize="10sp"
+            android:paddingLeft="8dp"
+            android:layout_alignBaseline="@+id/source_tv"
+            android:layout_alignBottom="@+id/source_tv"
+            android:layout_toEndOf="@+id/img_news" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

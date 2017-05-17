@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/vector_drawable_icon_news_green_net1414080903220" android:state_checked="true" />
+    <item android:drawable="@drawable/vector_drawable_icon_news_organ1414080903220"
+        android:state_checked="true" />
     <item android:drawable="@drawable/vector_drawable_icon_news_black_net1414080903220" />
 </selector>

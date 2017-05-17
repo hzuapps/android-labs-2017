@@ -1,13 +1,12 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.activity;
 
-import android.net.Uri;
+
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,18 +47,12 @@ public class Net1414080903220MainActivity extends AppCompatActivity implements V
     private NewsFragment newsFragment;
     private DevFragment devFragment;
 
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_net1414080903220_main);
-        knowFragmentPagerAdapter = new KnowFragmentPagerAdapter(getSupportFragmentManager());
+        knowFragmentPagerAdapter = new KnowFragmentPagerAdapter(this.getSupportFragmentManager());
 
         newsFragment = new NewsFragment();
         devFragment = new DevFragment();
@@ -88,7 +81,10 @@ public class Net1414080903220MainActivity extends AppCompatActivity implements V
         devRb = (RadioButton) findViewById(R.id.rb_dev_article);
 
         drawerLayout= (DrawerLayout)findViewById(R.id.dl_left);
-        knowDevToolbar= (KnowDevToolbar) findViewById(R.id.knowDevToolbar);
+
+        LayoutInflater inflater;
+/*        LayoutInflater.from(R.layout.);
+        knowDevToolbar= (KnowDevToolbar) findViewById(R.id.knowDevToolbar);*/
 
         viewPager = (ViewPager) findViewById(R.id.vpager);
         viewPager.setAdapter(knowFragmentPagerAdapter);
@@ -96,7 +92,7 @@ public class Net1414080903220MainActivity extends AppCompatActivity implements V
         viewPager.addOnPageChangeListener(this);
         viewPager.setOffscreenPageLimit(0);
         newsRb.setChecked(true);
-        initDrawer();
+       // initDrawer();
     }
 
     private void initDrawer() {
@@ -119,7 +115,7 @@ public class Net1414080903220MainActivity extends AppCompatActivity implements V
 
     @Override
     public void onPageSelected(int position) {
-
+        Log.i("activity","the position is"+position);
     }
 
     /**
