@@ -1,9 +1,37 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/regist_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/et_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/zb_logo"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="体育比赛文字直播吧"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/regist_username"
@@ -13,8 +41,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="22dp"
-        android:orientation="horizontal">
-        <!--android:layout_below="@id/regist_logo"-->
+        android:orientation="horizontal"
+        android:layout_below="@id/regist_logo">
 
 
         <TextView
