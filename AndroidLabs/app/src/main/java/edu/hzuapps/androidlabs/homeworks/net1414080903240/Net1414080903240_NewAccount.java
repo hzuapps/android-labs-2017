@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 
@@ -26,11 +27,14 @@ public class Net1414080903240_NewAccount extends AppCompatActivity {
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if(!value.getText().toString().equals("")){
                 Intent intent = new Intent(Net1414080903240_NewAccount.this,Net1414080903240_OrderRecord.class);
                 intent.putExtra("value",value.getText().toString().trim());
                 intent.putExtra("spinner1",spinner1.getSelectedItem().toString().trim());
                 startActivity(intent);
+                }else if(value.getText().toString()==""){
+                    Toast.makeText(Net1414080903240_NewAccount.this,"没有数据", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
