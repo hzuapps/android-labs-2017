@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903202.Net1414080903202manage">
+
+    <FrameLayout
+
+        android:layout_margin="20dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="日期："
+            />
+
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="收入："
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="支出："
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="备注："
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="155dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="盈亏："/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="余额："/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="40dp"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:hint="元"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginRight="40dp"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:hint="元"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginRight="40dp"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:hint="元"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginRight="40dp"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:hint="元"
+            />
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
+
+
+
