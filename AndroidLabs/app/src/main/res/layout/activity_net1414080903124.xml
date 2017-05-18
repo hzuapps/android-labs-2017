@@ -15,7 +15,7 @@
 
   <Button
     android:text="余额查询"
-    android:layout_width="344dp"
+    android:layout_width="353dp"
     android:layout_height="wrap_content"
     android:id="@+id/button1"
     android:onClick="click1"/>

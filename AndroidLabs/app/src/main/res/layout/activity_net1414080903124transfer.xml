@@ -21,9 +21,21 @@
 
     <Button
         android:text="确定"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
         android:id="@+id/button"
         android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp" />
+
+    <Button
+        android:text="返回"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginStart="32dp"
+        android:id="@+id/button7"
+        android:onClick="click6"/>
+
 </RelativeLayout>

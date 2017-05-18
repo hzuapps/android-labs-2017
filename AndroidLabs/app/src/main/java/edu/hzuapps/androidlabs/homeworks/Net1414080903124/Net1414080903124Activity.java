@@ -26,5 +26,6 @@ public class Net1414080903124Activity extends AppCompatActivity {
         Intent intent = new Intent(this, Net1414080903124drawActivity.class);
         startActivity(intent);
     }
-}
+    }
+
 
