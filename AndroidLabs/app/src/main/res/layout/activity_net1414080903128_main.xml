@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/主界面"
+    android:background="@drawable/main"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903128.Net1414080903128MainActivity">
 
     <LinearLayout
@@ -16,7 +16,7 @@
 
         tools:layout_editor_absoluteY="116dp"
         android:id="@+id/linearLayout"
-        android:layout_marginTop="162dp"
+        android:layout_marginTop="177dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
@@ -31,20 +31,29 @@
             tools:layout_editor_absoluteX="121dp"
             tools:layout_editor_absoluteY="16dp" />
 
+        <Button
+            android:id="@+id/btn_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排行榜"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="104dp"
+            android:layout_marginTop="32dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignLeft="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出游戏"
+            android:id="@+id/btn_close"
+            android:layout_marginTop="49dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignLeft="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_ranking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="排行榜"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="104dp"
-        android:layout_marginTop="71dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignLeft="@+id/linearLayout"
-        android:layout_alignStart="@+id/linearLayout" />
 
 
 </RelativeLayout>
