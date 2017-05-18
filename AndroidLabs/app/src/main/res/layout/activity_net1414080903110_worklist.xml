@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903110.Net1414080903110_WorkListActivity">
 
-	<!--作业列表界面-->
+	<!--作业列表界面！-->
     <Button
         android:id="@+id/btn1"
         android:layout_width="100dp"

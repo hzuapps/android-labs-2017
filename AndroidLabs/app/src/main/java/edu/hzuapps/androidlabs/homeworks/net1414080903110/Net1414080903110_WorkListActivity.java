@@ -34,7 +34,7 @@ public class Net1414080903110_WorkListActivity extends AppCompatActivity impleme
         String psword=intent.getStringExtra("password");
         if("zzj".equals(uname)&&"12345".equals(psword)) /*教师用户*/
         {
-            WorkAdapter adapter=new WorkAdapter(Net1414080903110_WorkListActivity.this,R.layout.work_item,work_infoList);
+            WorkAdapter adapter=new WorkAdapter(Net1414080903110_WorkListActivity.this,R.layout.net1414080903110_work_item,work_infoList);
             ListView listView=(ListView)findViewById(R.id.list_view);
             listView.setAdapter(adapter);
 			/*给ListView的各Item项设置长按监听事件（这里主要是用来删除作业的，后期会把功能加进去）*/
@@ -45,11 +45,11 @@ public class Net1414080903110_WorkListActivity extends AppCompatActivity impleme
                     return true;
                 }
             });
-            button.setVisibility(View.VISIBLE);/*让布置作业按钮显示*/
+            button.setVisibility(View.VISIBLE);/*教师用户，让布置作业按钮显示.*/
             i="admin";
         }
         else{
-            button.setVisibility(View.GONE);/*如果是学生用户 让布置作业按钮隐藏*/
+            button.setVisibility(View.GONE);/*如果是学生用户 让布置作业按钮隐藏.*/
             i="user";
         }
         WorkAdapter adapter=new WorkAdapter(Net1414080903110_WorkListActivity.this,R.layout.work_item,work_infoList);//实例化WorkAdapter适配器
