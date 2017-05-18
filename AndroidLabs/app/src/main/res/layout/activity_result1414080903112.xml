@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="1-118 1-203 1-213 1-302 1-305 1-308 1-404 1-412 1-514 1-610 1-616 1-702 1-703 1-802 1-803 2-105 2-114 2-203 2-204 2-211 2-212 2-305 2-308 2-316A 2-402 2-404 2-405 2-408 2-409 2-411 2-502 2-507（机房） 2-511 2-604 2-608 2-609 2-610 2-611 2-702 2-703 5-213 5-214 5-215 5-217 5-225 5-304 5-406 5-407 5-417 5-F201 6-102 6-105 6-201 6-204 6-305 6-401 7-101 7-110 7-111 7-209 7-304 7-305 7-401B 7-406"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_weight="1" />
+</LinearLayout>

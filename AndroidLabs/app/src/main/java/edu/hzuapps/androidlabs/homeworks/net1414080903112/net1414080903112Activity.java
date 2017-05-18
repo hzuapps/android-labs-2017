@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class net1414080903112Activity extends AppCompatActivity {
+public class Net1414080903112Activity extends AppCompatActivity {
 
 
     private static final String[] m={"星期一","星期二","星期三","星期四","星期五"};
@@ -35,7 +35,7 @@ public class net1414080903112Activity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // 给bnt1添加点击响应事件,即带参数跳转到另一页面（参数为空课室数据的筛选参数）
-                Intent intent =new Intent(net1414080903112Activity.this,result1414080903112.class);
+                Intent intent =new Intent(Net1414080903112Activity.this,result1414080903112.class);
                 intent.putExtra("weekday", view.getText());
                 intent.putExtra("time", view2.getText());
                 //启动

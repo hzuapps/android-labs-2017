@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="128dp"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_width="152dp"
+        android:layout_height="101dp"
+        app:srcCompat="@drawable/timetable"
+        android:id="@+id/imageView" />
+
+    <DatePicker
+        android:layout_width="232dp"
+        android:layout_height="125dp"
+        android:id="@+id/datePicker" />
+    </LinearLayout>
+    <TextView android:id="@+id/spinnerText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"></TextView>
+    <Spinner android:id="@+id/Spinner01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px" />
+
+    <TextView android:id="@+id/spinnerText2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"></TextView>
+    <Spinner android:id="@+id/Spinner02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <Button
+        android:text=" 查询 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button" />
+</LinearLayout>
