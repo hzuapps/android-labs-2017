@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+    <!--android:gravity="center"
+    android:layout_gravity="center"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:hint="计划的名称:" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:id="@+id/JH"
+            android:hint="计划名"
+            android:textSize="14dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:hint="时间:" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/time1"
+            android:hint="请输入时间"
+            android:textSize="14dp"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:hint="内容:" />
+
+        <EditText
+            android:id="@+id/add_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:enabled="true"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="20"
+            android:maxLines="20"
+            android:scrollbars="vertical"
+            android:background="@android:drawable/edit_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="350dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="7dp"
+            android:id="@+id/btn_ok"
+            android:text="确定" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/btn_reset"
+            android:text="取消"
+             />
+    </LinearLayout>
+    </RelativeLayout>
