@@ -3,6 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <edu.hzuapps.androidlabs.homework.net1414080903132.SnakeView
+        android:id="@+id/snake"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tileSize="24" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,6 +54,81 @@
             android:layout_marginBottom="10dp"
             android:layout_above="@+id/start2"
             android:layout_centerHorizontal="true">
+        </Button>
+
+        <Button
+
+            android:id="@+id/bottom"
+
+            android:layout_width="85dp"
+
+            android:layout_height="85dp"
+
+            android:background="@drawable/net1414080903132bottom"
+
+            android:gravity="center_horizontal"
+
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/right">
+
+        </Button>
+
+        <Button
+
+            android:id="@+id/left"
+
+            android:layout_width="85dp"
+
+            android:layout_height="85dp"
+
+            android:background="@drawable/net1414080903132left"
+
+            android:gravity="center_horizontal"
+
+            android:visibility="visible"
+            android:layout_above="@+id/start2"
+            android:layout_toStartOf="@+id/top"
+            android:layout_marginEnd="22dp">
+
+        </Button>
+
+        <Button
+
+            android:id="@+id/right"
+
+            android:layout_width="85dp"
+
+            android:layout_height="85dp"
+
+            android:background="@drawable/net1414080903132right"
+
+            android:gravity="center_horizontal"
+
+            android:visibility="visible"
+            android:layout_alignBaseline="@+id/left"
+            android:layout_alignBottom="@+id/left"
+            android:layout_toEndOf="@+id/top"
+            android:layout_marginStart="26dp">
+
+        </Button>
+
+        <Button
+
+            android:id="@+id/top"
+
+            android:layout_width="85dp"
+
+            android:layout_height="85dp"
+
+            android:background="@drawable/net1414080903132top"
+
+            android:gravity="center_horizontal"
+
+            android:visibility="visible"
+            android:layout_above="@+id/left"
+            android:layout_centerHorizontal="true">
+
         </Button>
     </RelativeLayout>
 
