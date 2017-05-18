@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.Net1414080903127GameActivity">
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903127.Net1414080903127GameActivity">
 
     <ImageButton
         android:layout_width="100dp"
@@ -51,6 +51,54 @@
         android:layout_below="@id/GameGrade"
         android:text="赢家"
         android:id="@+id/Winner"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player"
+        android:text="玩家"
+        android:textSize="50dp"
+        android:layout_below="@+id/Winner"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="系统"
+        android:id="@+id/system"
+        android:textSize="50dp"
+        android:layout_marginEnd="23dp"
+        android:layout_alignBaseline="@+id/player"
+        android:layout_alignBottom="@+id/player"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vs"
+        android:text="VS"
+        android:textSize="50dp"
+        android:layout_below="@+id/system"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/palyerO"
+        android:background="@drawable/white_net1414080903127"
+        android:layout_below="@+id/player"
+        android:layout_alignStart="@+id/player"
+        android:layout_marginTop="17dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/systemO"
+        android:background="@drawable/white_net1414080903127"
+        android:layout_alignTop="@+id/palyerO"
+        android:layout_alignStart="@+id/system" />
 
 
 </RelativeLayout>
