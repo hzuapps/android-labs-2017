@@ -36,8 +36,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/tu"
         android:id="@+id/imageView"
-        android:layout_alignTop="@+id/textView2"
+        android:layout_alignBottom="@+id/button"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/button" />
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
