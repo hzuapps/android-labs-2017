@@ -5,13 +5,6 @@
     android:orientation="vertical"
     android:weightSum="1">
     <Button
-        android:id="@+id/bt_record_birthday"
-        android:layout_margin="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="记录生日"/>
-    <Button
         android:layout_margin="40dp"
         android:id="@+id/bt_check_birthday"
         android:layout_width="match_parent"
@@ -19,6 +12,13 @@
         android:layout_below="@+id/radioGroup"
         android:layout_marginTop="50dp"
         android:text="查询已记录的生日"/>
+    <Button
+        android:id="@+id/bt_record_birthday"
+        android:layout_margin="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="记录生日"/>
 
     <ImageView
         android:layout_width="wrap_content"
