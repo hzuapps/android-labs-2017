@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903235.Net1414080903235_StartGame"
+    android:background="@drawable/Bground1">
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="139dp"
+        android:layout_height="56dp"
+        android:onClick="btn_start"
+        android:text="开始游戏"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="118dp" />
+
+    <Button
+        android:id="@+id/btn_goon"
+        android:layout_width="139dp"
+        android:layout_height="56dp"
+        android:onClick="btn_goon"
+        android:text="继续游戏"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="251dp" />
+</android.support.constraint.ConstraintLayout>
