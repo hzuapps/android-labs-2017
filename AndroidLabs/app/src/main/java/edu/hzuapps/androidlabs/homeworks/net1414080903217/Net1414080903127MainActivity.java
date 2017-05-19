@@ -1,16 +1,14 @@
-package edu.hzuapps.androidlabs.homeworks.net1414080903127;
+package edu.hzuapps.androidlabs;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 
-import edu.hzuapps.androidlabs.R;
-
-public class Net1414080903127MainActivity extends Activity {
-    private ImageButton Brank;
-    private ImageButton Bstart;
+public class Net1414080903127MainActivity extends AppCompatActivity {
+    private Button Brank;
+    private Button Bstart;
 
     private Intent intent;
 
@@ -18,8 +16,8 @@ public class Net1414080903127MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903127_main);
-        Brank=(ImageButton) findViewById(R.id.rank);
-        Bstart=(ImageButton)findViewById(R.id.start);
+        Brank=(Button)findViewById(R.id.rank);
+        Bstart=(Button)findViewById(R.id.start);
         Brank.setOnClickListener(mylistener);
         Bstart.setOnClickListener(mylistener);
     }

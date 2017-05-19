@@ -3,22 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_back_Net1414080903127"
+    android:background="@drawable/main_back_net1414080903127"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.hzuapps.androidlabs.Net1414080903127MainActivity">
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903127.Net1414080903127MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rank"
-        android:text="查看排名" />
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/start"
-        android:text="开始游戏"
-        android:layout_below="@id/rank"/>
+        android:background="@drawable/start_button_net1414080903127"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/rank" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rank"
+        android:background="@drawable/rank_button_net1414080903127"
+        android:layout_below="@+id/start"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp" />
+
+
 </RelativeLayout>
