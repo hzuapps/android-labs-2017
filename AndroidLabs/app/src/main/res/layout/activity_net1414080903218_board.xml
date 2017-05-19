@@ -9,8 +9,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903218.Net1414080903218BoardActivity">
 
-    <edu.hzuapps.androidlabs.homeworks.net1414080903218.ChessBoard
-        android:id="@+id/ChessBosrd"
+    <edu.hzuapps.androidlabs.homeworks.net1414080903218.ChessView
+        android:id="@+id/ChessView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
