@@ -16,33 +16,32 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Net1414080903234_M.OnFragmentInteractionListener} interface
+ * {@link Net1414080903234_S.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Net1414080903234_M#newInstance} factory method to
+ * Use the {@link Net1414080903234_S#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Net1414080903234_M extends Fragment {
+public class Net1414080903234_S extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
     // TODO: Rename and change types of parameters
     private String flag;
-    private TextView mTextview;
     private Button add;
     private OnFragmentInteractionListener mListener;
-
-    public Net1414080903234_M() {
+    private  View view = null;
+    public Net1414080903234_S() {
         // Required empty public constructor
     }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment Net1414080903234_M.
+     * @return A new instance of fragment Net1414080903234_S.
      */
     // TODO: Rename and change types and number of parameters
-    public static Net1414080903234_M newInstance(String message) {
-        Net1414080903234_M fragment = new Net1414080903234_M();
+    public static Net1414080903234_S newInstance(String message) {
+        Net1414080903234_S fragment = new Net1414080903234_S();
         Bundle args = new Bundle();
         args.putString("message", message);
         fragment.setArguments(args);
@@ -60,20 +59,7 @@ public class Net1414080903234_M extends Fragment {
         // Inflate the layout for this fragment
 
         flag = getArguments().getString("message");
-        View view = null;
-        switch (flag){
-            case "1":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__m,container,false);
-                break;
-            case "2":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__i,container,false);
-                break;
-            case "3":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__m,container,false);
-                break;
-            case "4":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__m,container,false);
-        }
+        view = inflater.inflate(R.layout.fragment_net1414080903234__s,container,false);
         return view;
     }
 
@@ -105,6 +91,6 @@ public class Net1414080903234_M extends Fragment {
                 Intent intent  = new Intent(getActivity(),Net1414080903234AddIncomeActivity.class);
                 startActivity(intent);
             }
-});
-        }*/
+        });
+    }*/
 }
