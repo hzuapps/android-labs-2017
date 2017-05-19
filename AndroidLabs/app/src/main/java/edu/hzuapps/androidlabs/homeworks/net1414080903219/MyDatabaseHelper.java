@@ -9,8 +9,8 @@ import android.widget.Toast;
  * Created by mary on 2017/5/3.
  */
 
-public class Net1414080903219MyDatabaseHelper extends SQLiteOpenHelper {
-    public static final String CREATE_WORD="create table Net1414080903219Word("
+public class MyDatabaseHelper extends SQLiteOpenHelper {
+    public static final String CREATE_WORD="create table Word("
             +"id integer primary key autoincrement,"
             +"word string,"
             +"mean string,"
@@ -19,8 +19,8 @@ public class Net1414080903219MyDatabaseHelper extends SQLiteOpenHelper {
     private Context mContext;;
 
 
-    public Net1414080903219MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
-                                            int version){
+    public MyDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
+                            int version){
         super(context,name,factory,version);
         mContext=context;
     }
