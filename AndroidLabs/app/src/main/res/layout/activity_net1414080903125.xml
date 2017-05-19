@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903125.Net1414080903125Activity"
     android:orientation="vertical"
     android:id="@+id/activity_net1414080903125"
     android:layout_width="match_parent"
@@ -22,7 +23,8 @@
             android:textColor="#FFFFFF"
             android:textSize="25dp"
             android:layout_marginLeft="30dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:onClick="onClick"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,6 +49,14 @@
             android:layout_marginTop="40px"
             android:layout_weight="1"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/MusicTime"
+            android:text="    "/>
+
+
         <LinearLayout
 
             android:orientation="horizontal"
@@ -61,12 +71,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
 
-            <Button
-                android:id="@+id/playMusic"
-                android:text="Play"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+            <ImageButton
+                android:id="@+id/playOrStopMusic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/play_net1414080903125"
+                android:onClick="onClick"/>
+
 
             <TextView
                 android:text=""
@@ -75,18 +86,6 @@
                 android:layout_weight="1"
                 android:id="@+id/textView" />
 
-            <Button
-                android:id="@+id/stopMusic"
-                android:text="Stop"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-            <TextView
-                android:text=""
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
 
         </LinearLayout>
 
