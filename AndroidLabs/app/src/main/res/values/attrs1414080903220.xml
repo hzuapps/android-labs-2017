@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="KnowDevToolBar">
+        <attr name="toolbarMenuIcon" format="reference"/>
+        <attr name="toolbarTile" format="reference"/>
+        <attr name="toolbarShareIcon" format="reference"/>
+    </declare-styleable>
+</resources>

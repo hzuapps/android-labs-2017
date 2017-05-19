@@ -22,6 +22,9 @@ import edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.R;
  * Class describe:自定义toolbar
  * Author: cheng
  * Create time: 2017/5/3 16:12
+ * Variable:
+ * change:
+ * chang time:
  */
 public class KnowDevToolbar extends Toolbar {
     private LayoutInflater inflater;
@@ -30,10 +33,12 @@ public class KnowDevToolbar extends Toolbar {
     private Button shareBt;
     private TextView title;
     public KnowDevToolbar(Context context) {
+        //super(context);
         this(context,null);
     }
 
     public KnowDevToolbar(Context context, @Nullable AttributeSet attrs) {
+        //super(context,attrs);
         this(context, attrs, 0);
     }
 
@@ -41,17 +46,18 @@ public class KnowDevToolbar extends Toolbar {
         super(context, attrs, defStyleAttr);
         initView();
        if(attrs!=null){
+
            final TintTypedArray tintTypedArray = TintTypedArray.obtainStyledAttributes(getContext(), attrs, R.styleable.KnowDevToolBar, defStyleAttr, 0);
            final Drawable menuIcon=tintTypedArray.getDrawable(R.styleable.KnowDevToolBar_toolbarMenuIcon);
-           String toolTile=tintTypedArray.getString(R.styleable.KnowDevToolBar_toolbarTile);
+           //String toolTile=tintTypedArray.getString(R.styleable.KnowDevToolBar_toolbarTile);
            final Drawable shareIcon=tintTypedArray.getDrawable(R.styleable.KnowDevToolBar_toolbarShareIcon);
 
            if(menuIcon!=null){
                setMenuIcon(menuIcon);
            }
-           if(toolTile!=null){
-               setTitle(toolTile);
-           }
+          // if(toolTile!=null){
+          ///     setTitle(toolTile);
+          // }
            if(shareIcon!=null){
                setShareIcon(shareIcon);
            }
@@ -113,14 +119,14 @@ public class KnowDevToolbar extends Toolbar {
     }
 
     public  void setMenuButtonOnClickListener(OnClickListener listen){
-       // Log.i("toolbar","点击了菜单按钮");
+        Log.i("toolbar","点击了菜单按钮");
         menuBt.setOnClickListener(listen);
 
     }
 
     public  void setShareButtonOnClickListener(OnClickListener listen){
         shareBt.setOnClickListener(listen);
-        //Log.i("toolbar","点击了分享按钮");
+        Log.i("toolbar","点击了分享按钮");
     }
 
 

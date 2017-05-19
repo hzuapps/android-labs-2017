@@ -24,14 +24,11 @@ public class KnowFragmentPagerAdapter extends android.support.v4.app.FragmentPag
 
     private NewsFragment newsFragment;
     private DevFragment devFragment;
-    //private List<Fragment>fragmentList;
     public static final int FragmentCount=2;
     public KnowFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
-        //fragmentList=new ArrayList<Fragment>();
         newsFragment=new NewsFragment();
         devFragment=new DevFragment();
-       // fragmentList.add(newsFragment);
 
     }
 
@@ -66,7 +63,6 @@ public class KnowFragmentPagerAdapter extends android.support.v4.app.FragmentPag
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        System.out.println("position Destory" + position);
         super.destroyItem(container, position, object);
     }
 }
