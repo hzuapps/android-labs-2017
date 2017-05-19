@@ -39,7 +39,8 @@
         android:orientation="horizontal"
         android:layout_marginTop="135dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="39dp">
+        android:layout_marginStart="39dp"
+        android:layout_alignParentLeft="true">
         <TextView
             android:layout_marginRight="1dp"
             android:layout_marginLeft="26dp"
@@ -121,7 +122,8 @@
         android:text="账号注册"
         android:textSize="28dp"
         android:layout_marginStart="25dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -166,7 +168,9 @@
         android:layout_marginEnd="24dp"
         android:layout_alignBaseline="@+id/enroll_return"
         android:layout_alignBottom="@+id/enroll_return"
-        android:layout_alignEnd="@+id/linearLayout2" />
+        android:layout_alignEnd="@+id/linearLayout2"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_marginRight="24dp" />
 
 </RelativeLayout>
 

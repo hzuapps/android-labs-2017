@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/enployee">
+    android:background="@drawable/employees">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,8 @@
         android:orientation="horizontal"
         android:layout_marginTop="135dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="39dp">
+        android:layout_marginStart="39dp"
+        android:layout_alignParentLeft="true">
         <TextView
             android:layout_marginRight="1dp"
             android:layout_marginLeft="26dp"
@@ -156,7 +157,8 @@
         android:text="员工信息"
         android:textSize="28dp"
         android:layout_marginStart="25dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp" />
 
     <Button
         android:id="@+id/employees_input"
@@ -166,7 +168,9 @@
         android:layout_alignBaseline="@+id/employees_return"
         android:layout_alignBottom="@+id/employees_return"
         android:layout_alignEnd="@+id/linearLayout"
-        android:layout_marginEnd="27dp" />
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_alignRight="@+id/linearLayout" />
 
 </RelativeLayout>
 
