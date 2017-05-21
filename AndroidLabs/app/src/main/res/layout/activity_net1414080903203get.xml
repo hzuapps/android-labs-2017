@@ -14,7 +14,7 @@
         android:paddingBottom="5dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/zb_logo"/>
+        android:src="@drawable/tyzb_logo"/>
 
     <TextView
         android:id="@+id/tv_name"
