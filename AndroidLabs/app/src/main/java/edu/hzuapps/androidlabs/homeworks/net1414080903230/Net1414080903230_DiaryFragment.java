@@ -1,20 +1,39 @@
 package edu.hzuapps.androidlabs.homework.net1414080903230;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link Net1414080903230_DiaryFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link Net1414080903230_DiaryFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+
 public class Net1414080903230_DiaryFragment extends Fragment {
+
+    /*
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_net1414080903230__diary, container, false);
+        view.findViewById(R.id.btn_writediary).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Net1414080903230_WriteDiaryActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+        return view;
+    }
+    */
     private ListView list_show;
 
 
@@ -22,7 +41,8 @@ public class Net1414080903230_DiaryFragment extends Fragment {
 
     public Net1414080903230_DiaryFragment() {
     }
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_net1414080903230__diary, container, false);
         view.findViewById(R.id.btn_writediary).setOnClickListener(new View.OnClickListener(){
             @Override
@@ -59,7 +79,7 @@ public class Net1414080903230_DiaryFragment extends Fragment {
 
             list_show = (ListView) view.findViewById(R.id.diary_list);
 
-            SimpleAdapter spa = new SimpleAdapter(getActivity(), specs, R.layout.spec_item_list_1414080903230,
+            SimpleAdapter spa = new SimpleAdapter(getActivity(), specs, R.layout.spec_item_list_net1414080903230,
                     new String[]{"seq", "name"}, new int[]{R.id.seq, R.id.name});
             list_show.setAdapter(spa);
         }catch(NullPointerException e){
