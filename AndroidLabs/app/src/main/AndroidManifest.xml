@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.video">
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    package="edu.hzuapps.androidlabs">
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/video"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="edu.hzuapps.androidlab.Net1414080903118.Net1414080903118MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +16,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.hzuapps.androidlab.Net1414080903118.Net1414080903118PlayActivity">
+            android:name=".BackActivity"
+            android:label="@string/title_activity_back">
+        </activity>
+        <activity
+            android:name=".examples.ViewBasicActivity"
+            android:label="@string/title_activity_view_basic">
+        </activity>
+        <activity
+            android:name=".examples.ActivityBasicActivity"
+            android:label="@string/title_activity_activity_basic">
+        </activity>
+        <activity
+            android:name=".examples.ActivityBasic2Activity"
+            android:label="@string/title_activity_activity_basic2">
         </activity>
     </application>
 
