@@ -9,7 +9,7 @@
 
     tools:context="edu.hzuapps.androidlabs.homworks.net1414080903137.Net1414080903137Activity">
 
-    <!-- 主界面-->
+    <!-- 主界面 -->
     <Button
         android:text="删除商品信息"
         android:layout_width="wrap_content"

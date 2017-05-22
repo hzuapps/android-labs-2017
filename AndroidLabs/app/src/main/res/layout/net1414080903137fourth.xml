@@ -11,7 +11,7 @@
     android:background="@drawable/s"
     tools:context="edu.hzuapps.androidlabs.homworks.net1414080903137.Net1414080903137FourthActivity">
 <TableLayout>
-    <!-- 添加-->
+    <!-- 添加 -->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
