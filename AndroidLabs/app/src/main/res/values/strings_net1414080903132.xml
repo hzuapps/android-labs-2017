@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mode_ready">贪吃蛇\n\n请开始游戏</string>
+    <string name="mode_pause">Paused\n请重新开始游戏</string>
+    <string name="mode_lose_prefix">游戏结束\n\n分数: </string>
+    <string name="mode_lose_suffix">\n\n请重新开始游戏</string>
+    <string name="snake_layout_text_text" />
+</resources>
