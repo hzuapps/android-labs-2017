@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="0dp"
             android:layout_marginTop="100dp"
-            android:src="@drawable/zb_logo"
+            android:src="@drawable/tyzb_logo"
             />
 
         <TextView
