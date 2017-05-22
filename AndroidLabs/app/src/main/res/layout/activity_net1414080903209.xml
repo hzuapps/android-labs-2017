@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_net1414080903209"
     android:layout_width="match_parent"
@@ -34,7 +35,7 @@
 
     <Button
             android:text="@string/bt_del"
-        android:layout_margin="5dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -42,6 +43,7 @@
             android:id="@+id/bt_del"
             android:layout_alignParentTop="true" />
 </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +52,11 @@
         android:id="@+id/ll_pb">
 
 
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/timg"
+            android:id="@+id/imageView" />
     </LinearLayout>
 
 
