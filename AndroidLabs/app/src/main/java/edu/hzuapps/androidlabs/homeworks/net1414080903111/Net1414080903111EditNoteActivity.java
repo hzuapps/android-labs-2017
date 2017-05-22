@@ -1,4 +1,4 @@
-﻿package edu.hzuapps.androidlabs.homeworks.net1414080903111;
+package edu.hzuapps.androidlabs.homeworks.net1414080903111;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -45,7 +45,7 @@ public class EditNoteActivity extends Activity {
             @Override
             public void onClick(View v) {
                 saveContent(oldName);
-                Intent intent = new Intent(EditNoteActivity.this, ViewContentActivity.class);
+                editContent.setFocusable(false);
                 String newName = editTitle.getText().toString();
                 intent.putExtra("note_name", newName);
                 startActivity(intent);
@@ -60,7 +60,7 @@ public class EditNoteActivity extends Activity {
         如果没有，覆盖原文件。
          */
         String newName = editTitle.getText().toString();
-        if (newName.equals(oldName)) {
+        if (!newName.equals(oldName)) {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
             Cursor cursor = db.query("note", new String[]{"id"}, "name=?", new String[]
                     {oldName}, null, null, null);
@@ -80,6 +80,7 @@ public class EditNoteActivity extends Activity {
                     }
                     newNoteFile(newName);
                 } while (cursor.moveToNext());
+
 
 
         } else {

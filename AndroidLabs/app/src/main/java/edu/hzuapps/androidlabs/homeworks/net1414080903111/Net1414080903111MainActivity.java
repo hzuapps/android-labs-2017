@@ -1,13 +1,13 @@
-﻿package edu.hzuapps.androidlabs.homeworks.net1414080903111;
+package edu.hzuapps.androidlabs.homeworks.net1414080903111;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -75,7 +75,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemLongClic
         noteList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, ViewContentActivity.class);
+                Intent intent = new Intent(MainActivity.this, EditNoteActivity.class);
                 String name = note_names.get(position);
                 intent.putExtra("note_name", name);
                 startActivity(intent);
@@ -127,4 +127,5 @@ public class MainActivity extends Activity implements AdapterView.OnItemLongClic
                 .show();
         return false;
     }
+
 }
