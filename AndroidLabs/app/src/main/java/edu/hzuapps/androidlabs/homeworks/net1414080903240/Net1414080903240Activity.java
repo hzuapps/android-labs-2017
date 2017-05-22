@@ -9,7 +9,7 @@ import android.widget.Button;
 public class Net1414080903240Activity extends AppCompatActivity {
     private Button btn_send1;
     private Button btn_send2;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_1414080903240);
@@ -28,8 +28,8 @@ public class Net1414080903240Activity extends AppCompatActivity {
         btn_send2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Net1414080903240Activity.this,Net1414080903240_OrderRecord.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(Net1414080903240Activity.this,Net1414080903240_OrderRecord.class);
+                startActivity(intent1);
             }
         });
     }

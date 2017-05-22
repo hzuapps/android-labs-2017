@@ -1,26 +1,47 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#8ab6fd"
     >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/headline"
+        android:id="@+id/imageView8"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="143dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:text="新增账目"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textColor="#226663"
+        android:background="@drawable/button_style"
 
+        android:layout_marginBottom="84dp"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_centerHorizontal="true" />
     <Button
         android:id="@+id/button2"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:text="查看当前账目"
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true" />
-
+        android:color="#f7f7ed"
+        android:textColor="#226663"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_style"
+        android:layout_weight="0.10"
+        android:layout_below="@+id/imageView8"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginTop="30dp" />
 </RelativeLayout>
