@@ -20,6 +20,7 @@
         android:text="宿舍水电费"/>
 
     <Button
+        android:id="@+id/bt_menu_fee"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginTop="15dp"
@@ -28,17 +29,16 @@
         android:textColor="#ffffff"
         android:text="水电费"
         android:textSize="18sp"
-        android:id="@+id/shuidianfei"
         android:background="@color/colorPrimary"/>
 
     <Button
+        android:id="@+id/bt_menu_record"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
-        android:id="@+id/kanjilu"
         android:text="查看记录"
         android:textSize="18sp"
         android:background="@color/colorPrimary"/>

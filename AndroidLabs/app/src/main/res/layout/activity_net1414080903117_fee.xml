@@ -89,7 +89,7 @@
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="23"/>
+                android:text="3.5元/吨"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -100,18 +100,19 @@
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="用量"/>
+                android:text="20吨"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#000000"/>
             <TextView
+                android:id="@+id/tv_fee_water"
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="余额"/>
+                android:text="100元"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -201,7 +202,7 @@
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="23"/>
+                android:text="0.69元/度"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -212,23 +213,25 @@
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="用量"/>
+                android:text="1000"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#000000"/>
             <TextView
+                android:id="@+id/tv_fee_ele"
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="余额"/>
+                android:text="100元"/>
         </LinearLayout>
-    </LinearLayout>\
+    </LinearLayout>
 
 
     <Button
+        android:id="@+id/bt_fee_submit"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginTop="15dp"
