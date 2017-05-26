@@ -16,8 +16,7 @@ import edu.hzuapps.androidlabs.R;
  */
 
 public class WorkAdapter extends ArrayAdapter<Work_Info> {
-    private int resourceId;
-
+    private int resourceId;   
     public WorkAdapter(Context context, int textViewResourceId, List<Work_Info> objects) {
         super(context, textViewResourceId, objects);
         resourceId = textViewResourceId;
@@ -30,5 +29,8 @@ public class WorkAdapter extends ArrayAdapter<Work_Info> {
         TextView workname = (TextView) view.findViewById(R.id.work_name);
         workname.setText(work.getWorkname());
         return view;
+    }
+    public void refresh(){
+        notifyDataSetChanged();
     }
 }
