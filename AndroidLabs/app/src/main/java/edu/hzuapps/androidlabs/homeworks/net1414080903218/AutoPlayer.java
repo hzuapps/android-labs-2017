@@ -163,6 +163,7 @@ public class AutoPlayer extends Player {
         if(isMe)data += "1 ";
         else data += "0 ";
         data += weight;
+        //board.writefNewLine(data);
         //writefNewLine(data);
         return weight;
     }
@@ -175,78 +176,5 @@ public class AutoPlayer extends Player {
         public final static int L2T2 = BEST;
         public final static int E3E = BETTER;
         public final static int E21E = BETTER;
-    }
-    public boolean writefNewLine(String data){
-        if(writef("\n"+data)){
-            return true;
-        }
-        return false;
-    }
-    public boolean writef(String data){
-        String state = Environment.getExternalStorageState();
-        if(state.equals(Environment.MEDIA_MOUNTED)) {
-            File SDPath = Environment.getExternalStorageDirectory();
-            //String path = SDPath.getPath()+"";
-            //SDPath.mkdir();
-            File path = new File(SDPath,"chess");
-            path.mkdir();
-            File file = new File(path,"data.txt");
-            try {
-                FileOutputStream fos = new FileOutputStream(file,true);
-                fos.write(data.getBytes());
-                fos.close();
-            }catch (Exception e){
-            }
-        }
-        return true;
-    }
-    public String readfLine(int index){
-        List list = new ArrayList();
-        String data = "";
-        String state = Environment.getExternalStorageState();
-        if(state.equals(Environment.MEDIA_MOUNTED)) {
-            File SDPath = Environment.getExternalStorageDirectory();
-            File path = new File(SDPath,"chess");
-            path.mkdir();
-            File file = new File(path,"data.txt");
-            try {
-                FileInputStream fis = new FileInputStream(file);
-                BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-                while ((data = br.readLine()) != null){
-                    list.add(new String(data));
-                }
-                //FileOutputStream fos = new FileOutputStream(file,true);
-                //fos.write(data.getBytes());
-                //fos.close();
-            }catch (Exception e){
-            }
-        }
-        data = list.get(index).toString();
-        return data;
-    }
-    public int getfLine(){
-        List list = new ArrayList();
-        String data = "";
-        int line = 0;
-        String state = Environment.getExternalStorageState();
-        if(state.equals(Environment.MEDIA_MOUNTED)) {
-            File SDPath = Environment.getExternalStorageDirectory();
-            File path = new File(SDPath,"chess");
-            path.mkdir();
-            File file = new File(path,"data.txt");
-            try {
-                FileInputStream fis = new FileInputStream(file);
-                BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-                while ((data = br.readLine()) != null){
-                    list.add(new String(data));
-                }
-                //FileOutputStream fos = new FileOutputStream(file,true);
-                //fos.write(data.getBytes());
-                //fos.close();
-            }catch (Exception e){
-            }
-        }
-        //line = list.lastIndexOf()；
-        return 0;
     }
 }
