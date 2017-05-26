@@ -8,7 +8,7 @@
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="160dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
@@ -20,7 +20,7 @@
     <LinearLayout
         android:id="@+id/value"
         android:layout_width="match_parent"
-        android:layout_height="15dp"
+        android:layout_height="20dp"
 
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -50,7 +50,7 @@
     <LinearLayout
         android:id="@+id/date"
         android:layout_width="match_parent"
-        android:layout_height="15dp"
+        android:layout_height="20dp"
         android:layout_below="@+id/value"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -74,11 +74,12 @@
             android:paddingRight="5dp"
             />
     </LinearLayout>
+
         <View style="@style/bg_line" android:layout_below="@+id/date"/>
     <LinearLayout
         android:id="@+id/project"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_below="@+id/date"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -106,7 +107,7 @@
     <LinearLayout
         android:id="@+id/remark"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_below="@+id/project"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
