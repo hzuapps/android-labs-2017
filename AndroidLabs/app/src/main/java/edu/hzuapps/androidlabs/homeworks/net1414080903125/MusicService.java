@@ -3,6 +3,7 @@ package edu.hzuapps.androidlabs.homeworks.net1414080903125;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Environment;
 import android.os.Binder;
 import android.os.IBinder;
 
@@ -24,10 +25,10 @@ public class MusicService extends Service{
 
 
     private String[] musicDir = new String[]{
-            "mnt/sdcard/也罢.mp3",
-            "mnt/sdcard/对号入座.mp3",
-            "mnt/sdcard/春风十里不及你.mp3",
-            "mnt/sdcard/恋爱的犀牛.mp3"
+            Environment.getExternalStorageDirectory().getAbsolutePath()+"mnt/sdcard/也罢.mp3",
+            Environment.getExternalStorageDirectory().getAbsolutePath()+"mnt/sdcard/对号入座.mp3",
+            Environment.getExternalStorageDirectory().getAbsolutePath()+"mnt/sdcard/春风十里不及你.mp3",
+            Environment.getExternalStorageDirectory().getAbsolutePath()+"mnt/sdcard/恋爱的犀牛.mp3"
 
     };
     private int musicNumber = 1;
