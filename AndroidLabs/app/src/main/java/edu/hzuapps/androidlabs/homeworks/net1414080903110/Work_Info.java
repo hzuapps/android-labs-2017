@@ -1,12 +1,14 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903110;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2017/4/29 0029.
    作业信息类，主要包括id，名字和内容
  */
 
-public class Work_Info {
-    private String workid;
+public class Work_Info implements Serializable {
+    private int workid;
     private String workname;
     private String workcontent;
     public String getWorkname() {
@@ -17,11 +19,11 @@ public class Work_Info {
         this.workname = workname;
     }
 
-    public String getWorkid() {
+    public int getWorkid() {
         return workid;
     }
 
-    public void setWorkid(String workid) {
+    public void setWorkid(int workid) {
         this.workid = workid;
     }
 

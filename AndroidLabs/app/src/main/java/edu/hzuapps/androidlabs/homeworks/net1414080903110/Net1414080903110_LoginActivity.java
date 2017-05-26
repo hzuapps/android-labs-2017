@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import edu.hzuapps.androidlabs.R;
 
@@ -45,7 +46,7 @@ public class Net1414080903110_LoginActivity extends AppCompatActivity implements
                     intent.putExtra("password", password); /*将用户名和密码通过Intent传递给下一个活动*/
                     startActivity(intent);
                 } else {
-
+                    Toast.makeText(Net1414080903110_LoginActivity.this,"账号信息有误",Toast.LENGTH_SHORT).show();
                 }
         }
     }

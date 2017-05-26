@@ -8,18 +8,10 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/t"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903110.Net1414080903110_WorkListActivity">
+	<!--作业列表界面-->
 
-	<!--作业列表界面！-->
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_weight="1"
-        android:text="布置作业"
-        />
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
@@ -28,7 +20,15 @@
         android:dividerHeight="20dp"
 
         />
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buzhi"
+        android:background="@drawable/buzhi_view_bg"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true" />
 
 
 
