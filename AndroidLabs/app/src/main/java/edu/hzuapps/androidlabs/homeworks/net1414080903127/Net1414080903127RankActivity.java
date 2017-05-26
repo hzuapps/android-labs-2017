@@ -39,6 +39,7 @@ public class Net1414080903127RankActivity extends Activity {
             edit.putInt("Second", 0);
             edit.putInt("Third", 0);
             edit.commit();
+
         }
         data[0]=sp.getInt("First",0);
         data[1]=sp.getInt("Second",0);
@@ -48,6 +49,7 @@ public class Net1414080903127RankActivity extends Activity {
     public void change(){
         for(int i=0;i<3;i++){
             Tdata[i]=Integer.toString(data[i]);
+
         }
     }
 }

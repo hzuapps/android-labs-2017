@@ -118,6 +118,7 @@ public class Net1414080903127GameActivity extends Activity {
     };
 
     public int GetRandomNumber() {
+        /*获取一个随机数*/
         int RNumber;
         random = new Random();
         RNumber = random.nextInt(3);
