@@ -1,31 +1,32 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903111;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends Activity implements AdapterView.OnItemLongClickListener {
+import edu.hzuapps.androidlabs.R;
+
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemLongClickListener {
     private List<String> note_names;
     private NoteDatabaseHelper dbHelper;
-    ListView noteList;
+    private ListView noteList;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemLongClic
         dbHelper = new NoteDatabaseHelper(this, "NoteList.db", null, 1);
 
         note_names = new ArrayList<>();
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+        adapter = new ArrayAdapter<>(
                 MainActivity.this, android.R.layout.simple_list_item_1, note_names
         );
         noteList = (ListView) findViewById(R.id.note_list);
@@ -50,19 +51,15 @@ public class MainActivity extends Activity implements AdapterView.OnItemLongClic
                 /*在数据库添加文件名，创建时间和id
                 在EditNoteActivity中打开该笔记文件
                  */
-                DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.CHINA);
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss", Locale.CHINA);
                 String t = df.format(new Date());
-                String NewNote = "new note";
-                try {
-                    FileOutputStream out = openFileOutput(NewNote, MODE_APPEND);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                String NewNote = t;
 
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 values.put("name", NewNote);
                 values.put("time", t);
+                values.put("content", "");
                 long RowId = db.insert("note", null, values);
 
                 Intent intent = new Intent(MainActivity.this, EditNoteActivity.class);
@@ -100,21 +97,20 @@ public class MainActivity extends Activity implements AdapterView.OnItemLongClic
     }
 
     @Override
-    public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+    public boolean onItemLongClick(final AdapterView<?> parent, View view, final int position, long id) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("delete")
                 .setMessage("delete this note?")
                 .setPositiveButton("delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        note_names.remove(position);
-
                         SQLiteDatabase db = dbHelper.getWritableDatabase();
                         String note_name = note_names.get(position);
                         db.delete("note", "name=?", new String[]{note_name});
-
+                        note_names.remove(position);
                         noteList.deferNotifyDataSetChanged();
                         dialog.dismiss();
+                        adapter.notifyDataSetChanged();
                     }
                 })
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -125,7 +121,6 @@ public class MainActivity extends Activity implements AdapterView.OnItemLongClic
                 })
                 .setCancelable(true)
                 .show();
-        return false;
+        return true;
     }
-
 }
