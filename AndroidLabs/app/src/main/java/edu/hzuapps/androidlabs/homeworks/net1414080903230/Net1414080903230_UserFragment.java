@@ -67,7 +67,7 @@ public class Net1414080903230_UserFragment extends Fragment {
     class submitOnClieckListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-//本地机器部署为服务器，从本地下载a.txt文件内容在textView上显示
+		//从github上抓取数据
             new Thread(){
                 public void run(){
                     try {
