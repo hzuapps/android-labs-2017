@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import edu.hzuapp.androidlabs.R;
 
 public class Net1414080903135AdminActivity extends AppCompatActivity implements View.OnClickListener{
 

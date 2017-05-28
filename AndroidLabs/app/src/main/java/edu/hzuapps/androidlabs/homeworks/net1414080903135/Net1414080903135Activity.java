@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
-import edu.hzuapp.androidlabs.R;
 
 public class Net1414080903135Activity extends AppCompatActivity {
 

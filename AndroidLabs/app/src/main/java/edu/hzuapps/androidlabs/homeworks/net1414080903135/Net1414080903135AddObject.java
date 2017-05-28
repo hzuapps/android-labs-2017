@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import edu.hzuapp.androidlabs.R;
 
 public class Net1414080903135AddObject extends AppCompatActivity implements View.OnClickListener {
 

@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import edu.hzuapp.androidlabs.R;
 
 public class Net1414080903135LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
