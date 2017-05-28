@@ -2,12 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:background="@color/aquamarine"
-    android:orientation="vertical">
+    android:background="@color/mintcream"
+    android:orientation="vertical"
+    android:id="@+id/user">
+
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp"
+        android:id="@+id/user_content" />
+
+    <Button
+        android:text="获取信息"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="第一个页面"
-        android:textSize="22sp"/>
+        android:id="@+id/button2" />
 </LinearLayout>
