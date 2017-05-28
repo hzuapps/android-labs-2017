@@ -1,4 +1,4 @@
-package edu.hzuapp.androidlabs.homeworks.net1414080903135;
+package edu.hzuapps.androidlabs.homeworks.net1414080903135;
 
 import android.content.ContentValues;
 import android.content.Intent;
