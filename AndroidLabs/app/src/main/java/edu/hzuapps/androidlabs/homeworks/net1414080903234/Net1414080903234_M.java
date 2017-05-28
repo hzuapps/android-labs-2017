@@ -26,10 +26,19 @@ public class Net1414080903234_M extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
     // TODO: Rename and change types of parameters
-    private String flag;
-    private TextView mTextview;
-    private Button add;
+
+    private TextView incomeTV;
+    private TextView outlayTV;
+    private TextView moneyTV;
+
     private OnFragmentInteractionListener mListener;
+    private View view = null;
+    public static double money = 0;
+    public static double income = 0;
+    public static double outlay = 0;
+
+    private int insize = 0;
+    private int outsize = 0;
 
     public Net1414080903234_M() {
         // Required empty public constructor
@@ -59,21 +68,13 @@ public class Net1414080903234_M extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        flag = getArguments().getString("message");
-        View view = null;
-        switch (flag){
-            case "1":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__m,container,false);
-                break;
-            case "2":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__i,container,false);
-                break;
-            case "3":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__m,container,false);
-                break;
-            case "4":
-                view = inflater.inflate(R.layout.fragment_net1414080903234__m,container,false);
-        }
+        view = inflater.inflate(R.layout.fragment_net1414080903234__m,container,false);
+
+        initValue();
+        setValue();
+
+
+
         return view;
     }
 
@@ -88,10 +89,41 @@ public class Net1414080903234_M extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
+    private void initValue(){
+        money = 0;
+        income = 0;
+        outlay = 0;
+        incomeTV = (TextView)view.findViewById(R.id.tiview);
+        outlayTV = (TextView)view.findViewById(R.id.toview);
+        moneyTV = (TextView)view.findViewById(R.id.tmview);
+        Net1414080903234_I.inlist = new Incomedao(view.getContext()).findALL();
+        Net1414080903234_O.outlist = new Outlaydao(view.getContext()).findALL();
+        insize =  Net1414080903234_I.inlist.size();
+        outsize = Net1414080903234_O.outlist.size();
+        for(int i = 0;i <insize;i++){
+            income = income + Net1414080903234_I.inlist.get(i).getMoney();
+        }
+        for(int i = 0;i < outsize;i++){
+            outlay = outlay + Net1414080903234_O.outlist.get(i).getMoney();
+        }
+        money = income - outlay;
+    }
+
+    private void setValue(){
+        incomeTV.setText(String.valueOf(income));
+        outlayTV.setText(String.valueOf(outlay));
+        moneyTV.setText(String.valueOf(money));
+    }
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onResume() {
+        setValue();
+        super.onResume();
     }
 
     /* @Override
@@ -107,4 +139,5 @@ public class Net1414080903234_M extends Fragment {
             }
 });
         }*/
+
 }

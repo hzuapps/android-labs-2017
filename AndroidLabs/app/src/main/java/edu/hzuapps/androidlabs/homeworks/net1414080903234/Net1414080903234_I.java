@@ -1,6 +1,8 @@
 package edu.hzuapps.androidlabs.homework.net1414080903234;
 
+import android.app.Activity;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,8 +11,12 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.List;
 
 
 /**
@@ -24,7 +30,7 @@ import android.widget.TextView;
 public class Net1414080903234_I extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
+    public static List<Income> inlist;
     // TODO: Rename and change types of parameters
     private String flag;
     private TextView mTextview;
@@ -32,6 +38,17 @@ public class Net1414080903234_I extends Fragment {
     private View view = null;
     private OnFragmentInteractionListener mListener;
 
+    //ListView中的TextView
+    private TextView id;
+    private TextView drawee;
+    private TextView money;
+    private TextView date;
+    //数据库操作
+    private Incomedao incomedao;
+    //适配器
+    private IncomeAdapter incomeadapter;
+    //ListView
+    private ListView incomeLV;
     public Net1414080903234_I() {
         // Required empty public constructor
     }
@@ -60,10 +77,14 @@ public class Net1414080903234_I extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_net1414080903234__i,container,false);
+        incomedao = new Incomedao(view.getContext());
+        incomeLV = (ListView) view.findViewById(R.id.incomeList);
+        inlist = incomedao.findALL();
+        incomeadapter = new IncomeAdapter();
+        incomeLV.setAdapter(incomeadapter);
         return view;
     }
-
-    // TODO: Rename method, update argument and hook method into UI event
+// TODO: Rename method, update argument and hook method into UI event
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -81,6 +102,17 @@ public class Net1414080903234_I extends Fragment {
     }
 
     @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            incomeadapter.notifyDataSetChanged();
+            //相当于Fragment的onResume
+        } else {
+            //相当于Fragment的onPause
+        }
+    }
+
+    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -92,5 +124,38 @@ public class Net1414080903234_I extends Fragment {
                 startActivity(intent);
             }
         });
+    }
+
+
+    class IncomeAdapter extends BaseAdapter {
+        public int getCount(){
+            return inlist.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return inlist.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View item = convertView != null?convertView:View.inflate(getContext(),R.layout.inlist_net1414080903234,null);
+            TextView idTV = (TextView) item.findViewById(R.id.incomeid);
+            TextView dateTV = (TextView) item.findViewById(R.id.idatet);
+            TextView draweeTV = (TextView) item.findViewById(R.id.idraweet);
+            TextView moneyTV = (TextView) item.findViewById(R.id.imoneyt);
+
+            final Income in = inlist.get(position);
+            idTV.setText(in.getId()+"");
+            dateTV.setText(in.getDate()+"  ");
+            draweeTV.setText(in.getPayer());
+            moneyTV.setText(String.valueOf(in.getMoney()));
+            return item;
+        }
     }
 }
