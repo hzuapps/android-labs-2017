@@ -1,7 +1,21 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903218;
 
 import android.graphics.Color;
+import android.os.Environment;
+import android.provider.ContactsContract;
+import android.text.format.DateFormat;
 import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Timer;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -18,6 +32,7 @@ public class Board {
     private int row;
     private boolean gameover;
     private boolean win;
+    private String fileName;
     public Board(int r,int c){
         row = r;
         col = c;
@@ -32,10 +47,13 @@ public class Board {
                 display[i][j] = false;
             }
         }
+        Date now = new Date();
+        fileName = String.valueOf(now.getTime())+".txt";
+        writefLine("start");
     }
     public Board(){
         row = 10;
-        col = 12;
+        col = 10;
         firstColor = Color.BLACK;
         laterColor = Color.WHITE;
         countPieces = 0;
@@ -53,6 +71,9 @@ public class Board {
         if(!isEmpty(r,c))return false;
         this.first[r][c] = first;
         display[r][c] = true;
+        String f = first ? "1" : "0";
+        String data = f+" "+String.valueOf(r)+" "+String.valueOf(c);
+        writefLine(data);
         checkWin(first,r,c);
         return true;
     }
@@ -125,6 +146,83 @@ public class Board {
             }
         }
         return false;
+    }
+    public boolean writefLine(String data){
+        if(writef(data+"\n",fileName)){
+            return true;
+        }
+        return false;
+    }
+    public boolean writefNewLine(String data){
+        if(writef("\n"+data,fileName)){
+            return true;
+        }
+        return false;
+    }
+    public boolean writef(String data,String name){
+        String state = Environment.getExternalStorageState();
+        if(state.equals(Environment.MEDIA_MOUNTED)) {
+            File SDPath = Environment.getExternalStorageDirectory();
+            File path = new File(SDPath,"chess");
+            path.mkdir();
+            File file = new File(path,name);
+            try {
+                FileOutputStream fos = new FileOutputStream(file,true);
+                fos.write(data.getBytes());
+                fos.close();
+            }catch (Exception e){
+            }
+        }
+        return true;
+    }
+    public int getfLine(){
+        List list = new ArrayList();
+        String data = "";
+        int line = 0;
+        String state = Environment.getExternalStorageState();
+        if(state.equals(Environment.MEDIA_MOUNTED)) {
+            File SDPath = Environment.getExternalStorageDirectory();
+            File path = new File(SDPath,"chess");
+            path.mkdir();
+            File file = new File(path,"data.txt");
+            try {
+                FileInputStream fis = new FileInputStream(file);
+                BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+                while ((data = br.readLine()) != null){
+                    list.add(new String(data));
+                }
+                //FileOutputStream fos = new FileOutputStream(file,true);
+                //fos.write(data.getBytes());
+                //fos.close();
+            }catch (Exception e){
+            }
+        }
+        //line = list.lastIndexOf()；
+        return 0;
+    }
+    public String readfLine(String name,int index){
+        List list = new ArrayList();
+        String data = "";
+        String state = Environment.getExternalStorageState();
+        if(state.equals(Environment.MEDIA_MOUNTED)) {
+            File SDPath = Environment.getExternalStorageDirectory();
+            File path = new File(SDPath,"chess");
+            path.mkdir();
+            File file = new File(path,name);
+            try {
+                FileInputStream fis = new FileInputStream(file);
+                BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+                while ((data = br.readLine()) != null){
+                    list.add(new String(data));
+                }
+                //FileOutputStream fos = new FileOutputStream(file,true);
+                //fos.write(data.getBytes());
+                //fos.close();
+            }catch (Exception e){
+            }
+        }
+        data = list.get(index).toString();
+        return data;
     }
     public boolean[][] getDisplay(){
         return display;
