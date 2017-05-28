@@ -24,4 +24,10 @@
         android:textSize="36dp"
         android:textColor="@color/white"
         android:id="@+id/lableincome" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lableincome"
+        android:id="@+id/incomeList">
+    </ListView>
 </RelativeLayout>

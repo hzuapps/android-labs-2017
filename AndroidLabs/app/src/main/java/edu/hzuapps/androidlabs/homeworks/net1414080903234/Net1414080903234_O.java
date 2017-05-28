@@ -9,8 +9,12 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.List;
 
 
 /**
@@ -24,12 +28,22 @@ import android.widget.TextView;
 public class Net1414080903234_O extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
+    public static List<Outlay> outlist;
     // TODO: Rename and change types of parameters
     private String flag;
     private Button add;
     private View view = null;
-
+    //ListView中的TextView
+    // private TextView id;
+    // private TextView usage;
+    // private TextView money;
+    // private TextView date;
+    //数据库操作
+    private Outlaydao outlaydao;
+    //适配器
+    private Net1414080903234_O.OutlayAdapter outlayadapter;
+    //ListView
+    private ListView outlayLV;
     public Net1414080903234_O() {
         // Required empty public constructor
     }
@@ -49,6 +63,17 @@ public class Net1414080903234_O extends Fragment {
     }
 
     @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            outlayadapter.notifyDataSetChanged();
+            //相当于Fragment的onResume
+        } else {
+            //相当于Fragment的onPause
+        }
+    }
+    
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
@@ -58,14 +83,19 @@ public class Net1414080903234_O extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_net1414080903234__o,container,false);
+        outlaydao = new Outlaydao(view.getContext());
+        outlayLV = (ListView) view.findViewById(R.id.outlayList);
+        outlist = outlaydao.findALL();
+        outlayadapter = new Net1414080903234_O.OutlayAdapter();
+        outlayLV.setAdapter(outlayadapter);
         return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     /**
      * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
+     * fragment to allow an interaction out this fragment to be communicated
+     * to the activity and potentially other fragments contained out that
      * activity.
      * <p>
      * See the Android Training lesson <a href=
@@ -91,4 +121,38 @@ public class Net1414080903234_O extends Fragment {
             }
         });
     }
+
+    class OutlayAdapter extends BaseAdapter {
+        public int getCount() {
+            return outlist.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return outlist.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View item = convertView != null ? convertView : View.inflate(getContext(), R.layout.outlist_net1414080903234, null);
+            TextView idTV = (TextView) item.findViewById(R.id.outlayid);
+            TextView dateTV = (TextView) item.findViewById(R.id.odatet);
+            TextView usageTV = (TextView) item.findViewById(R.id.ousaget);
+            TextView moneyTV = (TextView) item.findViewById(R.id.omoneyt);
+
+            final Outlay out = outlist.get(position);
+            idTV.setText(out.getId() + "");
+            dateTV.setText(out.getDate() + "  ");
+            usageTV.setText(out.getUsage());
+            moneyTV.setText(String.valueOf(out.getMoney()));
+            return item;
+        }
+    }  
 }
+
+

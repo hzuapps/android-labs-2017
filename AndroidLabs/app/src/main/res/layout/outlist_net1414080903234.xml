@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView"
+        android:textSize="16dp" />
+
+    <TextView
+        android:text="000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:id="@+id/outlayid"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif" />
+    <TextView
+        android:text="@string/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/odatet"
+        android:layout_alignBottom="@+id/textView"
+        android:id="@+id/textView9"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_marginStart="11dp"
+        android:id="@+id/odatet"
+        android:textSize="16dp"
+        android:text="1900-12-12"
+        android:layout_marginRight="12dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textView"
+        android:id="@+id/textView6"
+        android:text="@string/money"
+        android:textSize="24dp" />
+
+    <TextView
+        android:text="88888.88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView6"
+        android:id="@+id/omoneyt"
+        android:textSize="24dp"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="27dp" />
+
+
+    <TextView
+        android:text="@string/yuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/omoneyt"
+        android:layout_toEndOf="@+id/omoneyt"
+        android:id="@+id/textView8"
+        android:textSize="24dp" />
+
+    <TextView
+        android:text="@string/usage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/idraweet"
+        android:id="@+id/textView3"
+        android:layout_marginTop="3dp"
+        android:textSize="24dp" />
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ousaget"
+        android:textSize="24dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="27dp"
+        android:layout_below="@+id/textView6"
+        android:layout_toRightOf="@+id/textView3"/>
+
+
+
+
+
+
+</RelativeLayout>

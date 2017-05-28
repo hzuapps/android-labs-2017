@@ -24,4 +24,10 @@
         android:textSize="36dp"
         android:textColor="@color/white"
         android:id="@+id/lableoutlay" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lableoutlay"
+        android:id="@+id/outlayList">
+    </ListView>
 </RelativeLayout>
