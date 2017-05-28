@@ -2,7 +2,7 @@ package edu.hzuapps.androidlabs.homeworks.net1414080903104;
 /*
  * 实现记录信息数据化，基于对象对数据库关系表进行操作
  * 一个javabean类，定义的变量均为卡牌的内容
- * 注意Accessdata对象
+ * 
  */
 public class Accessdata {
 	private int id;//定义私有变量id，
@@ -17,6 +17,11 @@ public class Accessdata {
 		setStrength(strength);
 		setDefensive(defensive);
 		setHp(hp);
+	}
+	public Accessdata(int id,String name,String level){
+		setId(id);
+		setName(name);
+		setLevel(level);
 	}
 	public int getId(){return id;}
 	public void setId(int id){this.id=id;}

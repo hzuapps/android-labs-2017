@@ -19,24 +19,18 @@ import java.util.*;
 public class Net1414080903104extractActivity extends ActionBarActivity {
     int num;//用于存放随机得到的数字，该数字代表着卡牌的id
     Accessdata U=new Accessdata();//定义一个Accessdata变量以便用于存放从数据库获取得到的某卡牌数据
-	Visitdatabases Visit=new Visitdatabases();//定义一个Visitdatabases变量以便想数据库传送数据或者从数据库内获取数据
+	Visitdatabases Visit;//定义一个Visitdatabases变量以便想数据库传送数据或者从数据库内获取数据
     
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.extractactivity_net1414080903104);
         
         num=randomnum();
-        /*System.out.print(num);//连接数据库失败
         
-        try {
-			U=Visit.findonecard(num);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			Log.e("android", "fail to connect!"+"  "+e.getMessage());
-		}//将num利用Visitdatabases类（即上述创建的对象  V ）封装起来，并访问到数据库中相应的数据；
-        //将对象Visit返回的类型赋值给对象U；*/
-        
+        Visit=new Visitdatabases(this);
+        U=Visit.queryOne(num);//有问题！
+        //将num利用Visitdatabases类封装起来，并访问到数据库中相应的数据；
+        //将对象Visit返回的类型赋值给对象U；*/       
         //这时候对象U可以利用getXXX方法获取到数据库内的数据；
         TextView textView2_1 = (TextView)findViewById(R.id.textView2_1);
         TextView textView3_1 = (TextView)findViewById(R.id.textView3_1);
@@ -45,7 +39,7 @@ public class Net1414080903104extractActivity extends ActionBarActivity {
         TextView textView6_1 = (TextView)findViewById(R.id.textView6_1);
         TextView textView7_1 = (TextView)findViewById(R.id.textView7_1);
         TextView textView8_1 = (TextView)findViewById(R.id.textView8_1);       
-        U=shuju(num);       
+        //U=shuju(num);       
         textView2_1.setText(String.valueOf(U.getId()));
         textView3_1.setText(U.getName());
         textView4_1.setText(U.getLevel());
@@ -53,10 +47,7 @@ public class Net1414080903104extractActivity extends ActionBarActivity {
         textView6_1.setText(U.getStrength());
         textView7_1.setText(U.getDefensive());
         textView8_1.setText(U.getHp());
-        
-        
-        //将获得的数据显示出来(待编写代码)
-         
+
     }
 	
 	public int randomnum(){//定义一个在0-9之间获得随机生成数的方法
@@ -64,6 +55,7 @@ public class Net1414080903104extractActivity extends ActionBarActivity {
 		int result=random.nextInt(10);
 		return result+1;
 	}
+	/*
 	public Accessdata shuju(int a){//由于数据库连接出现错误，暂时利用函数方法来实现数据内容的获取
 		Accessdata U1 = null;
 		if(a==1){U1=new Accessdata(1,"库丘林Alter","SSR","凯尔特神话","9999","9999","9999");}
@@ -78,5 +70,6 @@ public class Net1414080903104extractActivity extends ActionBarActivity {
 		if(a==10){U1=new Accessdata(10,"贞德","SR","史实","1111","1111","1111");}
 		return U1;
 	}
+	*/
     
 }

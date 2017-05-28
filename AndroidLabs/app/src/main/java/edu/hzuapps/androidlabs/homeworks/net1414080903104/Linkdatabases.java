@@ -1,49 +1,39 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903104;
 /*
- *实现数据库连接和释放的类 
- *代码参考javaweb应用开发教材中“数据库访问javabean的设计”
- *（未测试成功，待修改）
+ *实现sqlite数据库连接和创建
+ *已经利用软件SQLite Expert Professional初始化数据好了
+ *
  */
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Properties;
-public class Linkdatabases {
-	private static String driver ;
-	private static String url ;
-	private static String user ;
-	private static String password ;
-    private static Properties pr=new Properties();
-	private Linkdatabases() {}
-	static { 
-	   try {pr.load(Linkdatabases.class.getClassLoader().getResourceAsStream("db.properties"));
-		  driver=pr.getProperty("driver");
-		  url=pr.getProperty("url");
-		  user=pr.getProperty("username");
-		  password=pr.getProperty("password");
-		  Class.forName(driver);
-		} catch (Exception e) {
-			throw new ExceptionInInitializerError(e);
-		}
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+public class Linkdatabases extends SQLiteOpenHelper{
+	public Linkdatabases (Context context){
+		super(context,"card.db",null,1);
 	}
-	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(url, user, password);
-	}
-	public static void free(ResultSet rs, Statement st, Connection conn) {
-		try { if (rs != null) rs.close();
-		} catch (SQLException e) {e.printStackTrace();
-		} finally {
-			try { if (st != null) st.close();
-			} catch (SQLException e) {e.printStackTrace();
-			} finally {
-				  if (conn != null)
-				    try { conn.close();
-				    } catch (SQLException e) {e.printStackTrace();
-				   }
-		             }
-		     }
-	    }
 
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		// TODO Auto-generated method stub
+		System.out.println("OnCreate");
+		db.execSQL("create table cards(id integer primary key,name varchar(20),level char(5),background varchar(50),strength char(5),defensive char(5),hp char(5) )");
+		//db.execSQL("insert into cards values (1,'库丘林Alter','SSR','凯尔特神话','9999','9999','9999')");
+		/*ContentValues cv = new ContentValues();
+		cv.put("id",1);
+        cv.put("name", "库丘林Alter");
+        cv.put("level", "SSR");
+        cv.put("background", "凯尔特神话");
+        cv.put("strength", "9999");
+        cv.put("defensive", "9999");
+        cv.put("hp", "9999");
+        db.insert("cards", null, cv);
+        */
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+		System.out.println("onUpGrade");
+	}
 }
