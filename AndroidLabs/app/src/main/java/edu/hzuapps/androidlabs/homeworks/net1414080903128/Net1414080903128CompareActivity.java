@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Net1414080903128CompareActivity extends AppCompatActivity {
 
@@ -56,6 +57,15 @@ public class Net1414080903128CompareActivity extends AppCompatActivity {
                     guessStatus = "恭喜你！你赢了！";
                     gameWon = true;
                     endGame();
+                    boolean isSaveSuccess=Utils.saveData(Net1414080903128CompareActivity.this,mysteryNumber,guessMade);
+                    if(isSaveSuccess)
+                    {
+                        Toast.makeText(Net1414080903128CompareActivity.this,"保存成功",Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(Net1414080903128CompareActivity.this, "保存失败", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 outputStringText.setText(guessStatus);
             }
