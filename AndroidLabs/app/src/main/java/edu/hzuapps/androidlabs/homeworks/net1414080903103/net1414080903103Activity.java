@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.homeworks.net1414080903103;
+﻿package edu.hzuapps.androidlabs.homeworks.net1414080903103;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class Net1414080903103Activity extends Activity implements OnClickListene
         Button btnStart = (Button) findViewById(R.id.BTN_START);
         Button btnStop = (Button) findViewById(R.id.BTN_STOP);
         Button btnConnectSvr = (Button) findViewById(R.id.BTN_GETVPNSTATUS);
-
+        Button btn_save=(Button) findViewById(R.id.btn_save);
         btnStart.setOnClickListener(this);
         btnStop.setOnClickListener(this);
         btnConnectSvr.setOnClickListener(this);
-
+        btn_save.setOnClickListener(this);
     }
 
     @Override
@@ -63,7 +63,21 @@ public class Net1414080903103Activity extends Activity implements OnClickListene
                 break;
             }
 
+           case R.id.btn_save: {
+		String saveinfo =edtIP.getText().toString().trim();
+		FileOutputStream fos;
+		try {
+		//保存数据
+		fos = openFileOutput("data.txt", Context.MODE_APPEND);
+		fos.write(saveinfo.getBytes());
+		fos.close();
+		} catch (Exception e) {
+		e.printStackTrace();
+		}
+		Toast.makeText(TestSVSDKLib.this, "保存成功", Toast.LENGTH_SHORT).show();
+		break;
 
+		}
         }
     }
 
