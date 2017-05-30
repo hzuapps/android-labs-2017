@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.hzuapps.androidlabs.homeworks.net1414080903212">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_assignment_on"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Net1414080903212Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AssignActivity"/>
+        <activity android:name=".MarkActivity"></activity>
+    </application>
+
+</manifest>

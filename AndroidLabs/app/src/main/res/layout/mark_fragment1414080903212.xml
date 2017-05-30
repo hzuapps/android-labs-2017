@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mark_fragment1414080903212"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903212.MarkActivity">
+    <LinearLayout
+        android:id="@+id/markhomework"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/framark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="批改作业"
+            android:textSize="36dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="9"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commentLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/gradeLinear"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/markcomment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作业评语:"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp">
+            <EditText
+                android:id="@+id/textcomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入作业评语"
+                android:textSize="16sp" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonMark"
+        android:text="点评作业"
+        android:textSize="24dp"
+        android:maxLength="50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentLinear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <LinearLayout
+        android:id="@+id/stu_idLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/markhomework"
+        android:layout_alignLeft="@+id/titleLinear"
+        android:layout_alignStart="@+id/titleLinear"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/markstuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学生学号:"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/textstuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入学生学号"
+            android:textSize="20sp"
+            android:maxLength="13"
+            android:layout_weight="0.44" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titleLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/stu_idLinear"
+        android:layout_alignLeft="@+id/gradeLinear"
+        android:layout_alignStart="@+id/gradeLinear">
+        <TextView
+            android:id="@+id/asstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标    题:"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/texttitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入作业标题"
+            android:textSize="20sp"
+            android:maxLength="15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gradeLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/titleLinear"
+        android:layout_alignLeft="@+id/commentLinear"
+        android:layout_alignStart="@+id/commentLinear">
+
+        <TextView
+            android:id="@+id/markgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成    绩:"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/textgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入作业成绩"
+            android:textSize="20sp"
+            android:maxLength="4" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCancelMark"
+        android:text="取消"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonMark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:textSize="20sp" />
+
+</RelativeLayout>
