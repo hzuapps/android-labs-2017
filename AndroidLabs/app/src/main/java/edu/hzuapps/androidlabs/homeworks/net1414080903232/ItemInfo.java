@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 
 public class ItemInfo implements Serializable {
+    private Long id;
     private String name;
     private String TB_name;
     private String time;
@@ -21,8 +22,8 @@ public class ItemInfo implements Serializable {
        this.TB_name = TB_name;
        this.time = time;
    }
-
-
+    public  void setId(Long id){this.id=id;}
+    public Long getId(){return id;}
     public String getName() {
         return name;
     }
