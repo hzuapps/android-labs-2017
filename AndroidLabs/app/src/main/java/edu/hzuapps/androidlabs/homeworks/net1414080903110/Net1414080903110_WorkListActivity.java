@@ -9,9 +9,12 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,6 +31,9 @@ public class Net1414080903110_WorkListActivity extends AppCompatActivity impleme
     private String i;
     private WorkDatabaseHelper dbHelper;
     private ImageView buzhi;
+    private Button send;
+    private TextView responseText;
+    private WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +43,9 @@ public class Net1414080903110_WorkListActivity extends AppCompatActivity impleme
         ListView listView=(ListView)findViewById(R.id.list_view);
         listView.setAdapter(adapter);
         buzhi=(ImageView)findViewById(R.id.buzhi);
+        send=(Button)findViewById(R.id.send_request);
         buzhi.setOnClickListener(this);
+        send.setOnClickListener(this);
         Intent intent=getIntent();
         String uname=intent.getStringExtra("username");/*获取Net1414080903110_LoginActivity传递过来的用户名和密码*/
         String psword=intent.getStringExtra("password");
@@ -92,7 +100,7 @@ public class Net1414080903110_WorkListActivity extends AppCompatActivity impleme
                 startActivity(intent);
             }
         });
-
+       
     }
 	
     public void onClick(View v)
@@ -103,6 +111,9 @@ public class Net1414080903110_WorkListActivity extends AppCompatActivity impleme
                 Intent intent2=new Intent(Net1414080903110_WorkListActivity.this,Net1414080903110_SubmitActivity.class);
                 this.finish();
                 startActivity(intent2);
+            case R.id.send_request://点击按钮从github抓取json文件
+                Intent intent3=new Intent(Net1414080903110_WorkListActivity.this,Net1414080903110_AnalysisJsonActivity.class);
+                startActivity(intent3);
         }
     }
 	
@@ -123,5 +134,6 @@ public class Net1414080903110_WorkListActivity extends AppCompatActivity impleme
         }
         cursor.close();
     }
+
 }
 
