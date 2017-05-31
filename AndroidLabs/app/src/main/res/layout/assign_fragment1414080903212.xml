@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/assign_fragment1414080903212"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903212.AssignActivity">
+    <LinearLayout
+        android:id="@+id/assignhomework"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/fraassign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="布置作业"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="9"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titleLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assignhomework"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp">
+        <TextView
+            android:id="@+id/asstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标    题:"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/texttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入作业标题"
+            android:textSize="20sp"
+            android:maxLength="15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/titleLinear"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/asscontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作业内容:"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <EditText
+                android:id="@+id/textcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入作业内容"
+                android:textSize="16sp"
+                android:maxLength="100"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sub_dateLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/contentLinear"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/assdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日    期:"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:padding="5dp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/textdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入提交日期"
+            android:textSize="20sp"
+            android:maxLength="10" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonAssign"
+        android:text="发布作业"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sub_dateLinear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:text="取消"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/buttonCancelAssign"
+        android:layout_below="@+id/buttonAssign"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp" />
+
+</RelativeLayout>

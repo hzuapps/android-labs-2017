@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_net1414080903212"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903212.Net1414080903212Activity">
 
     <RelativeLayout
         android:id="@+id/tab_title"
@@ -24,9 +26,8 @@
             android:background="@android:color/darker_gray"
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
-
     <LinearLayout
-        android:id="@+id/tab_menu"
+        android:id="@+id/ly_tab_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:orientation="horizontal"
@@ -57,7 +58,6 @@
             android:textColor="@drawable/tab_text1414080903212"
             android:text="Marking"
             android:textSize="12sp" />
-
     </LinearLayout>
 
     <View
@@ -65,14 +65,14 @@
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:background="@android:color/darker_gray"
-        android:layout_above="@id/tab_menu"/>
+        android:layout_above="@id/ly_tab_bar"/>
 
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/ly_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
         android:layout_below="@id/tab_title"
-        android:layout_above="@id/tab_menu"
         android:background="@android:color/transparent">
     </FrameLayout>
 
