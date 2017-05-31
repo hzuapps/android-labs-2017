@@ -20,9 +20,15 @@ android:orientation="vertical"
         android:text="单词听写"
         />
 
-
     <Button
         android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单词本"
+        />
+
+    <Button
+        android:id="@+id/button_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="错词"
@@ -30,14 +36,14 @@ android:orientation="vertical"
 
 
     <Button
-        android:id="@+id/button_4"
+        android:id="@+id/button_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="已学习单词"
         />
 
     <Button
-        android:id="@+id/button_"
+        android:id="@+id/button_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="退出"

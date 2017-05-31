@@ -26,4 +26,11 @@
         android:text="Query data"
         />
 
+    <Button
+        android:id="@+id/access"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Access"
+        />
+
     </LinearLayout>

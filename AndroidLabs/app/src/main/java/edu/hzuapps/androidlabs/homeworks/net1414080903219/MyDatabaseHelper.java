@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MyDatabaseHelper extends SQLiteOpenHelper {
     public static final String CREATE_WORD="create table Word("
             +"id integer primary key autoincrement,"
-            +"word string,"
+            +"english string,"
             +"mean string,"
             +"status string)";
 
