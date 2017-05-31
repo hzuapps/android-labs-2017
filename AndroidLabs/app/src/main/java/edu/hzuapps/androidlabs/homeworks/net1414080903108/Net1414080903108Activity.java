@@ -1,17 +1,23 @@
 ﻿package edu.hzuapps.androidlabs.homeworks.net1414080903108;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-
+import android.widget.Toast;
 import com.example.myapplication.R;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 public class Net1414080903108Activity extends AppCompatActivity {
     private ImageView iv;
@@ -25,7 +31,7 @@ public class Net1414080903108Activity extends AppCompatActivity {
         setContentView(R.layout.activity_net1414080903108);
         this.iv = (ImageView) this.findViewById(R.id.iv);
         // 创建一张空白图片
-        baseBitmap = Bitmap.createBitmap(480, 640, Bitmap.Config.ARGB_8888);
+        baseBitmap = Bitmap.createBitmap(1200, 1600, Bitmap.Config.ARGB_8888);
         // 创建一张画布
         canvas = new Canvas(baseBitmap);
         // 画布背景为白色
@@ -35,7 +41,7 @@ public class Net1414080903108Activity extends AppCompatActivity {
         // 画笔颜色为黑色
         paint.setColor(Color.BLACK );
         // 宽度5个像素
-        paint.setStrokeWidth(8);
+        paint.setStrokeWidth(10);
         // 先将白色背景画上
         canvas.drawBitmap(baseBitmap, new Matrix(), paint);
         iv.setImageBitmap(baseBitmap);
@@ -67,5 +73,24 @@ public class Net1414080903108Activity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void save(View view) {
+        try {
+            File file = new File(Environment.getExternalStorageDirectory(),
+                    System.currentTimeMillis() + ".jpg");
+            OutputStream stream = new FileOutputStream(file);
+            baseBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+            stream.close();
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_MEDIA_MOUNTED);
+            intent.setData(Uri.fromFile(Environment
+                    .getExternalStorageDirectory()));
+            sendBroadcast(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "保存图片成功", 0).show();
+
+            e.printStackTrace();
+        }
     }
 }
