@@ -32,4 +32,12 @@
         android:paddingTop="8dp"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_save">
+
+    </ListView>
 </RelativeLayout>

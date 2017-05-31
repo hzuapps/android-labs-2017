@@ -1,34 +1,41 @@
+
 package edu.hzuapps.androidlabs.homeworks.net1414080903213;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
-
-
-/**这是保存备忘录信息的表
- * Created by 刘泽钊 on 2017/4/16.
- */
+import android.util.Log;
 
 public class Net1414080903213_Data extends SQLiteOpenHelper {
-    public Net1414080903213_Data(Context context, String name, CursorFactory factory, int version) {
-        super(context, name, factory, version);
 
+    public static final String TABLE_NAME_NOTES = "note";
+    public static final String COLUMN_NAME_ID = "_id";
+    public static final String COLUMN_NAME_NOTE_CONTENT = "content";
+    public static final String COLUMN_NAME_NOTE_DATE = "date";
+
+    public Net1414080903213_Data(Context context) {
+        super(context, "note", null, 1);
+        // TODO Auto-generated constructor stub
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        StringBuilder sql = new StringBuilder();
-        sql.append("create table if not exists tb_bwl(")
-                .append("id integer primary key autoincrement,")
-                .append("title varchar(50),")
-                .append("content varchar(200),")
-                .append("createDate varchar(10),")
-                .append("noticeDate varchar(10),")
-                .append("noticeTime varchar(5) )");
-        db.execSQL(sql.toString());
-
+        String sql = "CREATE TABLE " + TABLE_NAME_NOTES + "(" + COLUMN_NAME_ID
+                + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + COLUMN_NAME_NOTE_CONTENT + " TEXT NOT NULL DEFAULT\"\","
+                + COLUMN_NAME_NOTE_DATE + " TEXT NOT NULL DEFAULT\"\"" + ")";
+        Log.d("SQL", sql);
+        db.execSQL(sql);
+       /* String sql1="insert into "+TABLE_NAME_NOTES+"values("+"1,"+"'写作业',"+"'晚上要写作业的干活'"+")";
+   Log.d("SQL1", sql1);
+     db.execSQL(sql1);
+      ContentValues values=new ContentValues();
+      values.put("id",1);
+      values.put("content","写作业");
+      values.put("date", "2013-1-2");
+      db.insert("note", null, values);
+      */
     }
 
     @Override
@@ -36,6 +43,5 @@ public class Net1414080903213_Data extends SQLiteOpenHelper {
         // TODO Auto-generated method stub
 
     }
-
 
 }
