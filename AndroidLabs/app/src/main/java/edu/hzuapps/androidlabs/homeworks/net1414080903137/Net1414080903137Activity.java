@@ -13,11 +13,13 @@ public class Net1414080903137Activity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_net1414080903137);
         Button button1=(Button) findViewById(R.id.button);
         Button button2=(Button) findViewById(R.id.button2);
         Button button3=(Button)findViewById(R.id.button3);
         Button button4=(Button)findViewById(R.id.button4);
+
         button1.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {

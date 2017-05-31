@@ -12,13 +12,14 @@
     tools:context="edu.hzuapps.androidlabs.homworks.net1414080903137.Net1414080903137fFifthActivity">
     <!-- 删除 -->
 <EditText
+    android:id="@+id/delete_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_weight="1"
-    android:hint="输入要删除商品的编号"/>
+    android:hint="输入要删除商品的名字"/>
 
     <Button
-        android:id="@+id/send"
+        android:id="@+id/shancu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
