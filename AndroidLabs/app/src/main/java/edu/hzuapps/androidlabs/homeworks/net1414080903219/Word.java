@@ -5,5 +5,23 @@ package homeworks.androids.hzuapps.edu.application.net1414080903219;
  */
 
 public class Word {
-    public String name, meaning, status;
+    public String english, mean, status;
+
+    public Word(String english,String mean,String status){
+        this.english=english;
+        this.mean=mean;
+        this.status=status;
+    }
+
+    public String getEnglish(){
+        return english;
+    }
+
+    public String getMean(){
+        return mean;
+    }
+
+    public String getStatus(){
+        return status;
+    }
 }

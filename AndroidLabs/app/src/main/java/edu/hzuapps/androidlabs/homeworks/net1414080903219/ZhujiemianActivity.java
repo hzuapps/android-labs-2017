@@ -27,15 +27,15 @@ public class ZhujiemianActivity extends AppCompatActivity {
             }
         });
 
-        //点击错词，跳转到LearnedActivity
-        //Button button2 = (Button) findViewById(R.id.button_3);
-        //button1.setOnClickListener(new View.OnClickListener() {
-           // @Override
-            //public void onClick(View v) {
-               // Intent intent = new Intent(ZhujiemianActivity.this, LearnedActivity.class);
-               // startActivity(intent);
-           // }
-       // });
+        Button button2=(Button)findViewById(R.id.button_3);
+        button2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(ZhujiemianActivity.this,DancibenActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

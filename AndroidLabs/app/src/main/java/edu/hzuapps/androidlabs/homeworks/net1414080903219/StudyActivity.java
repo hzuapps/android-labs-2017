@@ -1,22 +1,17 @@
 package homeworks.androids.hzuapps.edu.application.net1414080903219;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
 
 import java.util.Queue;
 
-import homeworks.androids.hzuapps.edu.application.FirstActivity;
 import homeworks.androids.hzuapps.edu.application.R;
 
 public class StudyActivity extends AppCompatActivity {
-    private MyDatabaseHelper dbHelper;
-    private Queue<Word> Words;
-    private Word word = new Word();
+    //private MyDatabaseHelper dbHelper;
+    //private Queue<Word> Words;
+    //private Word word = new Word();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
