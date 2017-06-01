@@ -12,13 +12,14 @@ public class Net1414080903117MenuActivity extends AppCompatActivity {
 
     Button btFee;
     Button btRecord;
-
+    Button btsend;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903117_menu);
         btFee= (Button) findViewById(R.id.bt_menu_fee);
         btRecord= (Button) findViewById(R.id.bt_menu_record);
+        btsend=(Button)findViewById(R.id.bt_send);
 
         btFee.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,12 @@ public class Net1414080903117MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Net1414080903117MenuActivity.this,Net1414080903117RecordActivity.class));
+            }
+        });
+        btsend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Net1414080903117MenuActivity.this,Net1414080903117ParseJsonActivity.class));
             }
         });
     }

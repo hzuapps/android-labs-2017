@@ -18,6 +18,8 @@ public class Net1414080903117MainActivity extends AppCompatActivity {
 
     Button btLogin;
 
+    Button btNetWork;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

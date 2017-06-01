@@ -14,6 +14,7 @@ public class Net1414080903117FeeActivity extends AppCompatActivity {
 
     TextView tvWater;
     TextView tvEle;
+    Button send;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
