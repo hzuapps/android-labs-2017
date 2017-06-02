@@ -5,6 +5,8 @@
     </uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
     </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,12 +17,13 @@
         <activity android:name=".Net1414080903214Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".CustomCamera"></activity>
-        <activity android:name=".Result"></activity>
+        <activity android:name=".Result"></activity>.
+        <activity android:name=".wordTranslation"></activity>
+
     </application>
 
 </manifest>
