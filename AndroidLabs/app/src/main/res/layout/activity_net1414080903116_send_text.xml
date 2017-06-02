@@ -7,12 +7,20 @@
     android:background="@drawable/timg"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903116.Net1414080903116SendText">
 
+    <TextView
+        android:id="@+id/show_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
     <EditText
         android:id="@+id/text_dynamic"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_below="@+id/show_name1"
         android:background="#FFFFFF"
-        android:hint="请输入你的文字动态......"/>
+        android:hint="请输入你的评论内容......"/>
 
     <Button
         android:text="发送"
@@ -22,6 +30,7 @@
         android:id="@+id/send"
         android:layout_below="@+id/text_dynamic"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="28dp" />
+        android:layout_marginEnd="28dp"
+        android:onClick="add"/>
 
 </RelativeLayout>

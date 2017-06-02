@@ -15,23 +15,14 @@
         android:layout_marginTop="10dp"
         android:textSize="20dp"/>
 
-    <Button
-        android:text="文字"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:id="@+id/text"
-        android:onClick="click"
-        android:layout_below="@+id/show_name"
-        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/text_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/show_name"
+        android:background="#FFFFFF"
+        android:hint="请输入你的文字动态......"/>
 
-    <Button
-        android:text="图片"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/picture"
-        android:layout_above="@+id/lv"
-        android:layout_toEndOf="@+id/text" />
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
@@ -40,6 +31,25 @@
         android:background="#FFFFF8"
         android:layout_marginTop="19dp"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="图片"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/picture"
+        android:layout_below="@+id/text_dynamic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:text="发送"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:onClick="add"
+        android:layout_alignBaseline="@+id/picture"
+        android:layout_alignBottom="@+id/picture"
+        android:layout_toStartOf="@+id/picture" />
 
 
 </RelativeLayout>
