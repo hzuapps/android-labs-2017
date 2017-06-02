@@ -39,8 +39,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="135dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="39dp"
-        android:layout_alignParentLeft="true">
+        android:layout_marginStart="39dp">
         <TextView
             android:layout_marginRight="1dp"
             android:layout_marginLeft="26dp"
@@ -49,14 +48,14 @@
             android:text="类型："
             android:textSize="20dp"/>
         <RadioButton
-            android:id="@+id/enroll_male"
+            android:id="@+id/enroll_employee"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:checked="false"
             android:text="员工"
             android:textSize="20dp"/>
         <RadioButton
-            android:id="@+id/enroll_female"
+            android:id="@+id/enroll_customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="顾客"
@@ -122,8 +121,7 @@
         android:text="账号注册"
         android:textSize="28dp"
         android:layout_marginStart="25dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="25dp" />
+        android:layout_centerHorizontal="true"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -168,9 +166,7 @@
         android:layout_marginEnd="24dp"
         android:layout_alignBaseline="@+id/enroll_return"
         android:layout_alignBottom="@+id/enroll_return"
-        android:layout_alignEnd="@+id/linearLayout2"
-        android:layout_alignRight="@+id/linearLayout2"
-        android:layout_marginRight="24dp" />
+        android:layout_alignEnd="@+id/linearLayout2" />
 
 </RelativeLayout>
 
