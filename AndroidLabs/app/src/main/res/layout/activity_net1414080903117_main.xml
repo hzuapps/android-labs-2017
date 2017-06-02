@@ -77,8 +77,17 @@
         android:textSize="18sp"
         android:background="@color/colorPrimary"/>
 
-
-
+    <Button
+        android:id="@+id/bt_net"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="网络"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"/>
 
 
 </LinearLayout>

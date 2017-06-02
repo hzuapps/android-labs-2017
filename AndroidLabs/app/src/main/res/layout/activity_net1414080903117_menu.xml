@@ -42,5 +42,16 @@
         android:text="查看记录"
         android:textSize="18sp"
         android:background="@color/colorPrimary"/>
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:text="解析json"
+        android:textSize="18sp"
+        android:background="@color/colorAccent"/>
 
 </LinearLayout>
