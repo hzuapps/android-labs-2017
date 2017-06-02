@@ -1,13 +1,12 @@
 package edu.hzuapps.androidlabs.homeworks.net1409081602222;
 
+import android.content.ContentValues;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.example.administrator.luyoucong.R;
 
 public class Net1409081602222ApplyCertificateActivity extends AppCompatActivity {
 
@@ -33,6 +32,11 @@ public class Net1409081602222ApplyCertificateActivity extends AppCompatActivity 
                 String time=etTime.getText().toString();
 
                 if(check(name)){
+                    Net1409081602222Helper net1409081602222Helper =new Net1409081602222Helper(Net1409081602222ApplyCertificateActivity.this);
+                    ContentValues values=new ContentValues();
+                    values.put("name",name);
+                    values.put("apply_time",time);
+                    net1409081602222Helper.getWritableDatabase().insert("certificate",null,values);
                     Toast.makeText(Net1409081602222ApplyCertificateActivity.this,"申请成功，请等待审核！！",Toast.LENGTH_SHORT).show();
                     finish();
                 }else{

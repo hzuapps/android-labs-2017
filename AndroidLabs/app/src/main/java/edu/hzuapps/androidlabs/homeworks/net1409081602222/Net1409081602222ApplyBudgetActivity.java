@@ -1,5 +1,6 @@
 package edu.hzuapps.androidlabs.homeworks.net1409081602222;
 
+import android.content.ContentValues;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.administrator.luyoucong.R;
 
 public class Net1409081602222ApplyBudgetActivity extends AppCompatActivity {
 
@@ -31,6 +31,10 @@ public class Net1409081602222ApplyBudgetActivity extends AppCompatActivity {
                     if(budget>100000){
                         Toast.makeText(Net1409081602222ApplyBudgetActivity.this,"数值过大，请亲自与经理汇报！！",Toast.LENGTH_LONG).show();
                     }else{
+                        Net1409081602222Helper net1409081602222Helper =new Net1409081602222Helper(Net1409081602222ApplyBudgetActivity.this);
+                        ContentValues values=new ContentValues();
+                        values.put("money",budget);
+                        net1409081602222Helper.getWritableDatabase().insert("budget",null,values);
                         Toast.makeText(Net1409081602222ApplyBudgetActivity.this,"申请成功，请等待审核！！",Toast.LENGTH_SHORT).show();
                         finish();
                     }
