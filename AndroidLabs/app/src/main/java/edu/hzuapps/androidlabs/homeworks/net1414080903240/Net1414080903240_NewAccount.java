@@ -55,12 +55,19 @@ public class Net1414080903240_NewAccount extends AppCompatActivity {
                     int a = Integer.parseInt(str);
                     int value=sp.getInt(str2,0);
                     int value2=sp.getInt("sum",0);
+                    int count=sp.getInt("count",0);
+                    int count2=count+1;
+                    String countnum="countnum"+count2;
+                    String countclass="countclass"+count2;
                     int sum=a+value2;
                     int addvalue=a+value;
                     al.putInt("sum",sum);
                     al.putInt(str2,addvalue);
-                    //al.putInt("food",0);
-                    //al.putInt("sum",0);
+                    al.putInt("count",count+1);
+                    al.putString(countnum,str);
+                    al.putString(countclass,str2);
+                    //al.putInt("count",0);
+
                     al.commit();
                 intent.putExtra("value",str);
                 intent.putExtra("spinner1",spinner1.getSelectedItem().toString().trim());

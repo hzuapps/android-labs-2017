@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Net1414080903240Activity extends AppCompatActivity {
+public class Net1414080903240_chose extends AppCompatActivity {
+
     private Button btn_send1;
     private Button btn_send2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_1414080903240);
+        setContentView(R.layout.chose_1414080903240);
 
 
         btn_send1 = (Button) findViewById(R.id.button1);
@@ -20,7 +21,7 @@ public class Net1414080903240Activity extends AppCompatActivity {
         btn_send1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Net1414080903240Activity.this,Net1414080903240_NewAccount.class);
+                Intent intent = new Intent(Net1414080903240_chose.this, Net1414080903240_AccountDetail.class);
                 startActivity(intent);
             }
         });
@@ -28,12 +29,8 @@ public class Net1414080903240Activity extends AppCompatActivity {
         btn_send2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(Net1414080903240Activity.this,Net1414080903240_chose.class);
+                Intent intent1 = new Intent(Net1414080903240_chose.this, Net1414080903240_OldAccount.class);
                 startActivity(intent1);
             }
         });
-    }
-
-
-
-}
+    }}
