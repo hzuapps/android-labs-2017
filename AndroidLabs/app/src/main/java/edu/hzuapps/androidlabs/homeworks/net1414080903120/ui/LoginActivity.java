@@ -1,4 +1,4 @@
-package edu.hzuapps.androidlabs.homeworks.net1414080903120.ui;
+﻿package edu.hzuapps.androidlabs.homeworks.net1414080903120.ui;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 	EditText accountEt,passwordEt;
 	CheckBox rememberCb;
     Button btnLogin;
-	
+	//
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
