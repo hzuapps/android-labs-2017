@@ -11,9 +11,11 @@
     android:background="@drawable/net1414080903231bgp1"
     tools:context="edu.hzuapps.androidlabs.homeworks.net1414080903231.Net1414080903231Main">
 
+
+
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp"

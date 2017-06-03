@@ -1,157 +1,120 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903231;
 
-import android.app.ListActivity;
-import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+public class Net1414080903231Clock extends AppCompatActivity {
 
-public class Net1414080903231Clock extends ListActivity {
+    private int  index = 0;
+    private ArrayList<HashMap<String,String>> mylist;
+    public Net1414080903231ClockDao ncd;
+    private ListView list;
 
-    private List<Map<String, Object>> mData;
-
-
+    public void refresh() {
+        onCreate(null);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mData = getData();
-        MyAdapter adapter = new MyAdapter(this);
-        setListAdapter(adapter);
-    }
-    private List<Map<String, Object>> getData() {
-        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        setContentView(R.layout.activity_net1414080903231_clock);
+        //绑定XML中的ListView，作为Item的容器
+        list = (ListView) findViewById(R.id.MyListView);
+         ncd=new Net1414080903231ClockDao(Net1414080903231Clock.this);
+        List<Net1414080903231Time> li=ncd.findAll();
+        //生成动态数组，并且转载数据
+        mylist = new ArrayList<HashMap<String, String>>();
 
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("title", "闹钟1");
-        map.put("info", "google 1");
-        map.put("img", R.drawable.clockpic);
-        list.add(map);
+        if(!li.isEmpty()){
 
-        map = new HashMap<String, Object>();
-        map.put("title", "闹钟2");
-        map.put("info", "google 2");
-        map.put("img", R.drawable.clockpic);
-        list.add(map);
+        for(int i=0;i<li.size();i++)
+        {
+            HashMap<String, String> map = new HashMap<String, String>();
+            String title=Integer.toString(li.get(i).getHour())+":"+Integer.toString(li.get(i).getMinute());
+            String text="ID"+Integer.toString(li.get(i).getId())+" | "+li.get(i).getRepeatCycle()+" | "+li.get(i).getTag();
+            map.put("ItemTitle", title);
+            map.put("ItemText", text);
+            mylist.add(map);
+        }
+        }
+        //生成适配器，数组===》ListItem
+        SimpleAdapter mSchedule = new SimpleAdapter(this,
+                mylist,//数据来源
+                R.layout.my_listitem,//ListItem的XML实现
+                //动态数组与ListItem对应的子项
+                new String[] {"ItemTitle", "ItemText"},
+                //ListItem的XML文件里面的两个TextView ID
+                new int[] {R.id.ItemTitle,R.id.ItemText});
+        //添加并且显示
+        list.setAdapter(mSchedule);
 
-        map = new HashMap<String, Object>();
-        map.put("title", "闹钟3");
-        map.put("info", "google 3");
-        map.put("img", R.drawable.clockpic);
-        list.add(map);
+        /*list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int arg2, long arg3) {
+                // TODO Auto-generated method stub
+                index = arg2;
+                String idn0 = mylist.get(index).get("ItemText").toString();
+                String idn1=idn0.substring(idn0.indexOf("D") + 1, idn0.indexOf(" "));
+                boolean b=ncd.deletebyid( Integer.parseInt(idn1));
 
-        return list;
-    }
+                Intent intent=new Intent();
+                intent.setClass(Net1414080903231Clock.this,Net1414080903231Clock.class);
+                startActivity(intent);
+                return false;
+            }
+        });*/
 
-    // ListView 中某项被选中后的逻辑
-    protected void onListItemClick(ListView l, View v, int position, long id) {
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                           int arg2, long arg3) {
+                // TODO Auto-generated method stub
+                index = arg2;
+                android.content.DialogInterface.OnClickListener listener=new android.content.DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog,int which){
+                        String idn0 = mylist.get(index).get("ItemText").toString();
+                        String idn1=idn0.substring(idn0.indexOf("D") + 1, idn0.indexOf(" "));
+                        boolean b=ncd.deletebyid( Integer.parseInt(idn1));
 
-        Log.v("MyListView4-click", (String)mData.get(position).get("title"));
-    }
-
-    /**
-     * listview中点击按键弹出对话框
-    */
-    public void showInfo(){
-        new AlertDialog.Builder(this)
-                .setTitle("闹钟")
-                .setMessage("时间：")
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent=new Intent();
+                        intent.setClass(Net1414080903231Clock.this,Net1414080903231Clock.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        //onCreate(null);
                     }
-                })
-                .show();
-
-    }
-
-
-    public final class ViewHolder{
-        public ImageView img;
-        public TextView title;
-        public TextView info;
-        public Button viewBtn;
-    }
-
-
-    public class MyAdapter extends BaseAdapter {
-
-        private LayoutInflater mInflater;
-
-
-        public MyAdapter(Context context){
-            this.mInflater = LayoutInflater.from(context);
-        }
-        @Override
-        public int getCount() {
-            // TODO Auto-generated method stub
-            return mData.size();
-        }
-
-        @Override
-        public Object getItem(int arg0) {
-            // TODO Auto-generated method stub
-            return null;
-        }
-
-        @Override
-        public long getItemId(int arg0) {
-            // TODO Auto-generated method stub
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-            ViewHolder holder = null;
-            if (convertView == null) {
-
-                holder=new ViewHolder();
-
-                convertView = mInflater.inflate(R.layout.activity_net1414080903231_clock, null);
-                holder.img = (ImageView)convertView.findViewById(R.id.img);
-                holder.title = (TextView)convertView.findViewById(R.id.title);
-                holder.info = (TextView)convertView.findViewById(R.id.info);
-                holder.viewBtn = (Button)convertView.findViewById(R.id.view_btn);
-                convertView.setTag(holder);
-
-            }else {
-
-                holder = (ViewHolder)convertView.getTag();
+                };
+                AlertDialog.Builder builder=new AlertDialog.Builder(Net1414080903231Clock.this);
+                builder.setTitle("确定要删除吗？");
+                builder.setPositiveButton("确定",listener);
+                builder.setNegativeButton("取消",null);
+                builder.show();
+                return false;
             }
 
 
-            holder.img.setBackgroundResource((Integer)mData.get(position).get("img"));
-            holder.title.setText((String)mData.get(position).get("title"));
-            holder.info.setText((String)mData.get(position).get("info"));
 
-            holder.viewBtn.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    showInfo();
-                }
-            });
-
-
-            return convertView;
-        }
+        });
 
     }
+
+
+
+    public void clock_add(View view) {
+        Intent intent = new Intent(this, Net1414080903231EditClock.class);
+        startActivity(intent);
+    }
+
 
 }
