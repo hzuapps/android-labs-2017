@@ -53,8 +53,8 @@ public class Net1414080903135AddObject extends AppCompatActivity implements View
                 this.finish();
                 startActivity(intent3);
 			case R.id.send_request://点击按钮从github抓取json文件
-                Intent intent4=new Intent(Net1414080903135AddObject.this,Net1414080903110_AnalysisJsonActivity.class);
- +               startActivity(intent4);
+                Intent intent4=new Intent(Net1414080903135AddObject.this,Net1414080903135_AnalysisJsonActivity.class);
+                startActivity(intent4);
         }
 
     }

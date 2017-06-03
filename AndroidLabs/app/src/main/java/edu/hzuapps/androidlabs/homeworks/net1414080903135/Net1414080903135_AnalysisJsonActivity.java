@@ -14,7 +14,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /*抓取并解析json文件*/
-public class Net1414080903110_AnalysisJsonActivity extends AppCompatActivity {
+public class Net1414080903135_AnalysisJsonActivity extends AppCompatActivity {
     private String grade;
     private String name;
     private String number;
@@ -36,7 +36,7 @@ public class Net1414080903110_AnalysisJsonActivity extends AppCompatActivity {
             public void run() {
                 try {
                     OkHttpClient client = new OkHttpClient();
-                    Request request = new Request.Builder().url("https://raw.githubusercontent.com/hizzj/android-labs-2017/master/AndroidLabs/app/src/main/java/edu/hzuapps/androidlabs/homeworks/net1414080903230/stu_info.json").build();//目标地址
+                    Request request = new Request.Builder().url("https://raw.githubusercontent.com/hizzj/android-labs-2017/master/AndroidLabs/app/src/main/java/edu/hzuapps/androidlabs/homeworks/net1414080903135/stu_info.json").build();//目标地址
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
                     AnalysisJson(responseData);
@@ -54,9 +54,11 @@ public class Net1414080903110_AnalysisJsonActivity extends AppCompatActivity {
             JSONArray jsonArray = new JSONArray(jsonData);
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                grade = jsonObject.getString("grade");
-                name = jsonObject.getString("name");
-                number = jsonObject.getString("number");
+                teacher = jsonObject.getString("teacher");
+                credit = jsonObject.getString("credit");
+                period = jsonObject.getString("period");
+				classroom = jsonObject.getString("classroom");
+				course = jsonObject.getString("course");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -67,7 +69,7 @@ public class Net1414080903110_AnalysisJsonActivity extends AppCompatActivity {
     Runnable runnableUi = new Runnable() { 
         public void run() {
  values.put("course",mcourse);     
-		 GithubResponse.setText("教师: " + teacher + "\n" + "\n" + ": 学时" + period + "\n" + "\n" + "学分: " + credit+ "\n" + "\n");//显示解析结果
+		 GithubResponse.setText("课程: " + course + "\n" + "教师: " + teacher + "\n" + "\n" +"课室: " + classroom + "\n" +  ": 学时" + period + "\n" + "\n" + "学分: " + credit+ "\n" + "\n");//显示解析结果
         }
     };
 }
