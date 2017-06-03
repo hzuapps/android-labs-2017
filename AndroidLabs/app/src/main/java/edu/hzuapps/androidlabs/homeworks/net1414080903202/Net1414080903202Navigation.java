@@ -24,7 +24,15 @@ public class Net1414080903202Navigation extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Net1414080903202Navigation.this, Net1414080903202manage.class);
+                startActivity(intent);
             }
-        }
+        });
+        btCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Net1414080903202Navigation.this, Net1414080903202Main_Check.class);
+                startActivity(intent);
+            }
+        });
     }
 }
