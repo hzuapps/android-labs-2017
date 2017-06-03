@@ -35,11 +35,12 @@ public class Net1414080903139AddRecordActivity extends AppCompatActivity {
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MySQLiteHelper helper=new MySQLiteHelper(Net1414080903139AddRecordActivity.this);
+
+                Net1414080903139MySQLiteHelper helper=new Net1414080903139MySQLiteHelper(Net1414080903139AddRecordActivity.this);
                 SQLiteDatabase db=helper.getWritableDatabase();
                 ContentValues values=new ContentValues();
-                values.put("name",etName.getText().toString().trim());
                 values.put("birthday",etBirthday.getText().toString().trim());
+                values.put("name",etName.getText().toString().trim());
                 db.insert("birthday",null,values);
                 db.close();
             }

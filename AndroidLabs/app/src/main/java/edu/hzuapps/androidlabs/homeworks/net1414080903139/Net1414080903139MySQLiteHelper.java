@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by 阳飞 on 2017/4/29.
  */
 
-public class MySQLiteHelper extends SQLiteOpenHelper {
+public class Net1414080903139MySQLiteHelper extends SQLiteOpenHelper {
 
-    public MySQLiteHelper(Context context) {
+    public Net1414080903139MySQLiteHelper(Context context) {
         super(context, "birthday", null, 1);
     }
 
