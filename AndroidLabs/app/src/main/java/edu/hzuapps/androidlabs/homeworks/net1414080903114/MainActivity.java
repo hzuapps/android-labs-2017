@@ -1,14 +1,23 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903114;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import edu.hzuapps.androidlabs.homeworks.net1414080903114.hardwareinfo.RateDatas;
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	private TextView tv_readRate, tv_writeRate, tv_uploadRate, tv_downloadRate;
 	private float virtualRate;
+	
 	
 	private Handler handler = new Handler( );
 	private Runnable gsRateThread = new Runnable(){
@@ -52,14 +61,14 @@ public class MainActivity extends Activity {
     }
     public float getNetUploadR(){
     	float uploadR = 0;
-    	//TODO code here to get diskUploadRate
+    	//TODO code here to get networkUploadRate
     	uploadR = virtualRate + 2;
     	return uploadR;
     	
     }
     public float getNetDownloadR(){
     	float downloadR = 0;
-    	//TODO code here to get diskDownloadRate
+    	//TODO code here to get networkDownloadRate
     	downloadR = virtualRate + 3;
     	return downloadR;
     	
@@ -88,6 +97,36 @@ public class MainActivity extends Activity {
         tv_downloadRate = (TextView) findViewById(R.id.tv_networkWriteRate);
         tv_uploadRate.setText("UploadRate: " + rateD.getUploadR() + " KB/s");
         tv_downloadRate.setText("DownloadRate: " + rateD.getDownloadR() + " KB/s");
+    }
+    public void saveRate(View view) {
+    	FileOutputStream fos;
+		String rate = null;
+		try {
+			fos = openFileOutput("rateDatas.txt", MODE_APPEND);
+			RateDatas rateD = new RateDatas();
+			rateD = getRateDatas();
+			rate  = "ReadRate = " + rateD.getReadR() + "\n" +
+							"WriteRate = " + rateD.getWriteR() + "\n" +
+							"UploadRate = " + rateD.getUploadR() + "\n" + 
+							"DownloadRate = " + rateD.getDownloadR() + "\n";
+			fos.write(rate.getBytes());
+			fos.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Toast.makeText(MainActivity.this, "save successfully", 0).show();
+    }
+    public void readRate(View view) throws IOException {
+    	FileInputStream fis = openFileInput("rateDatas.txt");
+    	byte[] buffer = new byte[fis.available()];
+    	fis.read(buffer);
+    	String rateDatas = new String(buffer);
+    	fis.close();
+    	Toast.makeText(MainActivity.this, rateDatas, 0).show();
     }
     
 }
