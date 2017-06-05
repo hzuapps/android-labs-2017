@@ -16,12 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.hzuapps.androidlabs.R;
+import edu.hzuapps.androidlabs.homworks.net1414080903136.db.ExpressDB;
 
 public class Net1414080903136Activity extends FragmentActivity {
     public static String url;
-     Button bt;
-     EditText et1;
-     EditText et2;
+    public static Button bt;
+    public static EditText et1;
+    public static EditText et2;
     private ViewPager mViewpager;
     private FragmentPagerAdapter mAdapter;
     private List<Fragment> mDatas;
@@ -37,6 +38,9 @@ public class Net1414080903136Activity extends FragmentActivity {
         initView();
     }
     private void initView() {
+        bt= (Button) findViewById(R.id.bt);
+        et1= (EditText) findViewById(R.id.et1);
+        et2= (EditText) findViewById(R.id.et2);
         ExpressInquiryTV= (TextView) findViewById(R.id.ExpressInquiry);
         SiteQueryTV= (TextView) findViewById(R.id.SiteQuery);
         MyExpressTV= (TextView) findViewById(R.id.MyExpress);
