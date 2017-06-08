@@ -23,7 +23,7 @@ public class Net1414080903140RecordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903140_record);
-        final List<Bean> list=getData();
+        final List<Net1414080903140Bean> list=getData();
         rv= (RecyclerView) findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(new RecyclerView.Adapter() {
@@ -58,15 +58,15 @@ public class Net1414080903140RecordActivity extends AppCompatActivity {
             tvTime= (TextView) itemView.findViewById(R.id.tv_item_time);
         }
     }
-    public List<Bean> getData(){
-        List<Bean> list=new ArrayList<>();
-        MyOpenHelper helper=new MyOpenHelper(this);
+    public List<Net1414080903140Bean> getData(){
+        List<Net1414080903140Bean> list=new ArrayList<>();
+        Net1414080903140MyOpenHelper helper=new Net1414080903140MyOpenHelper(this);
         SQLiteDatabase db=helper.getReadableDatabase();
         Cursor cursor=db.query("record",null,null,null,null,null,null);
         while (cursor.moveToNext()){
-            Bean bean=new Bean();
-            bean.setDate(cursor.getString(cursor.getColumnIndex("play_time")));
+            Net1414080903140Bean bean=new Net1414080903140Bean();
             bean.setScore(cursor.getInt(cursor.getColumnIndex("score")));
+            bean.setDate(cursor.getString(cursor.getColumnIndex("play_time")));
             list.add(bean);
         }
         cursor.close();
