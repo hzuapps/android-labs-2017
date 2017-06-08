@@ -80,7 +80,7 @@
             android:drawableTop="@drawable/tab_hw_xml1414080903212"
             android:gravity="center"
             android:textColor="@android:color/black"
-            android:text="Json解析" />
+            android:text="XML解析" />
     </LinearLayout>
 
     <View
