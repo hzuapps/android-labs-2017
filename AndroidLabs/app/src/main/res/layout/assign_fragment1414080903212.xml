@@ -70,9 +70,6 @@
             android:padding="5dp"
             android:layout_gravity="center"/>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
             <EditText
                 android:id="@+id/textcontent"
                 android:layout_width="match_parent"
@@ -80,7 +77,6 @@
                 android:hint="输入作业内容"
                 android:textSize="16sp"
                 android:maxLength="100"/>
-        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
