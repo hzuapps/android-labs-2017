@@ -85,7 +85,7 @@ public class Net1414080903212Activity extends AppCompatActivity implements View.
     public void onClick(View v) {
         switch (v.getId())  {
             case R.id.btn_login:
-                //单击“登录”按钮时，获取帐号和密码
+                //单击“登录”按钮时，获取账号和密码
                 String number = etNumber.getText().toString().trim();
                 String password = etPassword.getText().toString().trim();
                 //检查帐号和密码是否正确
@@ -145,7 +145,7 @@ public class Net1414080903212Activity extends AppCompatActivity implements View.
                 selected();
                 tab_xml.setSelected(true);
                 if (fra_xml == null) {
-                    fra_xml = new XmlFragment("");
+                    fra_xml = new XmlFragment();
                     transaction.add(R.id.ly_content, fra_xml);
                 }
                 else {
