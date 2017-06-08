@@ -3,6 +3,7 @@ package edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.net;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebResourceError;
@@ -14,6 +15,8 @@ import android.widget.Toast;
 
 import com.syd.oden.circleprogressdialog.core.CircleProgressDialog;
 
+import edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.R;
+
 /**
  * ProjectName: knowdev
  * PackName：edu.hzuapps.androidlabs.homeworks.net1414080903220.knowdev.net
@@ -24,6 +27,11 @@ import com.syd.oden.circleprogressdialog.core.CircleProgressDialog;
 public class WebUtil {
     private CircleProgressDialog circleProgressDialog;
     WebView webView;
+    String url="";
+
+   public WebUtil(String url){
+       this.url=url;
+   }
 
     public void initSetting(WebView webView,Context context,CircleProgressDialog circleProgressDialog,boolean isZoom){
         this.webView=webView;
@@ -46,9 +54,35 @@ public class WebUtil {
         }
 
         webView.requestFocusFromTouch();
+        WebInterface webAppInterface=new WebInterface(context);
+        webView.addJavascriptInterface(webAppInterface,"webInterface");
         webView.setWebViewClient(new WVC());
     }
 
+    private class WebInterface {
+
+        private Context context;
+        public  WebInterface(Context context){
+            this.context=context;
+        }
+
+         /**
+          * Method:  JS需要调用的方法：页面重新刷新
+          * desription:
+          * @Param:
+          * @return:
+          */
+        @JavascriptInterface
+        public void refresh(){
+            webView.post(new Runnable() {
+                @Override
+                public void run() {
+                    webView.loadUrl(url);
+                }
+            });
+        }
+
+    }
 
 
     private class WVC extends WebViewClient {
@@ -57,7 +91,10 @@ public class WebUtil {
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
             //webView.loadUrl("file:///android_asset/index.html");
-            circleProgressDialog.showDialog();
+            if(circleProgressDialog!=null){
+                circleProgressDialog.showDialog();
+            }
+
         }
 
         //页面加载结束时
