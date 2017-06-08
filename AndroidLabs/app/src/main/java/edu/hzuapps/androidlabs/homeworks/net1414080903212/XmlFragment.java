@@ -46,8 +46,7 @@ public class XmlFragment extends Fragment {
             new Thread(){
                 public void run(){
                     try {
-
-                        Document doc = Jsoup.connect("").get();
+                        Document doc = Jsoup.connect("https://github.com/HardyYao/android-labs-2017/blob/master/AndroidLabs/app/src/main/java/edu/hzuapps/androidlabs/homeworks/net1414080903212/homework1414080903212.xml").get();
                         int i = 1;
                         Elements data = doc.select("DT"+i);
                         while(!data.isEmpty()){
