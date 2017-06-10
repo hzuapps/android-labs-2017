@@ -1,22 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:orientation="vertical"
-    android:layout_height="wrap_content"
-    android:id="@+id/SleepListItem"
-    android:paddingBottom="3dip"
-    android:paddingLeft="10dip">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dip">
+
+    <com.loopj.android.image.SmartImageView
+        android:id="@+id/siv_icon"
+        android:layout_width="80dip"
+        android:layout_height="60dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/clockpic">
+
+    </com.loopj.android.image.SmartImageView>
 
     <TextView
-        android:layout_width="fill_parent"
-        android:id="@+id/SleepItemTitle"
-        android:textSize="30dip"
-        android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:id="@+id/tv_title"
+    android:layout_marginLeft="5dip"
+    android:layout_marginTop="10dip"
+    android:layout_toRightOf="@id/siv_icon"
+    android:text="我是标题"
+    android:maxLength="20"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:textColor="#000000"
+    android:textSize="18sp">
     </TextView>
 
     <TextView
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:id="@+id/SleepItemText">
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_des"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@id/siv_icon"
+        android:text="我是描述"
+        android:maxLength="16"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#99000000"
+        android:textSize="14sp">
     </TextView>
-</LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_type"
+        android:layout_marginBottom="5dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="评论"
+        android:textColor="#99000000"
+        android:textSize="12sp">
+    </TextView>
+</RelativeLayout>
