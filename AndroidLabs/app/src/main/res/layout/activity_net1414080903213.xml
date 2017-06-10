@@ -62,5 +62,24 @@
         android:layout_alignStart="@+id/button2"
         android:layout_alignEnd="@+id/button2" />
 
+    <Button
+        android:text="网络测试"
+        android:layout_width="82dp"
+        android:layout_height="40dp"
+        android:id="@+id/button4"
+        android:layout_weight="0.45"
+        style="@android:style/Widget.Button"
+        android:background="@drawable/mycolor_net1414080903213"
+        android:paddingBottom="8dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        android:layout_alignEnd="@+id/button3" />
+
 
 </RelativeLayout>

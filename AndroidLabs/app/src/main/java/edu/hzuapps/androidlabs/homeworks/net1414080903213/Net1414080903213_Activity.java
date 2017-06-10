@@ -20,6 +20,7 @@ public class Net1414080903213_Activity extends AppCompatActivity {
         Button b1 = (Button) findViewById(R.id.button1);
         Button b2 = (Button) findViewById(R.id.button2);
         Button b3 = (Button) findViewById(R.id.button3);
+        Button b4 = (Button) findViewById(R.id.button4);
         //跳转到日程安排界面
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,17 @@ public class Net1414080903213_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Net1414080903213_Activity.this,Net1414080903213_Note.class);
                 startActivity(intent);
+            }
+        });
+        //跳转到实验六测试
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Net1414080903213_Activity.this,Net1414080903213_GetXml.class);
+                startActivity(intent);
+
+
             }
         });
 
