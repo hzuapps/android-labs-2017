@@ -14,6 +14,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/date"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -25,6 +26,7 @@
 
 
         <TextView
+            android:id="@+id/input"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -35,6 +37,7 @@
             />
 
         <TextView
+            android:id="@+id/output"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="85dp"
@@ -45,6 +48,7 @@
             />
 
         <TextView
+            android:id="@+id/beizhu"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
@@ -55,6 +59,7 @@
             />
 
         <TextView
+            android:id="@+id/yingkui"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="155dp"
@@ -64,6 +69,7 @@
             android:text="盈亏："/>
 
         <TextView
+            android:id="@+id/total"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="190dp"
