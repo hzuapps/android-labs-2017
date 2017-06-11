@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<music>
+	<musicInfo>
+        <icon>http://github.com/ileyinan/android-labs-2017/AndroidLabs/app/src/main/res/drawable/xsm_music.jpg</icon>
+        <title>music_one</title>
+        <content>content</content>
+        <type>1</type>
+        <comment>1</comment>
+    </musicInfo>
+
+    <musicInfo>
+        <icon>http://github.com/ileyinan/android-labs-2017/AndroidLabs/app/src/main/res/drawable/xsm_music.jpg</icon>
+        <title>music_one</title>
+        <content>content</content>
+        <type>1</type>
+        <comment>1</comment>
+    </musicInfo>
+
+    <musicInfo>
+        <icon>http://github.com/ileyinan/android-labs-2017/AndroidLabs/app/src/main/res/drawable/xsm_music.jpg</icon>
+        <title>music_one</title>
+        <content>content</content>
+        <type>1</type>
+        <comment>1</comment>
+    </musicInfo>
+
+    <musicInfo>
+        <icon>http://github.com/ileyinan/android-labs-2017/AndroidLabs/app/src/main/res/drawable/xsm_music.jpg</icon>
+        <title>music_one</title>
+        <content>content</content>
+        <type>1</type>
+        <comment>1</comment>
+    </musicInfo>
+
+    <musicInfo>
+        <icon>http://github.com/ileyinan/android-labs-2017/AndroidLabs/app/src/main/res/drawable/xsm_music.jpg</icon>
+        <title>music_one</title>
+        <content>content</content>
+        <type>1</type>
+        <comment>1</comment>
+    </musicInfo>
+
+    <musicInfo>
+        <icon>http://github.com/ileyinan/android-labs-2017/AndroidLabs/app/src/main/res/drawable/xsm_music.jpg</icon>
+        <title>music_one</title>
+        <content>content</content>
+        <type>1</type>
+        <comment>1</comment>
+    </musicInfo>
+</music>
