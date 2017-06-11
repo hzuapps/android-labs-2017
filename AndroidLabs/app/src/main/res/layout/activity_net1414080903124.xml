@@ -34,6 +34,12 @@
       android:layout_width="match_parent"
       android:onClick="click2" />
 
+  <Button
+      android:text="绑定银行卡"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/button8"
+      android:onClick="click4" />
 </LinearLayout>
 
 

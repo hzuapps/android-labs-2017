@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+    >
+    <EditText
+        android:id="@+id/AccountName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入持卡人姓名">
+    </EditText>
+    <EditText
+        android:id="@+id/AccountNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入银行卡号">
+    </EditText>
+    <ListView
+        android:id="@+id/AccountsList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+    </ListView>
+</LinearLayout>
+
