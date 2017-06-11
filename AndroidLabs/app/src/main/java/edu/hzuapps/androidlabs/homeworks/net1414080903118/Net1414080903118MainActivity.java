@@ -23,6 +23,7 @@ public class Net1414080903118MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     Cursor cursor;
     ListView lv;
+    private RecordDatabaseHelper dbHelper;
 
     public List<VideoInfo> sysVideoList = new ArrayList<>();
 
@@ -35,14 +36,18 @@ public class Net1414080903118MainActivity extends AppCompatActivity {
         final MyAdapter adapter=new MyAdapter(this,sysVideoList);
         lv.setAdapter(adapter);
         lv.setEmptyView(LayoutInflater.from(this).inflate(R.layout.empty_list,null));
+        createRecord(sysVideoList);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-           @Override
-           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               Intent intent=new Intent(Net1414080903118MainActivity.this,Net1414080903118PlayActivity.class);
-               intent.putExtra("path",(String)adapter.getItem(position));
-               startActivity(intent);
-           }
-       });
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            	String name = sysVideoList.get(position);
+            	updateRecord(name);	
+
+                Intent intent=new Intent(Net1414080903118MainActivity.this,Net1414080903118PlayActivity.class);
+                intent.putExtra("path",(String)adapter.getItem(position));
+                startActivity(intent);
+            }
+        });
     }
 
     private void setVideoList() {
@@ -97,6 +102,23 @@ public class Net1414080903118MainActivity extends AppCompatActivity {
                     sysVideoList.add(info);
             } while (cursor.moveToNext());
         }
+    }
+
+    private void updateRecord(String name){
+    	SQliteDatabase db = dbHelper.getWritableDatabase();
+    	ContentValues values = new ContentValues();
+    	values.put("watched",1);
+    	db.update("Record",values,"name=?",new String[]{name});
+    }
+
+    private void createRecord(List VideoList){
+    	SQliteDatabase db = dbHelper.getWritableDatabase();
+    	String check = "if not exists(select * from Record where name=?)";
+    	for(VideoInfo v:sysVideoList){
+    		String name = v.getDisplayName();
+    		db.execSQL("insert into Record (name,watched) values(?,?) "+check,
+    				new String[]{name,0,name});
+    	}
     }
 
 }
