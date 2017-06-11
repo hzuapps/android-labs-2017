@@ -13,6 +13,7 @@ public class Net1414080903218BoardActivity extends AppCompatActivity {
     public Player firstPlayer;
     public Player laterPlayer;
     private ChessView view;
+    public LoginService loginService;
     public int mode;
 
     @Override
@@ -24,20 +25,27 @@ public class Net1414080903218BoardActivity extends AppCompatActivity {
     public void start(){
         int size = Integer.valueOf(getIntent().getStringExtra("size"));
         board = new Board(size,size);
-        firstPlayer = new Player(true,board);
         mode = Integer.valueOf(getIntent().getStringExtra("mode"));
-        if(mode == 1) {
-            laterPlayer = new AutoPlayer(false, board);
-        }
-        else if(mode == 2) {
-            laterPlayer = new NetPlayer(false, board);
-        }
-        else if(mode == 3) {
-            laterPlayer = new Player(false, board);
-        }
-        else laterPlayer = new AutoPlayer(false, board);
         view = (ChessView)findViewById(R.id.ChessView);
         view.mode = mode;
         view.start(board.getRow(),board.getCol());
+        if(mode == 1) {
+            firstPlayer = new Player(true,board);
+            laterPlayer = new AutoPlayer(false, board);
+        }
+        else if(mode == 2) {
+            firstPlayer = new Player(true,board);
+            laterPlayer = new Player(false, board);
+            loginService = new LoginService(view);
+            loginService.execute();
+        }
+        else if(mode == 3) {
+            firstPlayer = new Player(true,board);
+            laterPlayer = new Player(false, board);
+        }
+        else {
+            firstPlayer = new Player(true,board);
+            laterPlayer = new AutoPlayer(false, board);
+        }
     }
 }

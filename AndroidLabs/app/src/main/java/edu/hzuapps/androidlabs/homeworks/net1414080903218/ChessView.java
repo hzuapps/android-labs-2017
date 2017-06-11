@@ -53,6 +53,11 @@ public class ChessView extends View {
     protected int minute;
     protected int mode;
     protected boolean isFristPut;
+    public static Context myContext;
+    public String addr;
+    public int port;
+    public int stats;
+    public boolean netFirst;
 
     public ChessView(Context context, AttributeSet attrs){
         super(context,attrs);
@@ -61,6 +66,8 @@ public class ChessView extends View {
             controller = (Net1414080903218BoardActivity)context;
         }
         init();
+        stats = 0;
+        myContext = context;
         myPaint = new Paint();
     }
     private void init(){
@@ -125,6 +132,16 @@ public class ChessView extends View {
         canvas.drawText(text,centerX,newSY+textSize,myPaint);
         text = controller.firstPlayer.countPieces+"  :  "+controller.laterPlayer.countPieces;
         canvas.drawText(text,centerX,newSY+textSize*2,myPaint);
+        if(mode == 2){
+            if(!netFirst) text = "执黑子";
+            else text = "执白子";
+            canvas.drawText(text,centerX,newSY+textSize*4,myPaint);
+            if(stats == 3) text = "请等待...";
+            else if(stats == 4) text = "到你下了";
+            else if(stats == 1) text = "等待对方连接...";
+            else text = "错误！请重启程序";
+            canvas.drawText(text,centerX,newSY+textSize*5,myPaint);
+        }
         text = String.format("%02d",minute)+" : "+String.format("%02d",second);
         canvas.drawText(text,centerX,newSY+textSize*3,myPaint);
     }
@@ -145,8 +162,18 @@ public class ChessView extends View {
                             controller.laterPlayer.putPiece(0, 0);
                         }
                     }
-                    else if(mode == 2){
-
+                    else if(mode == 2 && stats == 4 && !controller.board.isGameover()){
+                        boolean success = false;
+                        if(netFirst){
+                            success = controller.laterPlayer.putPiece(row,col);
+                        }
+                        else {
+                            success = controller.firstPlayer.putPiece(row,col);
+                        }
+                        if(success) {
+                            stats = 3;
+                            controller.loginService.send(row, col);
+                        }
                     }
                     else if(mode == 3 ){
                         if(isFristPut){

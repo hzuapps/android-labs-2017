@@ -34,7 +34,9 @@ public class Net1414080903218Activity extends AppCompatActivity {
                 public void onClick(View v) {
                     IntentStartBoard=new Intent(v.getContext(),Net1414080903218BoardActivity.class);
                     IntentStartBoard.putExtra("mode","2");
-                    showChooseDialog();
+                    IntentStartBoard.putExtra("size","10");
+                    startActivity(IntentStartBoard);
+                    //showChooseDialog();
                 }
             });
         }
