@@ -25,6 +25,7 @@
             android:paddingRight="5dp"
             android:text="网址：" />
         <EditText
+            android:id="@+id/e_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入网址 "
