@@ -1,6 +1,7 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903135;
 
 import android.content.ContentValues;
+import android.webkit.WebView;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -51,6 +52,9 @@ public class Net1414080903135AddObject extends AppCompatActivity implements View
                 Intent intent3=new Intent(this,Net1414080903135AddObject.class);
                 this.finish();
                 startActivity(intent3);
+			case R.id.send_request://点击按钮从github抓取json文件
+                Intent intent4=new Intent(Net1414080903135AddObject.this,Net1414080903135_AnalysisJsonActivity.class);
+                startActivity(intent4);
         }
 
     }
