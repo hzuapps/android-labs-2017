@@ -10,7 +10,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.hzuapps.andridlabs.homeworks.net1414080903139.MySQLiteHelper;
 import edu.hzuapps.myapplication.R;
 
 public class Net1414080903139CheckActivity extends AppCompatActivity {
@@ -21,8 +20,8 @@ public class Net1414080903139CheckActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903139_check);
+        Net1414080903139MySQLiteHelper helper=new Net1414080903139MySQLiteHelper(this);
         lv= (ListView) findViewById(R.id.lv);
-        MySQLiteHelper helper=new MySQLiteHelper(this);
         SQLiteDatabase db=helper.getReadableDatabase();
         Cursor cursor=db.query("birthday",null,null,null,null,null,null);
         List<String> beans=new ArrayList<>();
