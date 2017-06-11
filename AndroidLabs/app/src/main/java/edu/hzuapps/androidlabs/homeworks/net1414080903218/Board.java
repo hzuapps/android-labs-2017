@@ -2,22 +2,15 @@ package edu.hzuapps.androidlabs.homeworks.net1414080903218;
 
 import android.graphics.Color;
 import android.os.Environment;
-import android.provider.ContactsContract;
-import android.text.format.DateFormat;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Timer;
-
-import static android.widget.Toast.LENGTH_SHORT;
 
 /**
  * Created by zzh on 2017/4/14.
@@ -32,6 +25,7 @@ public class Board {
     private int row;
     private boolean gameover;
     private boolean win;
+    private boolean firstPut;
     private String fileName;
     public Board(int r,int c){
         row = r;
@@ -40,6 +34,7 @@ public class Board {
         laterColor = Color.WHITE;
         countPieces = 0;
         gameover = false;
+        firstPut = true;
         display = new boolean[row][col];
         first = new boolean[row][col];
         for(int i=0;i<row;i++){
@@ -68,6 +63,7 @@ public class Board {
     }
     public boolean putPiece(boolean first,int r,int c){
         if(gameover)return false;
+        if(first != firstPut)return false;
         if(!isEmpty(r,c))return false;
         this.first[r][c] = first;
         display[r][c] = true;
@@ -75,6 +71,7 @@ public class Board {
         String data = f+" "+String.valueOf(r)+" "+String.valueOf(c);
         writefLine(data);
         checkWin(first,r,c);
+        firstPut = !firstPut;
         return true;
     }
     public void clearPieces(){
