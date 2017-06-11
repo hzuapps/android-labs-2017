@@ -30,7 +30,7 @@ public class Net1414080903234_M extends Fragment {
     private TextView incomeTV;
     private TextView outlayTV;
     private TextView moneyTV;
-
+    private Button alalyBn;
     private OnFragmentInteractionListener mListener;
     private View view = null;
     public static double money = 0;
@@ -126,18 +126,18 @@ public class Net1414080903234_M extends Fragment {
         super.onResume();
     }
 
-    /* @Override
+     @Override
    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        add = (Button)getActivity().findViewById(R.id.addi);
-        add.setOnClickListener(new View.OnClickListener(){
+         alalyBn = (Button)getActivity().findViewById(R.id.analyjson);
+         alalyBn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent  = new Intent(getActivity(),Net1414080903234AddIncomeActivity.class);
+                Intent intent  = new Intent(getActivity(),Net1414080903234AnalyActivity.class);
                 startActivity(intent);
             }
 });
-        }*/
+        }
 
 }

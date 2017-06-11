@@ -3,7 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+·   <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/analyjson"
+    android:text="解析json"
+    android:textColor="@color/orange"
+    android:textSize="24dp"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="-- -- --"
         android:textColor="@color/orange"
-        android:textSize="36dp"
+        android:textSize="24dp"
         android:gravity="center"
         android:layout_gravity="center"
         android:id="@+id/tmview"/>
@@ -30,7 +39,7 @@
         android:layout_height="2px"
         android:background="@color/dimgray"
         android:layout_above="@id/ly_tab_bar"
-        android:layout_marginTop="36dp"/>
+        android:layout_marginTop="24dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +56,7 @@
         android:layout_height="wrap_content"
         android:text="-- -- --"
         android:textColor="@color/orange"
-        android:textSize="36dp"
+        android:textSize="24dp"
         android:gravity="center"
         android:layout_gravity="center"
         android:id="@+id/toview"/>
@@ -74,7 +83,7 @@
         android:layout_height="wrap_content"
         android:text="-- -- --"
         android:textColor="@color/orange"
-        android:textSize="36dp"
+        android:textSize="24dp"
         android:gravity="center"
         android:layout_gravity="center"
         android:id="@+id/tiview"/>
