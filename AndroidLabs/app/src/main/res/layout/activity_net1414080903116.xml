@@ -60,7 +60,7 @@
         android:layout_below="@+id/lg_password"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:text="登录"/>
+        android:text="登录" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -69,5 +69,14 @@
         android:id="@+id/imageView"
         android:layout_centerVertical="true"
         android:layout_alignEnd="@+id/lg_password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/soft_info"
+        android:text="软件信息"
+        android:layout_marginTop="23dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignStart="@+id/login_button" />
 
 </RelativeLayout>
