@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<detail>
+    <account id="1">
+        <classname>饮食</classname>
+        <value>20</value>
+    </account>
+    <account id="2">
+        <classname>车费</classname>
+        <value>50</value>
+    </account>
+</detail>

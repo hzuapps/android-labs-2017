@@ -5,25 +5,17 @@ package edu.hzuapps.androidlabs.homeworks.net1414080903240;
  */
 
 public class order {
+    private int id;
     private String value;
-    private String data;
-    private String remark;
-    private String project;
+    private String classname;
 
+    public String getId() { return value;  }
+    public void setId(int id) { this.id =id;}
 
-    public void order(String a,String b,String c,String d){
-        value=a;
-        data=c;
-        remark=d;
-        project=b;
-    }
     public String getValue() { return value;  }
     public void setValue(String a) { this.value =a;}
-    public String getData() { return data;  }
-    public void setData(String a) { this.data =a;}
-    public String getRemark() { return remark;  }
-    public void setRemark(String a) { this.remark =a;}
-    public String getProject() { return project;  }
-    public void setProject(String a) { this.project =a;}
+    public String getClassname() { return classname;  }
+    public void setClassname(String a) { this.classname =a;}
+
 
 }

@@ -39,7 +39,6 @@ public class Net1414080903240_OrderRecord extends AppCompatActivity {
         float dress_a=(float)dress/sum0*100;
         float gift_a=(float)gift/sum0*100;
 
-
         String sum=String.valueOf(sum0);
         String cheer_value=String.valueOf(cheer);
         String food_value=String.valueOf(food);
