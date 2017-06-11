@@ -12,7 +12,10 @@ public class Net1414080903214Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903214);
     }
-    public void customCamera(View view){
-        startActivity(new Intent(this,CustomCamera.class));
+
+   public void customCamera(View view) {
+        startActivity(new Intent(this, CustomCamera.class));
     }
+
+    public void wordTranslation(View view) {startActivity(new Intent(this, wordTranslation.class));}
 }
