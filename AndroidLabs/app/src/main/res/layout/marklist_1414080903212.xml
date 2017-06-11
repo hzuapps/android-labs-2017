@@ -10,25 +10,63 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:textSize="16sp" />
     <TextView
         android:text="1414080903212"
         android:id="@+id/mark_stuid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
         android:textSize="16sp"
         android:layout_marginLeft="3dp"
         android:fontFamily="sans-serif" />
+
+    <TextView
+        android:text="成绩："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/mark_grade"
+        android:layout_alignBottom="@+id/textView1"
+        android:id="@+id/textView2"
+        android:textSize="16sp"/>
+    <TextView
+        android:text="A"
+        android:id="@+id/mark_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/textView2"
+        android:textSize="16sp"
+        android:layout_marginRight="12dp" />
+
+    <TextView
+        android:text="作业标题:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="第五次实验"
+        android:id="@+id/mark_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView2"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="3dp"
-        android:id="@+id/textView6"
+        android:id="@+id/textView4"
         android:text="作业评语:"
         android:textSize="20sp" />
 
@@ -38,46 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_toRightOf="@+id/textView6"
-        android:layout_alignBottom="@+id/textView6"/>
-
-    <TextView
-        android:text="成绩："
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/mark_grade"
-        android:layout_alignBottom="@+id/textView"
-        android:id="@+id/textView9"
-        android:textSize="16sp"/>
-    <TextView
-        android:text="A"
-        android:id="@+id/mark_grade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignBottom="@+id/textView9"
-        android:textSize="16sp"
-        android:layout_marginRight="12dp"
-        />
-
-    <TextView
-        android:text="第五次实验"
-        android:id="@+id/mark_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_below="@+id/textView9"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"/>
-
-    <TextView
-        android:text="作业标题:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textSize="20sp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"/>
 
 </RelativeLayout>

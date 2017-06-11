@@ -34,6 +34,17 @@
         android:layout_alignParentBottom="true">
 
         <TextView
+            android:id="@+id/navigation_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_hw_bg1414080903212"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_hw_homepage1414080903212"
+            android:gravity="center"
+            android:textColor="@drawable/tab_text1414080903212" />
+
+        <TextView
             android:id="@+id/navigation_assign"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -58,6 +69,18 @@
             android:textColor="@drawable/tab_text1414080903212"
             android:text="Marking"
             android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/navigation_xml"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_hw_bg1414080903212"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_hw_xml1414080903212"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:text="XML解析" />
     </LinearLayout>
 
     <View
