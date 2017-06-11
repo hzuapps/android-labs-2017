@@ -30,6 +30,7 @@ public class Net1414080903202Main_Check extends AppCompatActivity {
         dao=new Net1414080903202AccountDao(this);
         //从数据库中查询出所有数据
         list=dao.queryAll();
+            Toast.makeText(this,list.size()+"",Toast.LENGTH_LONG).show();
         adpater=new MyAdpapter();
         accountCheck.setAdapter(adpater);                          //给ListView添加适配器
     }
@@ -67,13 +68,13 @@ public class Net1414080903202Main_Check extends AppCompatActivity {
             TextView beizhu=(TextView) item.findViewById(R.id.beizhu);
             TextView yingkui=(TextView) item.findViewById(R.id.yingkui);
             TextView total=(TextView) item.findViewById(R.id.total);
-            date.setText(list.get(position).getDate());
-            input.setText(list.get(position).getInput()+"");
-            output.setText(list.get(position).getOutput()+"");
-            beizhu.setText(list.get(position).getBeizhu());
-            yingkui.setText(list.get(position).getYingkui()+"");
-            total.setText(list.get(position).getTotal()+"");
-            return null;
+            date.setText("日期："+list.get(list.size()-1-position).getDate());
+            input.setText("收入：        "+list.get(list.size()-1-position).getInput()+"");
+            output.setText("支出：        "+list.get(list.size()-1-position).getOutput()+"");
+            beizhu.setText("备注：        "+list.get(list.size()-1-position).getBeizhu());
+            yingkui.setText("盈亏：        "+list.get(list.size()-1-position).getYingkui()+"");
+            total.setText("余额：        "+list.get(list.size()-1-position).getTotal()+"");
+            return item;
         }
 
     }
@@ -84,7 +85,7 @@ public class Net1414080903202Main_Check extends AppCompatActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             //获取点击位置上的数据
-            Net1414080903202Account a=(Net1414080903202Account) parent.getItemAtPosition(position);
+            Net1414080903202Account a= list.get(position);
             Toast.makeText(getApplicationContext(),a.toString(),Toast.LENGTH_SHORT).show();
         }
     }

@@ -37,9 +37,10 @@
        />
 
         <EditText
+            android:gravity="right"
             android:id="@+id/input"
             android:layout_width="200dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:layout_marginRight="80dp"
             android:layout_gravity="right"
@@ -73,9 +74,10 @@
             />
 
         <EditText
+            android:gravity="right"
             android:id="@+id/output"
             android:layout_width="200dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:layout_marginRight="80dp"
             android:layout_gravity="right"
@@ -110,14 +112,16 @@
             />
 
         <EditText
+            android:gravity="right"
             android:id="@+id/beizhu"
             android:layout_width="200dp"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:layout_marginRight="80dp"
             android:layout_gravity="right"
 
             />
+
 
 
     </FrameLayout>

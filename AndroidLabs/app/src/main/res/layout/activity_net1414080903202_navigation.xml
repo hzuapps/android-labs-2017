@@ -44,4 +44,17 @@
         tools:layout_editor_absoluteY="202dp"
         tools:layout_editor_absoluteX="117dp"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/test"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:text="网络测试"
+        android:textSize="20dp"
+        android:onClick="click"
+        tools:layout_editor_absoluteY="202dp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:ignore="MissingConstraints" />
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabaseCorruptException;
 import android.renderscript.Sampler;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,13 +37,14 @@ public class Net1414080903202AccountDao {
         values.put("yingkui",account.getYingkui());
         values.put("total",account.getTotal());
         //向account表插入数据values
+        db.insert("account",null,values);
         db.close();
     }
 
     public List<Net1414080903202Account> queryAll() {
         SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cursor = db.query("account", null, null, null, null, null, null);
-        List<Net1414080903202Account> list = new ArrayList<Net1414080903202Account>();
+        List<Net1414080903202Account> list = new ArrayList<>();
         while (cursor.moveToNext()) {
             String date = cursor.getString(cursor.getColumnIndex("date"));
             Float input = cursor.getFloat(1);
