@@ -13,7 +13,7 @@ import edu.hzuapps.androidlabs.R;
 
 public class MainActivity extends AppCompatActivity {
     private ListView mListView;
-    //需要适配的数据
+    //需要适配的数据代码，调用存储。。。。。。。。。
     private String[] names={"京东商城","QQ","QQ斗地主","新浪微博","天猫","UC浏览器","微信"};
     //图片集合
     private int[] icons ={R.drawable.jd,R.drawable.qq,R.drawable.qq_dizhu,R.drawable.sina,R.drawable.tmall,R.drawable.uc,R.drawable.weixin,};
