@@ -30,7 +30,7 @@ public class Net1414080903140GameActivity extends AppCompatActivity {
     int choose = 0;
     int bt = 0;
     int current=1;
-    MyOpenHelper helper;
+    Net1414080903140MyOpenHelper helper;
 
     int[] pictures = new int[]{R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.five, R.drawable.four, R.drawable.six};
 
@@ -46,7 +46,7 @@ public class Net1414080903140GameActivity extends AppCompatActivity {
         tvResult = (TextView) findViewById(R.id.tv_game_result);
         tvCurrent= (TextView) findViewById(R.id.tv_current);
         tvCurrent.setText("1");
-        helper=new MyOpenHelper(this);
+        helper=new Net1414080903140MyOpenHelper(this);
         btStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,8 +116,8 @@ public class Net1414080903140GameActivity extends AppCompatActivity {
     public void save(){
         SQLiteDatabase db=helper.getWritableDatabase();
         ContentValues values=new ContentValues();
-        values.put("play_time",getDate());
         values.put("score",current);
+        values.put("play_time",getDate());
         db.insert("record",null,values);
         db.close();
     }
