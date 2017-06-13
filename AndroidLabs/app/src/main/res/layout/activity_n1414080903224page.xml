@@ -16,10 +16,8 @@
         android:layout_marginTop="5dp"
         android:text="关闭" />
 <TextView
+    android:id="@+id/show_page"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:layout_centerVertical="true"
-    android:textSize="50dp"
-    android:text="显示网页"/>
+   />
 </RelativeLayout>

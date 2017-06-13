@@ -21,7 +21,7 @@ public class N1414080903224Dao {
     public  void insert(N1414080903224Address address){
         SQLiteDatabase db=helper.getWritableDatabase(); //获取数据库对象
         ContentValues values=new ContentValues();
-        values.put("url",address.getUrl());
+        values.put("path",address.getPath());
         long id =db.insert("address",null,values); // 插入数据到 address 数据表里
         db.close();
     }
