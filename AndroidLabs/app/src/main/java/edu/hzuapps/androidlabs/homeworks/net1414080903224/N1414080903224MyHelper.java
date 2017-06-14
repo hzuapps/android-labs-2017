@@ -15,7 +15,7 @@ public class N1414080903224MyHelper  extends SQLiteOpenHelper{
     }
     public void onCreate(SQLiteDatabase db){
         System.out.println("onCreate");
-        db.execSQL("CREATE TABLE address(_id INTEGER KEY AUTOINCREMENT , url Varchar(20))") ; //创建address 数据表，字段名为 id,url
+        db.execSQL("CREATE TABLE address(_id INTEGER KEY AUTOINCREMENT , path Varchar(20))") ; //创建address 数据表，字段名为 id,path
     }
     public  void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion){
         System.out.println("onUpgrade");
