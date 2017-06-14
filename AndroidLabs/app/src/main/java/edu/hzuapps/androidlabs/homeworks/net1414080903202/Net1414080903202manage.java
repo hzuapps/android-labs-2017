@@ -55,10 +55,18 @@ public class Net1414080903202manage extends AppCompatActivity {
                     String beizhu=et_beizhu.getText().toString().trim();
                     String yingkui=String.valueOf(Float.parseFloat(input)-Float.parseFloat(output));
                     list=accountDao.queryAll();
-                    Float total=list.get(list.size()-1).getTotal();
+                    Float total=0f;
+                    if (list.size()>1)
+                    { total=list.get(list.size()-1).getTotal();
+                        total=total+Float.parseFloat(yingkui);
+                    }
+                    else {
+                        total=Float.parseFloat(yingkui);
+                    }
 
                     Net1414080903202Account account=new Net1414080903202Account(date,Float.parseFloat(input),Float.parseFloat(output),beizhu,Float.parseFloat(yingkui),total);
                     accountDao.insert(account);
+                    finish();
                     Toast.makeText(Net1414080903202manage.this,"数据提交成功",Toast.LENGTH_SHORT).show();
                     break;
             }
@@ -68,7 +76,7 @@ public class Net1414080903202manage extends AppCompatActivity {
 
     public  String getDate(){
         Date date=new Date();
-        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return format.format(date);
     }
 

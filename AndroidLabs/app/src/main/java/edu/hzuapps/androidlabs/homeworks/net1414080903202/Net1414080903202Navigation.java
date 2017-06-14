@@ -12,13 +12,14 @@ public class Net1414080903202Navigation extends AppCompatActivity {
 
     Button btManage;
     Button btCheck;
-
+    Button btTest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903202_navigation);
         btManage =(Button) findViewById(R.id.manage);
         btCheck =(Button)  findViewById(R.id.check) ;
+        btTest =(Button) findViewById(R.id.test);
 
         btManage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,5 +35,13 @@ public class Net1414080903202Navigation extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Net1414080903202Navigation.this, Net1414080903202ShowJson.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

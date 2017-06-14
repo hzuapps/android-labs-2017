@@ -17,7 +17,7 @@ public class Net1414080903202MyHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         System.out.println("onCreate");
-        db.execSQL("CREATE TABLE accont(date VARCHAR(20) PRIMARY KEY AUTOINCREMENT,input REA" +
+        db.execSQL("CREATE TABLE account(date VARCHAR(20) PRIMARY KEY,input REA" +
                 "L,output REAL,beizhu VARCHAR(20),yingkui REAL,total REAL)");
     }
     public void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion){
