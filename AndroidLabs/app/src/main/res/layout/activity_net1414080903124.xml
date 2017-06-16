@@ -40,6 +40,16 @@
       android:layout_height="wrap_content"
       android:id="@+id/button8"
       android:onClick="click4" />
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/soft_info"
+      android:text="软件信息"
+      android:layout_marginTop="23dp"
+      android:layout_alignTop="@+id/imageView"
+      android:layout_alignStart="@+id/login_button"
+      android:onClick="click5"/>
+
 </LinearLayout>
 
 

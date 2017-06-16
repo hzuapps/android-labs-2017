@@ -35,6 +35,10 @@ public class Net1414080903124Activity extends AppCompatActivity {
         Intent intent = new Intent(this, Net1414080903124bangActivity.class);
         startActivity(intent);
     }
+    public void click5(View view) {
+        Intent intent = new Intent(this, Net1414080903124AnalysisJson.class);
+        startActivity(intent);
+    }
 
 }
 

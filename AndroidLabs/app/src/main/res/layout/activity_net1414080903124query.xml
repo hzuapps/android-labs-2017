@@ -28,5 +28,6 @@
         android:layout_marginTop="39dp"
         android:id="@+id/button6"
         android:layout_below="@+id/textView"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:onClick="click5"/>
 </RelativeLayout>
