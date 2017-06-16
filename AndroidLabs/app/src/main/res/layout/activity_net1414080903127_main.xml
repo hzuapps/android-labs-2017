@@ -13,19 +13,28 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/start"
-        android:background="@drawable/start_button_net1414080903127"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/rank" />
+        android:id="@+id/gameinstructions"
+        android:background="@drawable/instruction_button_net1414080903127"
+        android:layout_above="@+id/start"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/rank"
         android:background="@drawable/rank_button_net1414080903127"
-        android:layout_below="@+id/start"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:background="@drawable/start_button_net1414080903127"
+        android:layout_above="@+id/rank"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="26dp" />
+        android:layout_marginBottom="23dp" />
 
 
 </RelativeLayout>
