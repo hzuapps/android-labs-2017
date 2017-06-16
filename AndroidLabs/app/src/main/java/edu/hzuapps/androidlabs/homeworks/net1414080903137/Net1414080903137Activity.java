@@ -19,6 +19,7 @@ public class Net1414080903137Activity extends AppCompatActivity {
         Button button2=(Button) findViewById(R.id.button2);
         Button button3=(Button)findViewById(R.id.button3);
         Button button4=(Button)findViewById(R.id.button4);
+        Button button5 = (Button) findViewById(R.id.button5);
 
         button1.setOnClickListener(new View.OnClickListener() {
 
@@ -47,6 +48,13 @@ public class Net1414080903137Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Net1414080903137Activity.this, Net1414080903137fFifthActivity.class);
+                startActivity(intent);
+            }
+        });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Net1414080903137Activity.this, Net1414080903137JsonActivity.class);
                 startActivity(intent);
             }
         });
