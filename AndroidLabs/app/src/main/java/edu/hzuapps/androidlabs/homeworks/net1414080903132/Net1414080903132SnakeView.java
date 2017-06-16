@@ -8,6 +8,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
@@ -16,9 +19,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-
+import java.util.logging.LogRecord;
+import android.os.Handler;
 import edu.hzuapps.androidlabs.R;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class Net1414080903132SnakeView extends Net1414080903132mapView implements OnClickListener {
 
@@ -58,6 +65,9 @@ public class Net1414080903132SnakeView extends Net1414080903132mapView implement
     private String lishi;//历史成绩
     private double mModeAdd;//蛇前进速度增量
     private long mMoveDelay;// 间隔多少毫秒进行移动一次
+    private String QQnumberjson;//从json
+    private String QQnumber;//QQ群号码
+    private Handler handler=null;
 
     public Net1414080903132SnakeView(Context context, AttributeSet att) {
         super(context, att);
@@ -83,6 +93,38 @@ public class Net1414080903132SnakeView extends Net1414080903132mapView implement
         mStart2 = button;
         mStart2.setOnClickListener(this);
     }
+    private void sendRequest() {
+        new Thread(){
+            public void run() {
+                try {
+                    OkHttpClient client = new OkHttpClient();
+                    Request request = new Request.Builder().url("https://raw.githubusercontent.com/hizzj/android-labs-2017/master/AndroidLabs/app/src/main/java/edu/hzuapps/androidlabs/homeworks/net1414080903132/Net14140809003132tanchishe.json").build();//目标地址
+                    Response response = client.newCall(request).execute();
+                    String responseData = response.body().string();
+                    AnalysisJson(responseData);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                handler.post(runnableUi);
+            }
+        }.start();
+    }
+    Runnable runnableUi = new Runnable() {
+           public void run() {
+              QQnumber=QQnumberjson;
+      }
+    };
+    private void AnalysisJson(String jsonData) {
+            try {
+                JSONArray jsonArray = new JSONArray(jsonData);
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    QQnumberjson = jsonObject.getString("QQnumber");
+                }
+            } catch (Exception e) {
+                 e.printStackTrace();
+            }
+        }
     //获得当前游戏的状态
     public void setMode(int newMode) {
         int oldMode = mMode;
@@ -113,7 +155,10 @@ public class Net1414080903132SnakeView extends Net1414080903132mapView implement
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            str = res.getText(R.string.mode_ready)+"\n成绩："+lishi;
+            handler=new Handler() ;
+            sendRequest();
+
+            str = res.getText(R.string.mode_ready)+"\n成绩："+lishi+"官方QQ群:"+QQnumber;
         }
         //如果状态为LOSE，将历史成绩读出与当前成绩比较，如果比历史成绩大就将成绩储存起来
         if (newMode == LOSE) {
