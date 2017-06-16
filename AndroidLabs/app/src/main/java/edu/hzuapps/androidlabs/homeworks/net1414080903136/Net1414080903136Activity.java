@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.hzuapps.androidlabs.R;
-import edu.hzuapps.androidlabs.homworks.net1414080903136.db.ExpressDB;
 
 public class Net1414080903136Activity extends FragmentActivity {
     public static String url;
