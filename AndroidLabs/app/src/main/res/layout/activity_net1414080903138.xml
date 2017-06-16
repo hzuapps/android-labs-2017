@@ -41,5 +41,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:textColor="#ffffff"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_json"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        android:text="json数据解析"/>
 </RelativeLayout>
 
