@@ -1,5 +1,7 @@
 ﻿package edu.hzuapps.androidlabs.homeworks.net1414080903103;
-
+import android.content.Intent;
+import android.widget.Button;
+import android.webkit.WebView;
 import java.util.ArrayList;
 import java.util.HashMap;
 import android.app.Activity;
@@ -16,6 +18,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.TextView;
+
 
 public class Net1414080903103Activity extends Activity implements OnClickListener {
     private static final String TAG = "自由浏览app";
@@ -26,11 +30,16 @@ public class Net1414080903103Activity extends Activity implements OnClickListene
     private final String VPN_USERNAME = "oa";
     private final String VPN_PASSWORD = "123456";
     private Dialog mShowingDialog;
+    private Button send;
+    private TextView responseText;
+    private WebView webView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903103);
         findviewByid();
+        send=(Button)findViewById(R.id.send_request);
+        send.setOnClickListener(this);
     }
 
     private void findviewByid() {
@@ -40,11 +49,11 @@ public class Net1414080903103Activity extends Activity implements OnClickListene
         Button btnStart = (Button) findViewById(R.id.BTN_START);
         Button btnStop = (Button) findViewById(R.id.BTN_STOP);
         Button btnConnectSvr = (Button) findViewById(R.id.BTN_GETVPNSTATUS);
-        Button btn_save=(Button) findViewById(R.id.btn_save);
+
         btnStart.setOnClickListener(this);
         btnStop.setOnClickListener(this);
         btnConnectSvr.setOnClickListener(this);
-        btn_save.setOnClickListener(this);
+
     }
 
     @Override
@@ -58,26 +67,16 @@ public class Net1414080903103Activity extends Activity implements OnClickListene
             }
 
             case R.id.BTN_STOP: {
-                doStop();
+                //doStop();
 
                 break;
             }
 
-           case R.id.btn_save: {
-		String saveinfo =edtIP.getText().toString().trim();
-		FileOutputStream fos;
-		try {
-		//保存数据
-		fos = openFileOutput("data.txt", Context.MODE_APPEND);
-		fos.write(saveinfo.getBytes());
-		fos.close();
-		} catch (Exception e) {
-		e.printStackTrace();
-		}
-		Toast.makeText(TestSVSDKLib.this, "保存成功", Toast.LENGTH_SHORT).show();
-		break;
+            case R.id.send_request:{
+                Intent intent3=new Intent(Net1414080903103Activity.this,Net1414080903103_AnalysisJsonActivity.class);
+                                startActivity(intent3);
+            }
 
-		}
         }
     }
 
@@ -138,7 +137,7 @@ public class Net1414080903103Activity extends Activity implements OnClickListene
             return;
         }
 
-// vpnlib.setVPNInfo("192.168.95.84", 443, "1", "111111");暂时不懂这部分内容
+/* vpnlib.setVPNInfo("192.168.95.84", 443, "1", "111111");暂时不懂这部分内容
         vpnlib.setVPNInfo(sIP, port, sUname, sUpwd);
         Log.i("ttt", "ip= " + sIP + " port= " + port + " uname= " + sUname);
         vpnlib.prepareVPNSettings();
@@ -178,4 +177,7 @@ public class Net1414080903103Activity extends Activity implements OnClickListene
     }
 
 
+}
+*/
+    }
 }
