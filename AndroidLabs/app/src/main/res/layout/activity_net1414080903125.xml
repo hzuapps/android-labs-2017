@@ -19,7 +19,7 @@
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name_1"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="25dp"
             android:layout_marginLeft="30dp"
@@ -28,8 +28,9 @@
 
         <TextView
             android:layout_width="wrap_content"
+            android:id="@+id/singerName"
             android:layout_height="wrap_content"
-            android:text="@string/singer_1"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="18dp"
             android:layout_marginLeft="30dp"/>
@@ -52,12 +53,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
             android:id="@+id/MusicTime"
-            android:text="    "/>
+            android:text=""/>
 
 
-        <LinearLayout
+        <!--<LinearLayout
 
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -65,11 +67,7 @@
             android:layout_marginBottom="40px"
             android:layout_weight="1">
 
-            <TextView
-                android:text=""
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
+
 
             <ImageButton
                 android:id="@+id/playOrStopMusic"
@@ -79,15 +77,35 @@
                 android:onClick="onClick"/>
 
 
-            <TextView
-                android:text=""
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:id="@+id/textView" />
 
 
-        </LinearLayout>
+
+
+
+        </LinearLayout>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/playOrStopMusic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/play_net1414080903125"
+                android:layout_centerInParent="true"
+                android:onClick="onClick"/>
+
+            <ImageButton
+                android:id="@+id/munu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/menu_net1414080903125"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="onClick"/>
+
+        </RelativeLayout>
 
 
 
