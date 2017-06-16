@@ -15,7 +15,7 @@ import edu.hzuapps.androidlabs.homeworks.net1414080903104.Net1414080903104extrac
 import edu.hzuapps.androidlabs.homeworks.net1414080903104.Net1414080903104lookActivity;
 
 public class Net1414080903104Activity<btn1, Button> extends ActionBarActivity {
-	Button btn1, btn2;
+	Button btn1, btn2,btn3;
     
 	class MyClickListener implements OnClickListener {		  
 		public void onClick(View v) {
@@ -30,6 +30,12 @@ public class Net1414080903104Activity<btn1, Button> extends ActionBarActivity {
 		    	//跳转到另外一个页面
 		    	Intent intent1=new Intent(Net1414080903104Activity.this,Net1414080903104lookActivity.class);
 		    	startActivity(intent1);
+
+		        break;
+		    case R.id.button3:
+		    	//跳转到另外一个页面
+		    	Intent intent2=new Intent(Net1414080903104Activity.this,Net1414080903104obtainjsonActivity.class);
+		    	startActivity(intent2);
 
 		        break;
 		    default:
@@ -47,9 +53,11 @@ public class Net1414080903104Activity<btn1, Button> extends ActionBarActivity {
         
         btn1 = (Button) findViewById(R.id.button1);
         btn2 = (Button) findViewById(R.id.button2);
+        btn3 = (Button) findViewById(R.id.button3);
      
         ((View) btn1).setOnClickListener(new MyClickListener());
         ((View) btn2).setOnClickListener(new MyClickListener());
+        ((View) btn3).setOnClickListener(new MyClickListener());
 
     }
 
