@@ -78,6 +78,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(intent);
             }
         });
+
+        Button getJson = (Button)findViewById(R.id.getJson);
+        getJson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                downJsonAndShow();
+            }
+        });
     }
 
     private void showNoteList() {
@@ -122,5 +130,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 .setCancelable(true)
                 .show();
         return true;
+    }
+
+    public void downJsonAndShow(){
+        Intent intent = new Intent(MainActivity.this, JsonActivity.class);
+        startActivity(intent);
     }
 }
