@@ -23,12 +23,13 @@ public class Net1414080903139AddRecordActivity extends AppCompatActivity {
     Button btSubmit;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.net1414080903139activity02);
 
-        etBirthday= (EditText) findViewById(R.id.et_name);
-        etName= (EditText) findViewById(R.id.et_birthday);
+
+        etBirthday= (EditText) findViewById(R.id.et_birthday);
+        etName= (EditText) findViewById(R.id.et_name);
 
         btSubmit= (Button) findViewById(R.id.btn_submit);
 
@@ -43,6 +44,7 @@ public class Net1414080903139AddRecordActivity extends AppCompatActivity {
                 values.put("name",etName.getText().toString().trim());
                 db.insert("birthday",null,values);
                 db.close();
+                finish();
             }
         });
     }
