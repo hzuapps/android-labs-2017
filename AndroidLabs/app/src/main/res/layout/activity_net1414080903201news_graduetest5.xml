@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggable_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.jinritoutiao.ParallaxScrimageView
+            android:id="@+id/shot"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:maxScrimAlpha="0.4"
+            app:parallaxFactor="-0.5"
+            app:scrimAlpha="0"
+            />
+        <com.jinritoutiao.ParallaxScrimageView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/text_primary_dark"
+            android:textSize="23sp"
+            app:maxScrimAlpha="0.4"
+            app:parallaxFactor="-0.5"
+            app:scrimAlpha="0"
+            />
+    </FrameLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="300dp"
+            android:orientation="vertical">
+            <WebView
+                android:id="@+id/wv_new"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/background_light" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        />
+</FrameLayout>
