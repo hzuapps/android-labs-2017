@@ -51,6 +51,14 @@ public class Net1414080903130LoginActivity extends AppCompatActivity {
 
             }
         });
+        Button c = (Button)findViewById(R.id.json_login);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Net1414080903130LoginActivity.this,Net1414080903130JsonActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public int check(String username,String password){

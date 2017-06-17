@@ -87,5 +87,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:text="登录" />
+        <Button
+            android:id="@+id/json_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="解析json" />
     </LinearLayout>
 </RelativeLayout>
