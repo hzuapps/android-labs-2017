@@ -1,18 +1,21 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903114;
 
 import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 import edu.hzuapps.androidlabs.homeworks.net1414080903114.hardwareinfo.RateDatas;
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
 
 public class MainActivity extends Activity {
 	private TextView tv_readRate, tv_writeRate, tv_uploadRate, tv_downloadRate;
@@ -128,6 +131,13 @@ public class MainActivity extends Activity {
     	fis.close();
     	Toast.makeText(MainActivity.this, rateDatas, 0).show();
     }
+    
+    public void aboutSoftware() {
+    	Intent intent=new Intent(this, AboutActivity.class);
+    	startActivity(intent);
+    	
+    }
+    
     
 }
     
