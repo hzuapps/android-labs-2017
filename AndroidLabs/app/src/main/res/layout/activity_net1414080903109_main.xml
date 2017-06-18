@@ -7,5 +7,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorPrimary"
+        android:text="重要节日记录本"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:src="@drawable/date"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_to_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="添加节日"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/bt_to_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="查看节日"
+        android:textColor="#ffffff" />
 </LinearLayout>
