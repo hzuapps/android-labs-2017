@@ -20,7 +20,6 @@ public class Net1414080903109AddActivity extends AppCompatActivity {
     Button bt;
 
     @Override
- /*添加节假日 后期添加功能*/
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net1414080903109_add);
@@ -33,6 +32,7 @@ public class Net1414080903109AddActivity extends AppCompatActivity {
                 Net1414080903109DayBean day=new Net1414080903109DayBean();
                 day.setName(etName.getText().toString());
                 day.setOccur(etOccur.getText().toString());
+                Net1414080903109Presenter.getInstance(Net1414080903109AddActivity.this).add(day);
             }
         });
     }

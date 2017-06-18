@@ -25,11 +25,11 @@ public class Net1414080903109ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_net1414080903109_list);
         list= Net1414080903109Presenter.getInstance(this).list();
         final MyAdapter adapter=new MyAdapter();
-        lv.setAdapter(adapter);
+        lv.setAdapter(adapter);//给ListView添加适配器
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            /*长监听，实现删除功能,在后面数据储存实验再加上*/
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Net1414080903109Presenter.getInstance(Net1414080903109ListActivity.this).delete(list.get(position).getName());
                 adapter.notifyDataSetChanged();
                 return false;
             }
@@ -54,7 +54,7 @@ public class Net1414080903109ListActivity extends AppCompatActivity {
         }
 
         @Override
-        /*列出所有节假日*/
+        /*界面拉到相应的位置便显示相应的节日列表*/
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView==null){
                 convertView= LayoutInflater.from(Net1414080903109ListActivity.this).inflate(R.layout.item_net1414080903109,null);

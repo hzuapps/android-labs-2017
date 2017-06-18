@@ -20,13 +20,14 @@ public class Net1414080903109MainActivity extends AppCompatActivity {
         btAdd= (Button) findViewById(R.id.bt_to_add);
         btList= (Button) findViewById(R.id.bt_to_list);
 
+        /*点击按钮跳转到添加节日的界面*/
         btAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Net1414080903109MainActivity.this,Net1414080903109AddActivity.class));
             }
         });
-
+        /*点击按钮跳转到显示节日列表的界面*/
         btList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
