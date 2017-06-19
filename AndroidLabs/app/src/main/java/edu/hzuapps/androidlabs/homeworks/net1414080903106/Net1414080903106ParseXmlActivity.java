@@ -1,13 +1,11 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903106;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
+
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,17 +21,10 @@ import java.net.URL;
 
 import edu.hzuapps.androidlabs.R;
 
-/**
- * Created by Administrator on 2017/4/24.
- */
-
-public class Net1414080903106MainActivity extends Activity implements View.OnClickListener {
-    private TextView SelectCityBtn;
+public class Net1414080903106ParseXmlActivity extends AppCompatActivity {
     private TextView CityName,Temperature,Climate;
-    private Button UpdateBtn;
-    private Button ParseXml;
-    private String updateCityCode;
     Net1414080903106Weather weather=null;
+
 
     private Handler mHandler=new Handler(){
         public void handleMessage(android.os.Message message){
@@ -50,53 +41,21 @@ public class Net1414080903106MainActivity extends Activity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_net1414080903106_main);
+        setContentView(R.layout.activity_net1414080903106_parse_xml);
 
-        //绑定组件
-        SelectCityBtn=(TextView) findViewById(R.id.title_city_locate);
-        SelectCityBtn.setOnClickListener(this);
         CityName=(TextView) findViewById(R.id.wether_cityName);
         Temperature=(TextView) findViewById(R.id.weather_temperature);
         Climate=(TextView) findViewById(R.id.weather_climate);
         CityName.setText("N/A");
         Temperature.setText("N/A");
         Climate.setText("N/A");
-        UpdateBtn=(Button) findViewById(R.id.weather_btn_update);
-        UpdateBtn.setOnClickListener(this);
-        ParseXml=(Button) findViewById(R.id.parse_xml);
-        ParseXml.setOnClickListener(this);
 
-        //检查网络连接状态
-        if(Net1414080903106CheckNet.getNetState(this)==Net1414080903106CheckNet.NET_NONE){
-            Log.d("MainActivity","网络不通");
-            Toast.makeText(Net1414080903106MainActivity.this,"网络不通",Toast.LENGTH_LONG).show();
-        }else{
-            Log.d("MainActivity","网络OK");
-            Toast.makeText(Net1414080903106MainActivity.this,"网络OK",Toast.LENGTH_LONG).show();
-        }
-
-        updateCityCode=getIntent().getStringExtra("citycode");
-        if(updateCityCode!="-1"){
-            getWeatherDatafromNet(updateCityCode);
-        }
-    }
-
-    @Override
-    public void onClick(View v) {
-        if(v.getId()==R.id.title_city_locate) {
-            Intent intent=new Intent(this, Net1414080903106SelectCity.class);
-            startActivity(intent);
-        }else if(v.getId()==R.id.weather_btn_update){
-            getWeatherDatafromNet("101010100");
-        }else if(v.getId()==R.id.parse_xml) {
-            Intent intent=new Intent(this, Net1414080903106ParseXmlActivity.class);
-            startActivity(intent);
-        }
+        getWeatherDatafromNet();
     }
 
     //获取网络上的数据
-    private void getWeatherDatafromNet(String citycode){
-        final String address="http://wthrcdn.etouch.cn/WeatherApi?citykey="+citycode;
+    private void getWeatherDatafromNet(){
+        final String address="https://raw.githubusercontent.com/zida106/android-labs-2017/master/AndroidLabs/app/src/main/res/values/weather.xml";
         Log.d("Address",address);
         new Thread(new Runnable() {
             @Override
@@ -139,24 +98,23 @@ public class Net1414080903106MainActivity extends Activity implements View.OnCli
     //通过xmlPullParser解析xml数据
     private Net1414080903106Weather parseXML(String xmlData){
         Net1414080903106Weather weather=null;
-        int typeCount=0;
         try{
             XmlPullParserFactory factory=XmlPullParserFactory.newInstance();
             XmlPullParser xmlPullParser=factory.newPullParser();
             xmlPullParser.setInput(new StringReader(xmlData));
 
             int eventType=xmlPullParser.getEventType();
-            Log.d("MainActivity","start parse xml");
+            Log.d("ParseXmlActivity","start parse xml");
 
             while(eventType!=xmlPullParser.END_DOCUMENT){
                 switch(eventType){
                     //文档开始位置
                     case XmlPullParser.START_DOCUMENT:
-                        Log.d("MainActivity","start doc");
+                        Log.d("ParseXmlActivity","start doc");
                         break;
                     //标签元素开始位置
                     case XmlPullParser.START_TAG:
-                        if(xmlPullParser.getName().equals("resp")){
+                        if(xmlPullParser.getName().equals("resources")){
                             weather=new Net1414080903106Weather();
                         }
                         if(weather!=null){
@@ -168,11 +126,10 @@ public class Net1414080903106MainActivity extends Activity implements View.OnCli
                                 eventType=xmlPullParser.next();
                                 Log.d("wendu",xmlPullParser.getText());
                                 weather.setWendu(xmlPullParser.getText());
-                            }else if(xmlPullParser.getName().equals("type")&&typeCount==0){
+                            }else if(xmlPullParser.getName().equals("type")){
                                 eventType=xmlPullParser.next();
                                 Log.d("type",xmlPullParser.getText());
                                 weather.setType(xmlPullParser.getText());
-                                typeCount++;
                             }
                         }
                         break;
@@ -193,7 +150,8 @@ public class Net1414080903106MainActivity extends Activity implements View.OnCli
         CityName.setText(weather.getCity());
         Temperature.setText(weather.getWendu()+"℃");
         Climate.setText(weather.getType());
-        Log.d("MainActivity","更新成功");
-        Toast.makeText(Net1414080903106MainActivity.this,"更新成功",Toast.LENGTH_SHORT).show();
+        Log.d("XmlActivity","更新成功");
+        Toast.makeText(Net1414080903106ParseXmlActivity.this,"更新成功",Toast.LENGTH_SHORT).show();
     }
 }
+
