@@ -39,5 +39,16 @@
         android:text="申请安全证书"
         android:textSize="18sp"
         android:background="@color/colorPrimary"/>
+		<Button
+        android:id="@+id/bt_Json"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="解析json"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"/>
 
 </LinearLayout>
