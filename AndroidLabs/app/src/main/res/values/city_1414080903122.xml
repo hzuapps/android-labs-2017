@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <infos>
+        <city id="1">
+            <temp>20/30</temp>
+            <weather>晴天多云</weather>
+            <name>上海</name>
+            <pm>80</pm>
+            <wind>1级</wind>
+        </city>
+        <city id="2">
+            <temp>26/32</temp>
+            <weather>晴天</weather>
+            <name>北京</name>
+            <pm>988888</pm>
+            <wind>3级</wind>
+        </city>
+        <city id="3">
+            <temp>15/24</temp>
+            <weather>多云</weather>
+            <name>吉林</name>
+            <pm>30</pm>
+            <wind>5级</wind>
+        </city>
+
+    </infos>
+</resources>
+
+
+
