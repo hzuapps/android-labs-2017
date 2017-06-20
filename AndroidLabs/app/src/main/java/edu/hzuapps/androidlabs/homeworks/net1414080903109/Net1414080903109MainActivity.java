@@ -19,6 +19,7 @@ public class Net1414080903109MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_net1414080903109_main);
         btAdd= (Button) findViewById(R.id.bt_to_add);
         btList= (Button) findViewById(R.id.bt_to_list);
+        btJson=(Button)findViewById(R.id.bt_to_json);
 
         /*点击按钮跳转到添加节日的界面*/
         btAdd.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +33,13 @@ public class Net1414080903109MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Net1414080903109MainActivity.this,Net1414080903109ListActivity.class));
+            }
+        });
+        /*点击按钮跳转到解析Json文件结果界面*/
+        btJson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Net1414080903109MainActivity.this,Net1414080903109_ParseJsonActivity.class));
             }
         });
     }

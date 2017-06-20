@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
-   /*主界面*/
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,5 +40,15 @@
         android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
         android:text="查看节日"
+        android:textColor="#ffffff" />
+<Button
+        android:id="@+id/bt_to_json"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="解析Json文件"
         android:textColor="#ffffff" />
 </LinearLayout>
