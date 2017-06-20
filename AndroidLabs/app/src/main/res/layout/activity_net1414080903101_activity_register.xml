@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注册界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/id_register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <!--     <ImageView
+                android:id="@+id/id_img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:src="@drawable/back_black"/>
+ -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="注      册"
+                android:textSize="24sp"/>
+        </RelativeLayout>
+        <!-- 代替@layout/register_title_bar  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账  号"/>
+
+            <EditText
+                android:id="@+id/id_et_register_accountName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入您的账号"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"/>
+
+            <EditText
+                android:id="@+id/id_et_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="密  码"
+                android:inputType="textPassword"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+       <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_second_password"/>
+
+            <EditText
+                android:id="@+id/id_et_secPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_second_password_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"/>
+        </LinearLayout> -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+        <!--    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_chest_id"/>
+
+            <EditText
+                android:id="@+id/id_et_chest_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_chest_id_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"/>-->
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/id_but_register_finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/login_and_register_activity_but_click"
+            android:text="完    成"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+
+</LinearLayout>
