@@ -2,12 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/background"/>
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
     <RelativeLayout
         android:id="@+id/title_relative"
         android:layout_width="match_parent"
@@ -44,7 +41,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30.0dp"
-            android:text="惠州"
             android:textColor="#FFFFFF"
             android:textSize="50.0sp"/>
         <TextView
@@ -53,17 +49,29 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/wether_cityName"
-            android:text="25℃"
             android:textColor="#FFFFFF"
             android:textSize="25.0sp"/>
         <TextView
-            android:id="@+id/weather_state"
+            android:id="@+id/weather_climate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/weather_temperature"
-            android:text="阵雨"
             android:textColor="#FFFFFF"
-            android:textSize="25.0sp"/>
+            android:textSize="25.0sp" />
+        <Button
+            android:id="@+id/weather_btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/weather_climate"
+            android:text="刷新"/>
+        <Button
+            android:id="@+id/parse_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weather_btn_update"
+            android:layout_centerHorizontal="true"
+            android:text="解析xml"/>
     </RelativeLayout>
 </RelativeLayout>
