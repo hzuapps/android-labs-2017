@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<news>
+    <newsInfo>
+        <icon>http://ico.ooopic.com/ajax/iconpng/?id=135287.png</icon>
+        <title>公司的商城系统推广</title>
+        <content>主要推广公司的商城系统 </content>
+        <type>2</type>
+        <salary>150</salary>
+    </newsInfo>
+    <newsInfo>
+        <icon>http://ico.ooopic.com/ajax/iconpng/?id=135287.png</icon>
+        <title>办公室财务室缺人</title>
+        <content>主要操作电脑，财务数据录入</content>
+        <type>1</type>
+        <salary>100</salary>
+    </newsInfo>
+    <newsInfo>
+        <icon>http://ico.ooopic.com/ajax/iconpng/?id=135287.png</icon>
+        <title>公司传单派发</title>
+        <content>主要去山谷街派发传单</content>
+        <type>1</type>
+        <salary>100</salary>
+    </newsInfo>
+    <newsInfo>
+        <icon>http://ico.ooopic.com/ajax/iconpng/?id=135287.png</icon>
+        <title>公司经理急招秘书一员</title>
+        <content>帮经理处理平常工作</content>
+        <type>3</type>
+        <salary>5000</salary>
+    </newsInfo>
+    <newsInfo>
+        <icon>http://ico.ooopic.com/ajax/iconpng/?id=135287.png</icon>
+        <title>招聘微信公众号管理人</title>
+        <content>管理微信公众号，可在家</content>
+        <type>2</type>
+        <salary>150</salary>
+    </newsInfo>
+    <newsInfo>
+        <icon>http://ico.ooopic.com/ajax/iconpng/?id=135287.png</icon>
+        <title>急招公司扫地阿姨一员</title>
+        <content>清理公司卫生</content>
+        <type>3</type>
+        <salary>3000</salary>
+    </newsInfo>
+</news>
