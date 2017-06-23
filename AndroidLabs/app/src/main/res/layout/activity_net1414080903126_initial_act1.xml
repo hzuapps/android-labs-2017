@@ -13,7 +13,7 @@
         android:background="@drawable/c"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:text="增添一笔账目"
+        android:text="增添账目"
         android:onClick="click"
         android:layout_x="200dp"
         android:layout_y="300dp"
@@ -25,7 +25,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.124" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <Button
         android:id="@+id/btn_2"
@@ -36,33 +36,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="计算盈损"
+        android:text="查看账本"
         android:onClick="click"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
-
-    <Button
-        android:id="@+id/btn_3"
-        android:background="@drawable/c"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="生成表格"
-        android:onClick="click"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
-
-
-
+        app:layout_constraintVertical_bias="0.71" />
 
 
 </android.support.constraint.ConstraintLayout>
