@@ -1,6 +1,9 @@
 package edu.hzuapps.androidlabs.homeworks.net1414080903101;
+<<<<<<< HEAD
+=======
 
-import com.intelligent_chest.entity.User;
+>>>>>>> 84e0e7eb67d6893cec6bccf75d22a39d971a3cf1
+
 
 /**
  * Created by Czd on 2017/6/1.
