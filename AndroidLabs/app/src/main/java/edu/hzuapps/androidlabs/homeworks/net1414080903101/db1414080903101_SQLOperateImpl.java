@@ -1,11 +1,10 @@
-package com.intelligent_chest.db;
+package edu.hzuapps.androidlabs.homeworks.net1414080903101;
 
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.intelligent_chest.entity.User;
 
 /**
  * Created by Czd on 2017/6/1.

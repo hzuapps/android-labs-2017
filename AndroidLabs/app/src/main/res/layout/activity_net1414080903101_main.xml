@@ -94,4 +94,10 @@
         android:textSize="18sp"
         android:padding="15dp"
         android:text="4.陈式太极单刀"/>
+		 <Button
+        android:id="@+id/send_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="抓取Json文件" />
 </LinearLayout>
