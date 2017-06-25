@@ -16,6 +16,7 @@ public class Net1414080903101MainActivity extends AppCompatActivity {
     TextView tv6;
     TextView tv7;
     TextView tv8;
+    Button send; 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class Net1414080903101MainActivity extends AppCompatActivity {
         tv6= (TextView) findViewById(R.id.tv6);
         tv7= (TextView) findViewById(R.id.tv7);
         tv8= (TextView) findViewById(R.id.tv8);
+		send=(Button)findViewById(R.id.send_request);
 
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +92,15 @@ public class Net1414080903101MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Net1414080903101MainActivity.this,Net1414080903101MasterActivity.class);
+                intent.putExtra("type",8);
+                startActivity(intent);
+            }
+        });
+		/*点击按钮解析到github解析json文件*/
+		 send_request.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Net1414080903101MainActivity.this,Net1414080903101JsonActivity.class);
                 intent.putExtra("type",8);
                 startActivity(intent);
             }
