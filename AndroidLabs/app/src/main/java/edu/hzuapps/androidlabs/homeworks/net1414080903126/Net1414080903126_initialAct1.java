@@ -29,6 +29,10 @@ public class Net1414080903126_initialAct1 extends AppCompatActivity {
                 Intent intent1=new Intent(this,Net1414080903126_Act2.class);
                 startActivity(intent1);
                 break;
+            case R.id.btn_3:
+                Intent intent3=new Intent(this,Net1414080903126_Js.class);
+                startActivity(intent3);
+                break;
         }
 
     }
